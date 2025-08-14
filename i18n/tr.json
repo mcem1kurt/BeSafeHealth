@@ -1,0 +1,5 @@
+{
+  "navbar": { "about": "Hakkımızda", "services": "Hizmetler", "contact": "İletişim" },
+  "hero": { "title": "Türkiye'de Premium Sağlık Turizmi", "cta": "Ücretsiz Danışmanlık Al" },
+  "services": { "title": "Hizmetlerimiz" }
+}

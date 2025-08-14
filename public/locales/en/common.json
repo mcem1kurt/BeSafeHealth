@@ -1,0 +1,246 @@
+{
+  "navbar": { "home": "Home", "about": "About", "services": "Services", "partners": "Partners", "contact": "Contact" },
+  "hero": { 
+    "title": "Welcome to the Perfect Starting Point.", 
+    "subtitle": "We provide quality tourism services and an unforgettable travel experience to people from all over the world.", 
+    "cta": "Get a Free Consultation", 
+    "explore": "Explore Services",
+    "contactForm": {
+      "title": "Get Your Free Consultation",
+      "subtitle": "Fill out the form below and our experts will contact you shortly.",
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "service": "Select Service",
+      "message": "Tell us about your needs...",
+      "submit": "Send Request"
+    }
+  },
+  "services": { 
+    "title": "Our Services", 
+    "hair": { "title": "Hair Transplant", "subtitle": "Modern hair transplant techniques for natural and permanent results" },
+    "dental": { "title": "Dental", "subtitle": "Comprehensive dental treatments with modern technology" },
+    "aesthetic": { "title": "Aesthetic Surgery", "subtitle": "Natural and harmonious results with expert surgeons" }
+  },
+  "tourism": {
+    "quality_services": "Quality Tourism Services",
+    "intro": "We provide quality tourism services and an unforgettable travel experience to people from all over the world.",
+    "accommodation": "Accommodation Services",
+    "professional": "Professional Service",
+    "consulting": "Consultancy Service",
+    "planning": "Travel Planning",
+    "transfer": "Transfer Service",
+    "tours": "Touristic Tours"
+  },
+  "agency": {
+    "title": "Be Safe Health and Tourism Agency",
+    "paragraph1": "When you choose the Be Safe Health clinic, you can rest assured that nothing is more important to us than your health.",
+    "paragraph2": "Everything we do is designed to make your journey more enjoyable. Our longevity in the sector comes from the results we achieve and the lives we change.",
+    "paragraph3": "In our healthcare facilities equipped with the most advanced technologies of modern medicine, our specialist doctors and experienced healthcare staff prepare the most suitable treatment and rehabilitation programs for you. We offer a professional approach for surgeries, aesthetic procedures, dental treatments, medical check-ups, and more."
+  },
+  "agencySection": {
+    "title": "Be Safe Health",
+    "subtitle": "and Tourism Agency",
+    "p1": "When you choose the Be Safe Health clinic, you can rest assured that nothing is more important to us than your health.",
+    "p2": "Everything we do is designed to make your journey more enjoyable. Our longevity in the sector comes from the results we achieve and the lives we change.",
+    "p3": "In our healthcare facilities equipped with the most advanced technologies of modern medicine, our specialist doctors and experienced healthcare staff prepare the most suitable treatment and rehabilitation programs for you. We offer a professional approach for surgeries, aesthetic procedures, dental treatments, medical check-ups, and more."
+  },
+  "partners": { "title": "Contracted Institutions", "subtitle": "We deliver quality healthcare with trusted partners." },
+  "contact": { 
+    "title": "Contact Us", 
+    "subtitle": "Our coordinators will get back within 24 hours.", 
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone",
+      "phonePlaceholder": "Enter your phone number",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your needs",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!"
+    },
+    "name": "Name", 
+    "email": "Email", 
+    "phone": "Phone (WhatsApp)", 
+    "message": "Message", 
+    "send": "Send Message", 
+    "whatsapp": "Chat on WhatsApp" 
+  },
+  "footer": {
+    "quick_links": "Quick Links",
+    "links": { "about": "About", "services": "Services", "partners": "Partners", "contact": "Contact" },
+    "contact": "Contact",
+    "address": "Mecidiyeköy Mah, Hark Sokak no2, Şişli/İstanbul, Türkiye",
+    "phone": "+90 212 356 36 08",
+    "email": "info@besafehealth.com.tr",
+    "copyright": "All rights reserved."
+  },
+  "cta": { "viewAllServices": "View all services", "learnMore": "Learn more" },
+  "stats": {
+    "happy_patients": "Happy Patients",
+    "years_experience": "15+ Years Experience",
+    "support": "Support"
+  },
+  "heroTrust": {
+    "certified": "Certified Medical Tourism",
+    "experience": "15+ Years Experience",
+    "support": "24/7 Support"
+  },
+  "aboutExtra": {
+    "valuesTitle": "Our Values",
+    "values": {
+      "patient_first": "Patient-first care",
+      "transparent_pricing": "Transparent pricing",
+      "world_class": "World-class standards",
+      "coordination": "End-to-end coordination"
+    },
+    "teamTitle": "Our Team",
+    "teamDesc": "A multidisciplinary team of surgeons, dentists, and patient coordinators.",
+    "tourismTitle": "Medical Tourism",
+    "tourismDesc": "From arrival to departure, we arrange VIP transfers, interpretation, and tailored recovery plans."
+  },
+  "servicesPage": {
+    "descriptions": {
+      "hair": "FUE, DHI, Sapphire techniques",
+      "dental": "Implants, Hollywood smile, veneers",
+      "aesthetic": "Rhinoplasty, BBL, mommy makeover"
+    }
+  },
+  "serviceDetails": {
+    "hair": {
+      "title": "Saç Ekimi",
+      "description": "Modern saç ekimi teknikleri ile doğal ve kalıcı sonuçlar elde ediyoruz. FUE (Follicular Unit Extraction) ve DHI (Direct Hair Implantation) gibi en gelişmiş yöntemleri kullanarak, hastalarımıza en iyi deneyimi sunuyoruz.",
+      "features": [
+        "FUE Tekniği ile doğal sonuçlar",
+        "Uzman doktor ekibi",
+        "Kişiselleştirilmiş tedavi planları",
+        "Kapsamlı bakım ve takip"
+      ]
+    },
+    "dental": {
+      "title": "Diş Tedavileri",
+      "description": "Modern diş hekimliği teknolojileri ile estetik ve fonksiyonel diş tedavileri sunuyoruz. İmplant, zirkonyum kaplama, ortodonti ve estetik diş beyazlatma gibi kapsamlı hizmetlerimizle gülüşünüzü yeniden tasarlıyoruz.",
+      "features": [
+        "İmplant tedavileri",
+        "Zirkonyum kaplamalar",
+        "Ortodonti tedavileri",
+        "Estetik diş beyazlatma"
+      ]
+    },
+    "aesthetic": {
+      "title": "Rinoplasti",
+      "description": "Estetik cerrahi alanında uzman doktorlarımız ile doğal ve uyumlu sonuçlar elde ediyoruz. Rinoplasti, yüz estetiği ve vücut kontürü gibi işlemlerde en gelişmiş teknikleri kullanarak hastalarımızın beklentilerini aşıyoruz.",
+      "features": [
+        "Rinoplasti ve burun estetiği",
+        "Yüz estetiği ve gençleştirme",
+        "Vücut kontürü ve liposuction",
+        "Minimal invaziv teknikler"
+      ]
+    }
+  },
+  "servicesDetail": {
+    "accommodation": {
+      "title": "Accommodation Services",
+      "p1": "Throughout your health tourism journey, your comfort and convenience are our priority. Our accommodation services are carefully designed to provide you with the best experience.",
+      "p2": "We plan the most suitable options and coordinate requests on your behalf, in sync with VIP transport, interpreter support and clinical appointments."
+    },
+    "professional": {
+      "title": "Professional Service",
+      "p1": "Your health and satisfaction are our priority. We deliver top-tier professional healthcare with an experienced team and accredited partners.",
+      "p2": "Our coordination team is with you at every step to guide your consultations, surgery planning and follow-ups."
+    },
+    "consulting": {
+      "title": "Consultancy Service",
+      "p1": "Our consultants help you research options, choose the right treatment, and organize travel.",
+      "p2": "We provide a single point of contact for your questions and requests to make your experience effortless."
+    },
+    "planning": {
+      "title": "Travel Planning",
+      "p1": "We combine flights, accommodation, transfers, and clinic visits into a single schedule for a seamless experience.",
+      "p2": "We offer flexible choices and coordinate details ahead of time, so you can focus on a healthy journey."
+    },
+    "transfer": {
+      "title": "Transfer Service",
+      "p1": "Friendly, experienced drivers safely transport you from the airport or any location to your accommodation.",
+      "p2": "We track flights, handle delays, and provide VIP vehicles with on-time clinic-hotel transfers."
+    },
+    "tours": {
+      "title": "Touristic Tours",
+      "p1": "Beyond treatment, we offer curated tour programs for a delightful, satisfying trip.",
+      "p2": "From guided tours to custom itineraries, we plan flexibly around your care schedule."
+    }
+  },
+  "journey": {
+    "title": "Your Journey",
+    "subtitle": "From Application to Follow-up",
+    "cta": {
+      "title": "Are you ready to start?",
+      "subtitle": "Take the first step with our expert team in 5 minutes.",
+      "button": "Start Now"
+    },
+    "steps": {
+      "step1": { "title": "Quick Pre-Evaluation", "desc": "Send your photo and info; get suitability and a plan the same day." },
+      "step2": { "title": "Personal Planning", "desc": "Flight/accommodation options and operation schedule; tailored to your budget and needs." },
+      "step3": { "title": "Arrival & Welcome", "desc": "VIP transfer and check-in; pre-op consult and hairline design." },
+      "step4": { "title": "Operation", "desc": "Comfort-focused process; experienced team and sterile environment." },
+      "step5": { "title": "Care & Training", "desc": "First wash, medication kit; 10-min personal care training." },
+      "step6": { "title": "Remote Follow-up", "desc": "3, 6, 12 month checks; photo follow-up and doctor review." }
+    }
+  },
+  "reviews": {
+    "heading": "Google Reviews",
+    "viewAll": "View on Google",
+    "r1": "Professional and friendly team. Seamless coordination.",
+    "r2": "Great experience from arrival to aftercare.",
+    "r3": "Highly recommend. Felt supported at every step.",
+    "subtitle": "Discover our clients' experiences",
+    "googleBadge": "Google Review",
+    "swipeHint": "Swipe left/right to navigate"
+  },
+  "beforeAfter": {
+    "before": "Before",
+    "after": "After"
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "q1": "What is included in the price?",
+    "a1": "Transfers and accommodation planning, consultation, aftercare guidance.",
+    "q2": "How long do I need to stay?",
+    "a2": "Plan at least 2 days in Istanbul for operation and check-in/out.",
+    "q3": "Do you offer online consultation?",
+    "a3": "Yes, we provide free online consultation prior to your trip."
+  },
+  "services": {
+    "title": "Services",
+    "description": "We provide world-class healthcare services to guests from all around the globe, ensuring a comfortable and unforgettable experience.",
+    "hair": { "title": "Hair Transplant", "subtitle": "FUE, DHI, Sapphire" },
+    "dental": { "title": "Dental Treatments", "subtitle": "Implants, Veneers" },
+    "aesthetic": { "title": "Aesthetic Surgery", "subtitle": "Rhinoplasty, BBL" },
+    "planning": { "title": "Travel Planning", "subtitle": "Flights, schedule" },
+    "transfer": { "title": "VIP Transfer", "subtitle": "Airport, clinic" },
+    "tours": { "title": "Touristic Tours", "subtitle": "Experiences" }
+  },
+  "floatingContact": {
+    "title": "Free Consultation",
+    "subtitle": "Our experts will get back to you as soon as possible",
+    "button": "Contact Us"
+  },
+  "backButton": {
+    "hair": "Back to All Techniques",
+    "dental": "Back to All Treatments",
+    "aesthetic": "Back to All Procedures"
+  },
+  "consultation": {
+    "title": "Free Consultation",
+    "subtitle": "Fill out the form to get detailed information about"
+  },
+  "premium": {
+    "hair": "Premium Hair Transplant",
+    "dental": "Premium Dental Care",
+    "aesthetic": "Premium Aesthetic Surgery",
+    "services": "Premium Services"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Sound Generator</title>
+</head>
+<body>
+    <h1>Notification Sound Generator</h1>
+    <p>This page generates a notification sound using the Web Audio API.</p>
+    <button onclick="playNotificationSound()">Play Notification Sound</button>
+    
+    <script>
+        function playNotificationSound() {
+            // Create audio context
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            
+            // Create oscillator for the notification sound
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            // Connect nodes
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            // Set sound properties
+            oscillator.frequency.setValueAtTime(800, audioContext.currentTime); // Start at 800Hz
+            oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1); // Drop to 400Hz
+            
+            // Set volume envelope
+            gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.3, audioContext.currentTime + 0.01);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+            
+            // Start and stop the sound
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.3);
+        }
+        
+        // Auto-play when page loads (for testing)
+        window.addEventListener('load', () => {
+            setTimeout(playNotificationSound, 1000);
+        });
+    </script>
+</body>
+</html>

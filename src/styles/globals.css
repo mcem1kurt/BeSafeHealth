@@ -1,0 +1,295 @@
+@import "tailwindcss";
+
+/* Force dark mode for all users */
+html, body, #__next {
+  color-scheme: dark !important;
+}
+
+/* Base color tokens */
+:root {
+  --background: #0b0b0b;
+  --foreground: #f6f6f6;
+}
+
+/* Tailwind v4 theme tokens */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Modern gold palette */
+  --color-gold-50: #fff9ec;
+  --color-gold-100: #fff1cf;
+  --color-gold-200: #ffe3a1;
+  --color-gold-300: #fdd267;
+  --color-gold-400: #efbe3f;
+  --color-gold-500: #cda248; /* primary */
+  --color-gold-600: #a88234;
+  --color-gold-700: #856329;
+  --color-gold-800: #5b4219;
+  --color-gold-900: #3a2a10;
+
+  --color-primary: var(--color-gold-500);
+  --color-muted: #9ca3af;
+}
+
+/* Light theme (explicit) */
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #0f0f0f;
+}
+
+/* Dark theme (explicit) */
+[data-theme="dark"] {
+  --background: #0b0b0b;
+  --foreground: #f6f6f6;
+}
+
+/* Force dark mode - ignore system preference */
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f0f0f;
+  }
+} */
+
+/* Base typography and smoothing */
+html, body, #__next { height: 100%; }
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* (removed) snap-scrolling utilities */
+
+/* Utility for gold gradient accents */
+.gold-gradient {
+  background-image: linear-gradient(135deg, var(--color-gold-400), var(--color-gold-600));
+}
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Enhanced navbar hover effects */
+.navbar-link {
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-link:hover {
+  color: var(--color-gold-400) !important;
+}
+
+/* Ensure hover effects work on all navbar elements */
+nav a:hover,
+nav button:hover,
+.navbar-link:hover {
+  color: var(--color-gold-400) !important;
+  transform: translateY(-1px);
+}
+
+/* Attempt to neutralize white backgrounds on logos without alpha */
+/* Remove mix-blend on logos to avoid gray backgrounds on dark surfaces */
+.logo-transparent { mix-blend-mode: normal; }
+
+/* Seamless left-to-right infinite marquee
+   Animate half the track width and duplicate content to avoid jumps */
+@keyframes marquee-ltr-infinite {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Animated background effects */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-30px) rotate(120deg); }
+  66% { transform: translateY(-15px) rotate(240deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animated background elements */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.1) 0%, rgba(251, 191, 36, 0.05) 50%, transparent 100%);
+  animation: float 20s ease-in-out infinite;
+}
+
+.floating-circle:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-circle:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  right: 15%;
+  animation-delay: -5s;
+}
+
+.floating-circle:nth-child(3) {
+  width: 250px;
+  height: 250px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: -10s;
+}
+
+.floating-circle:nth-child(4) {
+  width: 150px;
+  height: 150px;
+  top: 30%;
+  right: 40%;
+  animation-delay: -15s;
+}
+
+/* Enhanced gold gradients */
+.gold-gradient-primary {
+  background: linear-gradient(135deg, var(--color-gold-400), var(--color-gold-600));
+}
+
+.gold-gradient-secondary {
+  background: linear-gradient(135deg, var(--color-gold-300), var(--color-gold-500));
+}
+
+.gold-gradient-accent {
+  background: linear-gradient(135deg, var(--color-gold-200), var(--color-gold-400));
+}
+
+/* Animated gradient backgrounds */
+.animated-gradient {
+  background: linear-gradient(-45deg, var(--color-gold-600), var(--color-gold-400), var(--color-gold-600), var(--color-gold-500));
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+.marquee-outer {
+  /* allow cards to lift on hover without being clipped */
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.marquee-track {
+
+/* Custom select dropdown styling */
+select option {
+  background-color: #1f2937 !important;
+  color: white !important;
+  padding: 8px 12px !important;
+}
+
+select option:hover {
+  background-color: #374151 !important;
+}
+
+select option:checked {
+  background-color: #fbbf24 !important;
+  color: #1f2937 !important;
+}
+  display: flex;
+  width: max-content;
+  gap: 3rem;
+  animation: marquee-ltr-infinite 35s linear infinite;
+  will-change: transform;
+}
+
+.partner-logo {
+  height: 64px;
+  width: auto;
+  opacity: 0.9;
+  filter: grayscale(100%);
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Unify partner logos with white backgrounds */
+.logo-unify {
+  width: auto;
+  object-fit: contain;
+  /* Avoid blend that can gray-out white areas; rely on transparent assets */
+  mix-blend-mode: normal;
+  filter: contrast(1.05) brightness(1.02);
+  opacity: 0.95;
+}
+.logo-unify:hover { opacity: 1; }
+
+/* Hover flip animation (left-to-right rotateY) for WhatsApp FAB */
+@keyframes flip-y-once {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.whatsapp-fab:hover img {
+  animation: flip-y-once 800ms ease;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Force dark mode override for all users */
+html {
+  color-scheme: dark !important;
+  background-color: #0b0b0b !important;
+}
+
+body {
+  color-scheme: dark !important;
+  background-color: #0b0b0b !important;
+}
+
+#__next {
+  color-scheme: dark !important;
+  background-color: #0b0b0b !important;
+}
+
+/* Override any light theme attempts */
+[data-theme="light"] {
+  --background: #0b0b0b !important;
+  --foreground: #f6f6f6 !important;
+}
+
+/* Ensure dark theme is always active */
+[data-theme="dark"] {
+  --background: #0b0b0b !important;
+  --foreground: #f6f6f6 !important;
+}
+
+/* Global dark mode text color overrides */
+* {
+  color: inherit;
+}
+
+/* Force all text to be visible in dark mode */
+h1, h2, h3, h4, h5, h6 {
+  color: white !important;
+}
+
+p, span, div, li, a {
+  color: var(--foreground) !important;
+}

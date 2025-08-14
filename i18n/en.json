@@ -1,0 +1,5 @@
+{
+  "navbar": { "about": "About", "services": "Services", "contact": "Contact" },
+  "hero": { "title": "Premium Medical Tourism in Turkey", "cta": "Get a Free Consultation" },
+  "services": { "title": "Our Services" }
+}
