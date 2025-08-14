@@ -1,13 +1,17 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../../next-i18next.config.js";
 import FloatingContactButton from "@/components/FloatingContactButton";
 
+// Type for navigator with maxTouchPoints
+interface NavigatorWithMaxTouchPoints extends Navigator {
+  maxTouchPoints: number;
+}
+
 function App({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useState<string>("dark");
 
   useEffect(() => {
     // Force dark mode on all users, regardless of system preference
@@ -47,7 +51,7 @@ function App({ Component, pageProps }: AppProps) {
   // Desktop scroll smoothing (lightweight, no dependency)
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const isTouch = "ontouchstart" in window || (navigator as any).maxTouchPoints > 0;
+    const isTouch = "ontouchstart" in window || (navigator as NavigatorWithMaxTouchPoints).maxTouchPoints > 0;
     const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (isTouch || prefersReduced) return; // keep native scrolling on touch/reduced-motion
 
@@ -77,8 +81,8 @@ function App({ Component, pageProps }: AppProps) {
 
     window.addEventListener("wheel", onWheel, { passive: false });
     return () => {
-      window.removeEventListener("wheel", onWheel as any);
-      if (raf) cancelAnimationFrame(raf as number);
+      window.removeEventListener("wheel", onWheel);
+      if (raf) cancelAnimationFrame(raf);
     };
   }, []);
 
@@ -99,7 +103,7 @@ function App({ Component, pageProps }: AppProps) {
         }}
         twitter={{ cardType: "summary_large_image" }}
       />
-              <Component {...pageProps} key={(theme as string) || "theme"} />
+              <Component {...pageProps} key="theme" />
         <FloatingContactButton />
     </>
   );

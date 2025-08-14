@@ -50,8 +50,7 @@ export default function ContactPage() {
               </a>
               <NotificationBadge 
                 delay={5} 
-                number={2} 
-                soundUrl="/sounds/notification.mp3" 
+                initialNumber={2}
               />
             </div>
           </div>

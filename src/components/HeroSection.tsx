@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { useTranslation } from "next-i18next";
 import { useEffect, useRef } from "react";
 
@@ -15,9 +14,9 @@ export default function HeroSection() {
       // Ensure playback starts even if the browser stalls autoplay
       v.play().catch(() => { });
     };
-    v.addEventListener("canplay", tryPlay, { once: true } as any);
+    v.addEventListener("canplay", tryPlay, { once: true });
     tryPlay();
-    return () => v.removeEventListener("canplay", tryPlay as any);
+    return () => v.removeEventListener("canplay", tryPlay);
   }, []);
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-[#0b0b0b] overflow-hidden">

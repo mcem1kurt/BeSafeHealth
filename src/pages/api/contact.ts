@@ -5,7 +5,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
-  const { name, email, phone, message } = req.body || {};
+  const { name, email, message } = req.body || {};
   if (!name || !email || !message) {
     return res.status(400).json({ error: "Missing required fields" });
   }

@@ -104,7 +104,7 @@ export default function Home() {
           >
             <div className="relative ">
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-green-600 rounded-full blur-lg opacity-30 animate-pulse z-10"></div>
-              <img src="/icons/whatsapp.svg" alt="WhatsApp" className="w-16 h-16 transition-all duration-300 hover:scale-110 relative z-10" />
+              <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={64} height={64} className="w-16 h-16 transition-all duration-300 hover:scale-110 relative z-10" />
             </div>
           </a>
           <NotificationBadge 

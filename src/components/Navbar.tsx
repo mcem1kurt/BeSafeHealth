@@ -1,11 +1,9 @@
 import Link from "next/link";
 import { MessageCircle, ChevronDown, Menu, X, ArrowUp } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
 import { motion, useScroll, useSpring } from "framer-motion";
-import NotificationBadge from "./NotificationBadge";
 
 export default function Navbar() {
   const router = useRouter();

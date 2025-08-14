@@ -1,5 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+// Type for webkit audio context
+interface WindowWithWebkitAudioContext extends Window {
+  webkitAudioContext?: typeof AudioContext;
+}
 
 interface NotificationBadgeProps {
   delay: number;
@@ -9,10 +14,9 @@ interface NotificationBadgeProps {
 export default function NotificationBadge({ delay, initialNumber = 1 }: NotificationBadgeProps) {
   const [show, setShow] = useState(false);
   const [number, setNumber] = useState(initialNumber);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Use browser's default notification sound
-  const playNotificationSound = () => {
+  const playNotificationSound = useCallback(() => {
     try {
       // Use browser's built-in notification sound
       if ('Notification' in window && Notification.permission === 'granted') {
@@ -38,18 +42,18 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
       createBeepSound();
       return false;
     }
-  };
+  }, []);
 
   // Fallback beep sound using Web Audio API
   const createBeepSound = () => {
     try {
       // Check if Web Audio API is supported
-      if (!window.AudioContext && !(window as any).webkitAudioContext) {
+      if (!window.AudioContext && !(window as WindowWithWebkitAudioContext).webkitAudioContext) {
         console.error("❌ Web Audio API not supported");
         return false;
       }
 
-      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const audioContext = new (window.AudioContext || (window as WindowWithWebkitAudioContext).webkitAudioContext)();
       
       // Resume context if suspended
       if (audioContext.state === 'suspended') {
@@ -86,7 +90,7 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
   };
 
   // Function to update notification number randomly
-  const updateNotificationNumber = () => {
+  const updateNotificationNumber = useCallback(() => {
     // Always increase the number by 1 to simulate accumulating notifications
     const newNumber = number + 1;
     
@@ -101,7 +105,7 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
     const nextUpdateDelay = 60 * 1000; // 60 seconds = 1 minute
     console.log(`⏰ Next notification update in: ${nextUpdateDelay / 1000} seconds (1 minute)`);
     setTimeout(updateNotificationNumber, nextUpdateDelay);
-  };
+  }, [number, playNotificationSound]);
 
   // Get different notification messages for variety
   const getNotificationMessage = () => {
@@ -172,7 +176,7 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
     }, delay * 1000);
 
     return () => clearTimeout(timer);
-  }, [delay]);
+  }, [delay, initialNumber, playNotificationSound, updateNotificationNumber]);
 
   return (
     <AnimatePresence>

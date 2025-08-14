@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }));
     res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate=86400");
     res.status(200).json({ reviews: trimmed });
-  } catch (e) {
+  } catch {
     res.status(200).json({ reviews: [] });
   }
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "next-i18next";
@@ -11,7 +12,7 @@ type Props = {
   imageAlt?: string;
 };
 
-export default function ServiceCard({ title, href, desc = "", imageSrc, imageAlt }: Props) {
+export default function ServiceCard({ title, href, imageSrc, imageAlt }: Props) {
   const { t } = useTranslation("common");
   return (
     <motion.div
@@ -23,7 +24,12 @@ export default function ServiceCard({ title, href, desc = "", imageSrc, imageAlt
     >
       <Link href={href} className="block cursor-pointer">
         <div className="relative w-full h-48 overflow-hidden">
-          <img src={imageSrc} alt={imageAlt || title} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <Image 
+            src={imageSrc || ""} 
+            alt={imageAlt || title} 
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105" 
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
         <div className="p-6 bg-gradient-to-b from-[var(--color-gold-800)] to-[var(--color-gold-900)] border-t border-[var(--color-gold-500)] relative overflow-hidden">

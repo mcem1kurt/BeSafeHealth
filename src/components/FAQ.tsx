@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
-import Link from "next/link";
 
 export default function FAQ() {
   const { t } = useTranslation("common");

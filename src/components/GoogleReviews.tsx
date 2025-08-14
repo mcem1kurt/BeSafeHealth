@@ -176,7 +176,7 @@ const GoogleReviews = () => {
                                     {/* Review Text */}
                                     <div className="flex-1">
                                                                                         <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed">
-                                                    "{reviews[currentIndex].review}"
+                                                    &ldquo;{reviews[currentIndex].review}&rdquo;
                                                 </p>
                                     </div>
 

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ContactForm from "./ContactForm";
 import { useTranslation } from "next-i18next";
-import NotificationBadge from "./NotificationBadge";
 
 export default function FloatingContactButton() {
   const { t } = useTranslation("common");
