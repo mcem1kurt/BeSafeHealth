@@ -32,8 +32,8 @@ export default function ServiceCard({ title, href, imageSrc, imageAlt }: Props) 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
-        <div className="p-6 bg-gradient-to-b from-[var(--color-gold-800)] to-[var(--color-gold-900)] border-t border-[var(--color-gold-500)] relative overflow-hidden">
-          <h3 className="text-xl font-semibold text-white group-hover:text-[var(--color-gold-200)] transition-colors duration-300 mb-3">{title}</h3>
+        <div className="p-4 sm:p-6 bg-gradient-to-b from-[var(--color-gold-800)] to-[var(--color-gold-900)] border-t border-[var(--color-gold-500)] relative overflow-hidden">
+          <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-[var(--color-gold-200)] transition-colors duration-300 mb-2 sm:mb-3">{title}</h3>
           <div className="flex items-center justify-between text-sm text-white/80 group-hover:text-[var(--color-gold-200)] transition-colors duration-300">
             <span className="font-medium">{t("cta.learnMore")}</span>
             <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />

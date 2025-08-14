@@ -78,20 +78,20 @@ export default function Navbar() {
             </button>
             {openMega && (
               <div
-                className="absolute left-1/2 top-full -translate-x-1/2 z-[60] w-[720px] rounded-2xl border border-white/10 bg-black/60 backdrop-blur-xl p-6 shadow-2xl"
+                className="absolute left-1/2 top-full -translate-x-1/2 z-[60] w-[90vw] max-w-[720px] rounded-2xl border border-white/10 bg-black/60 backdrop-blur-xl p-4 sm:p-6 shadow-2xl"
                 onMouseEnter={() => setOpenMega(true)}
                 onMouseLeave={() => setOpenMega(false)}
               >
-                <div className="grid grid-cols-3 gap-4 text-sm">
-                  <Link href="/services/hair-transplant" className="group rounded-xl border border-white/10 p-4 hover:border-[var(--color-gold-400)] bg-gray-800/50">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-sm">
+                  <Link href="/services/hair-transplant" className="group rounded-xl border border-white/10 p-3 sm:p-4 hover:border-[var(--color-gold-400)] bg-gray-800/50">
                     <div className="font-medium text-white group-hover:text-[var(--color-gold-400)]">{t("services.hair.title")}</div>
                     <div className="text-white/80 mt-1">{t("services.hair.subtitle")}</div>
                   </Link>
-                  <Link href="/services/dental" className="group rounded-xl border border-white/10 p-4 hover:border-[var(--color-gold-400)] bg-gray-800/50">
+                  <Link href="/services/dental" className="group rounded-xl border border-white/10 p-3 sm:p-4 hover:border-[var(--color-gold-400)] bg-gray-800/50">
                     <div className="font-medium text-white group-hover:text-[var(--color-gold-400)]">{t("services.dental.title")}</div>
                     <div className="text-white/80 mt-1">{t("services.dental.subtitle")}</div>
                   </Link>
-                  <Link href="/services/aesthetic" className="group rounded-xl border border-white/10 p-4 hover:border-[var(--color-gold-400)] bg-gray-800/50">
+                  <Link href="/services/aesthetic" className="group rounded-xl border border-white/10 p-3 sm:p-4 hover:border-[var(--color-gold-400)] bg-gray-800/50">
                     <div className="font-medium text-white group-hover:text-[var(--color-gold-400)]">{t("services.aesthetic.title")}</div>
                     <div className="text-white/80 mt-1">{t("services.aesthetic.subtitle")}</div>
                   </Link>

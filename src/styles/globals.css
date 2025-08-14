@@ -293,3 +293,49 @@ h1, h2, h3, h4, h5, h6 {
 p, span, div, li, a {
   color: var(--foreground) !important;
 }
+
+/* Mobile-first responsive design */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Optimize touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve mobile spacing */
+  .mobile-spacing {
+    margin: 1rem 0;
+  }
+  
+  /* Mobile-specific text sizes */
+  .mobile-text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .mobile-text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav {
+    padding: 1rem;
+  }
+  
+  /* Mobile form improvements */
+  .mobile-form {
+    padding: 1rem;
+  }
+  
+  .mobile-form input,
+  .mobile-form select,
+  .mobile-form textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}

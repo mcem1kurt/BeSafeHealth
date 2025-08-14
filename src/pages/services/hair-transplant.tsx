@@ -106,7 +106,7 @@ export default function HairTransplantService() {
         <Navbar />
     
         {/* Back Button */}
-        <div className="pt-8 px-4 sm:px-6 lg:px-8">
+        <div className="pt-6 sm:pt-8 px-4 sm:px-6 lg:px-8">
                   <button
           onClick={() => setSelectedProcedure(null)}
           className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-200 mb-8 cursor-pointer"
@@ -119,20 +119,20 @@ export default function HairTransplantService() {
         </div>
 
         {/* Hero Section */}
-        <section className="relative py-16 bg-[#0b0b0b]">
+        <section className="relative py-12 sm:py-16 bg-[#0b0b0b]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-12 sm:mb-16"
             >
-              <h1 className="text-5xl font-bold text-white mb-6">{detail.title}</h1>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">{detail.title}</h1>
               <p className="text-xl text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200 max-w-3xl mx-auto">{detail.description}</p>
             </motion.div>
 
             {/* Main Grid Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16">
               {/* First Row - Service Description */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}

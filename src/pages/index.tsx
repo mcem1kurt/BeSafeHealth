@@ -53,25 +53,25 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 bg-transparent"
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-transparent"
       >
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] text-white px-4 sm:px-6 py-2 rounded-full text-sm font-medium mb-4">
             <span className="w-2 h-2 bg-white rounded-full"></span>
             {t("premium.services")}
           </div>
-          <h2 className="text-4xl font-bold text-white mb-4">{t("services.title")}</h2>
-          <p className="text-xl text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200 max-w-3xl mx-auto">{t("services.description")}</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{t("services.title")}</h2>
+          <p className="text-lg sm:text-xl text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200 max-w-3xl mx-auto">{t("services.description")}</p>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <ServiceCard title={t("services.hair.title")} href="/services/hair-transplant" imageSrc="/images/services/hair-transplant.jpg" />
           <ServiceCard title={t("services.dental.title")} href="/services/dental" imageSrc="/images/services/dental.jpg" />
           <ServiceCard title={t("services.aesthetic.title")} href="/services/aesthetic" imageSrc="/images/services/aesthetic.jpg" />
         </div>
         
-        <div className="text-center mt-12">
-          <Link href="/services" className="inline-flex items-center gap-3 bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] hover:from-[var(--color-gold-600)] hover:to-[var(--color-gold-700)] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.4)] hover:scale-105">
+        <div className="text-center mt-8 sm:mt-12">
+          <Link href="/services" className="inline-flex items-center gap-3 bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] hover:from-[var(--color-gold-600)] hover:to-[var(--color-gold-700)] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.4)] hover:scale-105">
             {t("cta.viewAllServices")}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -94,7 +94,7 @@ export default function Home() {
       {/* Partners marquee */}
       <PartnersMarquee />
       
-              <div className="fixed bottom-6 left-6 z-40">
+              <div className="fixed bottom-4 sm:bottom-6 left-4 sm:left-6 z-40">
           <a
             href="https://wa.me/905079415087"
             target="_blank"
@@ -104,7 +104,7 @@ export default function Home() {
           >
             <div className="relative ">
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-green-600 rounded-full blur-lg opacity-30 animate-pulse z-10"></div>
-              <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={64} height={64} className="w-16 h-16 transition-all duration-300 hover:scale-110 relative z-10" />
+              <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={64} height={64} className="w-12 h-12 sm:w-16 sm:h-16 transition-all duration-300 hover:scale-110 relative z-10" />
             </div>
           </a>
           <NotificationBadge 
