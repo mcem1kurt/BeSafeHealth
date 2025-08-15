@@ -4,7 +4,6 @@ import { DefaultSeo } from "next-seo";
 import { useEffect } from "react";
 import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../../next-i18next.config.js";
-import FloatingContactButton from "@/components/FloatingContactButton";
 
 // Type for navigator with maxTouchPoints
 interface NavigatorWithMaxTouchPoints extends Navigator {
@@ -104,7 +103,6 @@ function App({ Component, pageProps }: AppProps) {
         twitter={{ cardType: "summary_large_image" }}
       />
               <Component {...pageProps} key="theme" />
-        <FloatingContactButton />
     </>
   );
 }

@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import { Phone, Mail, MessageCircle } from "lucide-react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import NotificationBadge from "@/components/NotificationBadge";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,10 +48,7 @@ export default function ContactPage() {
               <a href="https://wa.me/905079415087" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-md px-4 py-2 border border-white/10 hover:border-[var(--color-gold-400)]">
                 <MessageCircle size={16} /> {t("contact.whatsapp")}
               </a>
-              <NotificationBadge 
-                delay={5} 
-                initialNumber={2}
-              />
+
             </div>
           </div>
           <div className="mt-8">

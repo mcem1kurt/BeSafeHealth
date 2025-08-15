@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "next-i18next";
 
 // Type for webkit audio context
 interface WindowWithWebkitAudioContext extends Window {
@@ -12,6 +13,7 @@ interface NotificationBadgeProps {
 }
 
 export default function NotificationBadge({ delay, initialNumber = 1 }: NotificationBadgeProps) {
+  const { t } = useTranslation("common");
   const [show, setShow] = useState(false);
   const [number, setNumber] = useState(initialNumber);
 
@@ -110,39 +112,41 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
   // Get different notification messages for variety
   const getNotificationMessage = () => {
     const messages = [
-      'New consultation request received',
-      'Patient inquiry about hair transplant',
-      'Dental treatment consultation request',
-      'Aesthetic surgery inquiry received',
-      'New patient from Turkey',
-      'Consultation scheduled for tomorrow',
-      'Patient feedback received',
-      'New appointment request',
-      'Treatment plan inquiry',
-      'Price quote requested'
+      t("notifications.messages.0"),
+      t("notifications.messages.1"),
+      t("notifications.messages.2"),
+      t("notifications.messages.3"),
+      t("notifications.messages.4"),
+      t("notifications.messages.5"),
+      t("notifications.messages.6"),
+      t("notifications.messages.7"),
+      t("notifications.messages.8"),
+      t("notifications.messages.9")
     ];
     
-    const randomIndex = Math.floor(Math.random() * messages.length);
-    return messages[randomIndex];
+    // Use a deterministic index based on current time to avoid hydration issues
+    const timeBasedIndex = Math.floor((Date.now() / 60000) % messages.length); // Changes every minute
+    return messages[timeBasedIndex];
   };
 
   // Get different notification titles for variety
   const getNotificationTitle = () => {
     const titles = [
-      'Be Safe Health',
-      'New Patient Inquiry',
-      'Consultation Request',
-      'Patient Message',
-      'Appointment Update',
-      'Treatment Inquiry',
-      'Patient Feedback',
-      'New Request',
-      'Health Consultation',
-      'Medical Tourism'
+      t("notifications.titles.0"),
+      t("notifications.titles.1"),
+      t("notifications.titles.2"),
+      t("notifications.titles.3"),
+      t("notifications.titles.4"),
+      t("notifications.titles.5"),
+      t("notifications.titles.6"),
+      t("notifications.titles.7"),
+      t("notifications.titles.8"),
+      t("notifications.titles.9")
     ];
     
-    const randomIndex = Math.floor(Math.random() * titles.length);
-    return titles[randomIndex];
+    // Use a deterministic index based on current time to avoid hydration issues
+    const timeBasedIndex = Math.floor((Date.now() / 60000) % titles.length); // Changes every minute
+    return titles[timeBasedIndex];
   };
 
   // Animation key for number changes

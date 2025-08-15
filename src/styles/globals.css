@@ -67,8 +67,7 @@ body {
   background-image: linear-gradient(135deg, var(--color-gold-400), var(--color-gold-600));
 }
 
-/* Smooth scrolling */
-html { scroll-behavior: smooth; }
+/* Smooth scrolling - removed for better performance */
 
 /* Enhanced navbar hover effects */
 .navbar-link {

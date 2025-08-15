@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle, ChevronDown, Menu, X, ArrowUp } from "lucide-react";
+import { MessageCircle, ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
@@ -9,7 +9,6 @@ export default function Navbar() {
   const router = useRouter();
   const { t } = useTranslation("common");
   const [scrolled, setScrolled] = useState(false);
-  const [showScrollTop, setShowScrollTop] = useState(false);
   const [openMega, setOpenMega] = useState(false);
   const [openMobile, setOpenMobile] = useState(false);
   const { scrollYProgress } = useScroll();
@@ -19,7 +18,6 @@ export default function Navbar() {
     const onScroll = () => {
       const scrollY = window.scrollY;
       setScrolled(scrollY > 40);
-      setShowScrollTop(scrollY > 200); // Show button after scrolling down 200px
     };
     
     const onKeyDown = (e: KeyboardEvent) => {
@@ -28,10 +26,9 @@ export default function Navbar() {
         e.preventDefault();
         const topSection = document.getElementById('top');
         if (topSection) {
-          topSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+                      topSection.scrollIntoView({
+              block: 'start'
+            });
         }
       }
     };
@@ -176,41 +173,7 @@ export default function Navbar() {
         </motion.div>
       )}
 
-      {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <motion.button
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          onClick={() => {
-            const topSection = document.getElementById('top');
-            if (topSection) {
-              topSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            } else {
-              // Fallback to top of page
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-              });
-            }
-          }}
-          className="fixed bottom-24 right-6 z-40 bg-gradient-to-r from-[var(--color-gold-600)] to-[var(--color-gold-700)] hover:from-[var(--color-gold-500)] hover:to-[var(--color-gold-600)] text-white p-3 rounded-full shadow-2xl hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.4)] transition-all duration-300 hover:scale-110 cursor-pointer group"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          aria-label="Scroll to top"
-          title="Scroll to top (or press Home key)"
-        >
-          <ArrowUp size={20} />
-          {/* Tooltip */}
-          <div className="absolute bottom-full right-0 mb-2 px-2 py-1 bg-black/80 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-            Scroll to top
-            <div className="absolute top-full right-3 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/80"></div>
-          </div>
-        </motion.button>
-      )}
+
     </div>
   );
 }

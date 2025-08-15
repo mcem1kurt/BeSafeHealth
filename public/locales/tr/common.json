@@ -1,7 +1,7 @@
 {
   "navbar": { "home": "Anasayfa", "about": "Hakkımızda", "services": "Hizmetlerimiz", "partners": "Anlaşmalı Kurumlar", "contact": "İletişim" },
   "hero": { 
-    "title": "Kusursuz Başlangıç Noktasına Hoş Geldiniz.", 
+    "title": "Kusursuzluğun Başlangıç Noktasına Hoş Geldiniz.", 
     "subtitle": "Dünyanın dört bir yanından gelen kişilere kaliteli turizm hizmetleri ve unutulmaz bir seyahat deneyimi sunuyoruz.", 
     "cta": "Ücretsiz Danışmanlık Al", 
     "explore": "Hizmetleri Keşfet",
@@ -75,6 +75,47 @@
     "copyright": "Tüm hakları saklıdır."
   },
   "cta": { "viewAllServices": "Tüm hizmetleri görüntüle", "learnMore": "Daha fazla bilgi" },
+  "chatForm": {
+    "title": "Bizimle Sohbet Edin",
+    "subtitle": "Size yardımcı olmak için buradayız! Bize mesaj gönderin.",
+    "namePlaceholder": "Adınız",
+    "emailPlaceholder": "E-posta adresiniz",
+    "messagePlaceholder": "Mesajınız",
+    "sendButton": "Mesajı Gönder"
+  },
+  "stepDetails": {
+    "duration": "Süre",
+    "requirements": "Gereksinimler",
+    "process": "Süreç",
+    "benefits": "Faydalar",
+    "getStarted": "Bu Adımla Başlayın"
+  },
+  "notifications": {
+    "messages": [
+      "Yeni danışmanlık talebi alındı",
+      "Saç ekimi hakkında hasta sorgusu",
+      "Diş tedavisi danışmanlık talebi",
+      "Estetik cerrahi sorgusu alındı",
+      "Türkiye'den yeni hasta",
+      "Yarın için danışmanlık planlandı",
+      "Hasta geri bildirimi alındı",
+      "Yeni randevu talebi",
+      "Tedavi planı sorgusu",
+      "Fiyat teklifi istendi"
+    ],
+    "titles": [
+      "Be Safe Health",
+      "Yeni Hasta Sorgusu",
+      "Danışmanlık Talebi",
+      "Hasta Mesajı",
+      "Randevu Güncellemesi",
+      "Tedavi Sorgusu",
+      "Hasta Geri Bildirimi",
+      "Yeni Talep",
+      "Sağlık Danışmanlığı",
+      "Sağlık Turizmi"
+    ]
+  },
   "stats": {
     "happy_patients": "Mutlu Hasta",
     "years_experience": "15+ Yıllık Deneyim",

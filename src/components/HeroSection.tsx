@@ -1,44 +1,85 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function HeroSection() {
   const { t } = useTranslation("common");
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    const tryPlay = () => {
-      // Ensure playback starts even if the browser stalls autoplay
-      v.play().catch(() => { });
+    setIsClient(true);
+    // Check if device is mobile
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isMobileDevice = /mobile|android|iphone|ipad|phone|tablet/i.test(userAgent);
+      const isSmallScreen = window.innerWidth < 768;
+      setIsMobile(isMobileDevice || isSmallScreen);
     };
-    v.addEventListener("canplay", tryPlay, { once: true });
-    tryPlay();
-    return () => v.removeEventListener("canplay", tryPlay);
-  }, []);
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    // Only load video on desktop
+    if (!isMobile && videoRef.current) {
+      const v = videoRef.current;
+      const tryPlay = () => {
+        v.play().catch(() => {
+          console.log("Video autoplay failed, will play on user interaction");
+        });
+      };
+      
+      v.addEventListener("canplay", tryPlay, { once: true });
+      v.addEventListener("loadeddata", () => {
+        // setVideoLoaded(true); // This line is removed as per the edit hint
+      });
+      tryPlay();
+      
+      return () => v.removeEventListener("canplay", tryPlay);
+    }
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, [isMobile]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-[#0b0b0b] overflow-hidden">
-      {/* Background video */}
-      <video
-        ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        playsInline
-        loop
-        preload="auto"
-        aria-hidden="true"
-      >
-        <source src="/videos/hero.webm" type="video/webm" />
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
+      {/* Background video - Only on desktop */}
+      {isClient && !isMobile && (
+        <video
+          ref={videoRef}
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          playsInline
+          loop
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src="/videos/hero.webm" type="video/webm" />
+        </video>
+      )}
+
+      {/* Mobile fallback background */}
+      {isClient && isMobile && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+          {/* Animated background pattern for mobile */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-0 left-0 w-64 h-64 bg-yellow-400/20 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl animate-pulse delay-1000" />
+            <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-yellow-500/30 rounded-full blur-2xl animate-pulse delay-500" />
+          </div>
+        </div>
+      )}
+
       {/* Readability overlay */}
       <div
         className="absolute inset-0 bg-black/55 sm:bg-gradient-to-b sm:from-black/60 sm:via-black/45 sm:to-black/60"
         aria-hidden="true"
       />
+      
       {/* Background Pattern (subtle overlay on top of video) */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,190,63,0.12),transparent_55%)]" />
@@ -53,7 +94,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] mb-4 sm:mb-6 lg:mb-8 leading-tight"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] mb-4 sm:mb-6 lg:mb-8 leading-tight"
             >
               {t("hero.title")}
             </motion.h1>

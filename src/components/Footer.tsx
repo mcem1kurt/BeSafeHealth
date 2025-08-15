@@ -27,7 +27,12 @@ export default function Footer() {
           <div className="text-base font-semibold">{t("footer.contact")}</div>
           <div className="mt-3 space-y-2 text-foreground/80">
             <div>{t("footer.address")}</div>
-            <div className="flex items-center gap-2"><Phone size={14} /> {t("footer.phone")}</div>
+            <div className="flex items-center gap-2">
+              <Phone size={14} /> 
+              <a href={`tel:${t("footer.phone").replace(/\s+/g, '')}`} className="hover:text-[var(--color-gold-400)] transition-colors duration-200 cursor-pointer">
+                {t("footer.phone")}
+              </a>
+            </div>
             <div className="flex items-center gap-2"><Mail size={14} /> {t("footer.email")}</div>
             <div className="flex items-center gap-2">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -38,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-4 text-center text-xs text-foreground/60">© {new Date().getFullYear()} BeSafe Health — {t("footer.copyright")}</div>
+      <div className="border-t border-white/10 py-4 text-center text-xs text-foreground/60">© 2024 BeSafe Health — {t("footer.copyright")}</div>
     </footer>
   );
 }

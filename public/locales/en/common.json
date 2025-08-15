@@ -79,6 +79,47 @@
     "copyright": "All rights reserved."
   },
   "cta": { "viewAllServices": "View all services", "learnMore": "Learn more" },
+  "chatForm": {
+    "title": "Chat with us",
+    "subtitle": "We're here to help! Send us a message.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Your message",
+    "sendButton": "Send Message"
+  },
+  "stepDetails": {
+    "duration": "Duration",
+    "requirements": "Requirements",
+    "process": "Process",
+    "benefits": "Benefits",
+    "getStarted": "Get Started with This Step"
+  },
+  "notifications": {
+    "messages": [
+      "New consultation request received",
+      "Patient inquiry about hair transplant",
+      "Dental treatment consultation request",
+      "Aesthetic surgery inquiry received",
+      "New patient from Turkey",
+      "Consultation scheduled for tomorrow",
+      "Patient feedback received",
+      "New appointment request",
+      "Treatment plan inquiry",
+      "Price quote requested"
+    ],
+    "titles": [
+      "Be Safe Health",
+      "New Patient Inquiry",
+      "Consultation Request",
+      "Patient Message",
+      "Appointment Update",
+      "Treatment Inquiry",
+      "Patient Feedback",
+      "New Request",
+      "Health Consultation",
+      "Medical Tourism"
+    ]
+  },
   "stats": {
     "happy_patients": "Happy Patients",
     "years_experience": "15+ Years Experience",
