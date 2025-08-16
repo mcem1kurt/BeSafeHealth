@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MessageCircle, ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -64,7 +65,23 @@ export default function Navbar() {
           `}
         >
           <div className="flex items-center gap-2">
-            {/* Logo text removed - logo is now displayed above navbar */}
+            {/* Logo - appears when scrolled */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ 
+                opacity: scrolled ? 1 : 0, 
+                x: scrolled ? 0 : -20 
+              }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            >
+              {scrolled && (
+                <Link href="/" className="flex items-center">
+                  <div className="w-12 h-16 flex items-center justify-center">
+                    <Image src="/images/only-logo-besafe-dark.png" alt="Be Safe Logo" width={50} height={50} />
+                  </div>
+                </Link>
+              )}
+            </motion.div>
           </div>
         <nav className="hidden md:flex items-center gap-8 text-sm">
           <Link href="/" className="navbar-link text-white hover:text-[var(--color-gold-400)] transition-colors duration-200 cursor-pointer font-medium">{t("navbar.home")}</Link>

@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <div>
       {/* Large Logo Section - Above Navbar */}
-      <section id="top" className="relative bg-[#0b0b0b] py-8 border-b border-white/10">
+      <section id="top" className="relative bg-[#0b0b0b] py-8 border-b border-yellow-500/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -44,10 +44,10 @@ export default function AboutPage() {
         <section>
           <h2 className="text-2xl font-semibold text-white">{t("aboutExtra.valuesTitle")}</h2>
           <ul className="mt-3 grid sm:grid-cols-2 gap-4 text-gray-300">
-            <li className="rounded-xl text-gray-300 border border-white/10 p-5">{t("aboutExtra.values.patient_first")}</li>
-            <li className="rounded-xl text-gray-300 border border-white/10 p-5">{t("aboutExtra.values.transparent_pricing")}</li>
-            <li className="rounded-xl text-gray-300 border border-white/10 p-5">{t("aboutExtra.values.world_class")}</li>
-            <li className="rounded-xl text-gray-300 border border-white/10 p-5">{t("aboutExtra.values.coordination")}</li>
+            <li className="rounded-xl text-gray-300 border border-yellow-500/40 p-5 hover:border-yellow-400/60 transition-colors duration-200">{t("aboutExtra.values.patient_first")}</li>
+            <li className="rounded-xl text-gray-300 border border-yellow-500/40 p-5 hover:border-yellow-400/60 transition-colors duration-200">{t("aboutExtra.values.transparent_pricing")}</li>
+            <li className="rounded-xl text-gray-300 border border-yellow-500/40 p-5 hover:border-yellow-400/60 transition-colors duration-200">{t("aboutExtra.values.world_class")}</li>
+            <li className="rounded-xl text-gray-300 border border-yellow-500/40 p-5 hover:border-yellow-400/60 transition-colors duration-200">{t("aboutExtra.values.coordination")}</li>
           </ul>
         </section>
         <section>

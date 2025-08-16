@@ -16,10 +16,18 @@ export default function StepsTimeline() {
       desc: t("journey.steps.step1.desc"),
       icon: <Camera className="size-6" />,
       details: {
-        duration: "Same Day",
-        requirements: ["Recent photos", "Medical history", "Current medications"],
-        process: "Send your photos and basic information through our secure portal. Our medical team will review and provide initial assessment within 24 hours.",
-        benefits: ["Quick response", "No travel required", "Professional evaluation"]
+        duration: t("journey.steps.step1.duration"),
+        requirements: [
+          t("journey.steps.step1.requirements.photo"),
+          t("journey.steps.step1.requirements.history"),
+          t("journey.steps.step1.requirements.medications")
+        ],
+        process: t("journey.steps.step1.process"),
+        benefits: [
+          t("journey.steps.step1.benefits.response"),
+          t("journey.steps.step1.benefits.travel"),
+          t("journey.steps.step1.benefits.evaluation")
+        ]
       }
     },
     {
@@ -28,10 +36,18 @@ export default function StepsTimeline() {
       desc: t("journey.steps.step2.desc"),
       icon: <Calendar className="size-6" />,
       details: {
-        duration: "2-3 Days",
-        requirements: ["Preferred dates", "Budget range", "Special requests"],
-        process: "Our coordinators will create a personalized plan including flight options, accommodation choices, and detailed treatment schedule based on your preferences.",
-        benefits: ["Flexible scheduling", "Multiple options", "Cost optimization"]
+        duration: t("journey.steps.step2.duration"),
+        requirements: [
+          t("journey.steps.step2.requirements.dates"),
+          t("journey.steps.step2.requirements.budget"),
+          t("journey.steps.step2.requirements.requests")
+        ],
+        process: t("journey.steps.step2.process"),
+        benefits: [
+          t("journey.steps.step2.benefits.scheduling"),
+          t("journey.steps.step2.benefits.options"),
+          t("journey.steps.step2.benefits.cost")
+        ]
       }
     },
     {
@@ -40,10 +56,18 @@ export default function StepsTimeline() {
       desc: t("journey.steps.step3.desc"),
       icon: <Plane className="size-6" />,
       details: {
-        duration: "1-2 Hours",
-        requirements: ["Passport", "Travel documents", "Medical records"],
-        process: "VIP airport pickup with luxury vehicle, direct transfer to your accommodation, and immediate consultation with your assigned doctor.",
-        benefits: ["Stress-free arrival", "Immediate support", "Professional guidance"]
+        duration: t("journey.steps.step3.duration"),
+        requirements: [
+          t("journey.steps.step3.requirements.passport"),
+          t("journey.steps.step3.requirements.documents"),
+          t("journey.steps.step3.requirements.records")
+        ],
+        process: t("journey.steps.step3.process"),
+        benefits: [
+          t("journey.steps.step3.benefits.arrival"),
+          t("journey.steps.step3.benefits.support"),
+          t("journey.steps.step3.benefits.guidance")
+        ]
       }
     },
     {
@@ -52,10 +76,18 @@ export default function StepsTimeline() {
       desc: t("journey.steps.step4.desc"),
       icon: <HeartPulse className="size-6" />,
       details: {
-        duration: "Varies by procedure",
-        requirements: ["Pre-operative tests", "Fasting instructions", "Comfortable clothing"],
-        process: "State-of-the-art facilities with experienced medical team. Continuous monitoring and immediate post-operative care in recovery room.",
-        benefits: ["Advanced technology", "Expert team", "Comprehensive care"]
+        duration: t("journey.steps.step4.duration"),
+        requirements: [
+          t("journey.steps.step4.requirements.tests"),
+          t("journey.steps.step4.requirements.fasting"),
+          t("journey.steps.step4.requirements.clothing")
+        ],
+        process: t("journey.steps.step4.process"),
+        benefits: [
+          t("journey.steps.step4.benefits.technology"),
+          t("journey.steps.step4.benefits.team"),
+          t("journey.steps.step4.benefits.care")
+        ]
       }
     },
     {
@@ -64,10 +96,18 @@ export default function StepsTimeline() {
       desc: t("journey.steps.step5.desc"),
       icon: <Stethoscope className="size-6" />,
       details: {
-        duration: "1-2 Hours",
-        requirements: ["Post-op instructions", "Medication schedule", "Follow-up appointments"],
-        process: "Detailed care instructions, medication management, and practical training for home care. Includes comprehensive care kit and emergency contacts.",
-        benefits: ["Confidence building", "Proper care", "Emergency support"]
+        duration: t("journey.steps.step5.duration"),
+        requirements: [
+          t("journey.steps.step5.requirements.instructions"),
+          t("journey.steps.step5.requirements.medication"),
+          t("journey.steps.step5.requirements.appointments")
+        ],
+        process: t("journey.steps.step5.process"),
+        benefits: [
+          t("journey.steps.step5.benefits.confidence"),
+          t("journey.steps.step5.benefits.care"),
+          t("journey.steps.step5.benefits.support")
+        ]
       }
     },
     {
@@ -76,10 +116,18 @@ export default function StepsTimeline() {
       desc: t("journey.steps.step6.desc"),
       icon: <MonitorCheck className="size-6" />,
       details: {
-        duration: "Ongoing",
-        requirements: ["Progress photos", "Health updates", "Symptom reports"],
-        process: "Regular check-ins at 3, 6, and 12 months. Photo-based progress tracking and virtual consultations with your doctor.",
-        benefits: ["Continuous support", "Progress tracking", "Professional guidance"]
+        duration: t("journey.steps.step6.duration"),
+        requirements: [
+          t("journey.steps.step6.requirements.photos"),
+          t("journey.steps.step6.requirements.updates"),
+          t("journey.steps.step6.requirements.symptoms")
+        ],
+        process: t("journey.steps.step6.process"),
+        benefits: [
+          t("journey.steps.step6.benefits.support"),
+          t("journey.steps.step6.benefits.tracking"),
+          t("journey.steps.step6.benefits.guidance")
+        ]
       }
     },
   ];
@@ -136,23 +184,28 @@ export default function StepsTimeline() {
           ))}
         </div>
 
-        {/* Mobile Layout - Vertical stack: icon, card, icon, card */}
+        {/* Mobile Layout - Vertical stack with clickable icons only */}
         <div className="md:hidden space-y-8">
           {steps.map((s, i) => (
             <div key={s.id} className="flex flex-col items-center">
-              {/* Step Icon */}
-              <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-b from-yellow-400 to-yellow-700 text-gray-800 border-2 border-yellow-400/70 shadow-[0_10px_24px_-8px_rgba(234,179,8,0.3)] mb-4">
-                {s.icon}
-              </div>
+              {/* Step Icon - Now clickable */}
+              <button
+                onClick={() => openStepDetails(s.id)}
+                className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-b from-yellow-400 to-yellow-700 text-gray-800 border-2 border-yellow-400/70 shadow-[0_10px_24px_-8px_rgba(234,179,8,0.3)] mb-4 hover:scale-110 hover:shadow-[0_15px_35px_-8px_rgba(234,179,8,0.4)] transition-all duration-200 cursor-pointer group"
+              >
+                <div className="group-hover:scale-110 transition-transform duration-200">
+                  {s.icon}
+                </div>
+              </button>
               
-              {/* Step Card */}
-              <div className="w-full max-w-sm">
-                <StepCard step={s} side="center" onClick={() => openStepDetails(s.id)} />
+              {/* Step Title - Small text below icon */}
+              <div className="text-center mb-2">
+                <h3 className="text-sm font-medium text-white/90">{s.title}</h3>
               </div>
               
               {/* Connecting line (except for last step) */}
               {i < steps.length - 1 && (
-                <div className="w-[2px] h-8 bg-gradient-to-b from-gray-600 via-gray-500 to-gray-600 mt-4" />
+                <div className="w-[2px] h-8 bg-gradient-to-b from-gray-600 via-gray-500 to-gray-600 mt-2" />
               )}
             </div>
           ))}
@@ -219,7 +272,7 @@ export default function StepsTimeline() {
                   <div className="p-8">
                     {/* Header */}
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-b from-yellow-400 to-yellow-700 text-gray-800 border-2 border-yellow-300 shadow-lg">
+                      <div className="flex items-center justify-center w-36 h-16 rounded-full bg-gradient-to-b from-yellow-400 to-yellow-700 text-gray-800 border-2 border-yellow-300 shadow-lg">
                         {step.icon}
                       </div>
                       <div>

@@ -224,12 +224,102 @@
       "button": "Start Now"
     },
     "steps": {
-      "step1": { "title": "Quick Pre-Evaluation", "desc": "Send your photo and info; get suitability and a plan the same day." },
-      "step2": { "title": "Personal Planning", "desc": "Flight/accommodation options and operation schedule; tailored to your budget and needs." },
-      "step3": { "title": "Arrival & Welcome", "desc": "VIP transfer and check-in; pre-op consult and hairline design." },
-      "step4": { "title": "Operation", "desc": "Comfort-focused process; experienced team and sterile environment." },
-      "step5": { "title": "Care & Training", "desc": "First wash, medication kit; 10-min personal care training." },
-      "step6": { "title": "Remote Follow-up", "desc": "3, 6, 12 month checks; photo follow-up and doctor review." }
+      "step1": { 
+        "title": "Quick Pre-Evaluation", 
+        "desc": "Send your photo and info; get suitability and a plan the same day.",
+        "duration": "Same Day",
+        "requirements": {
+          "photo": "Recent photos",
+          "history": "Medical history",
+          "medications": "Current medications"
+        },
+        "process": "Send your photos and basic information through our secure portal. Our medical team will review and provide initial assessment within 24 hours.",
+        "benefits": {
+          "response": "Quick response",
+          "travel": "No travel required",
+          "evaluation": "Professional evaluation"
+        }
+      },
+      "step2": { 
+        "title": "Personal Planning", 
+        "desc": "Flight/accommodation options and operation schedule; tailored to your budget and needs.",
+        "duration": "2-3 Days",
+        "requirements": {
+          "dates": "Preferred dates",
+          "budget": "Budget range",
+          "requests": "Special requests"
+        },
+        "process": "Our coordinators will create a personalized plan including flight options, accommodation choices, and detailed treatment schedule based on your preferences.",
+        "benefits": {
+          "scheduling": "Flexible scheduling",
+          "options": "Multiple options",
+          "cost": "Cost optimization"
+        }
+      },
+      "step3": { 
+        "title": "Arrival & Welcome", 
+        "desc": "VIP transfer and check-in; pre-op consult and hairline design.",
+        "duration": "1-2 Hours",
+        "requirements": {
+          "passport": "Passport",
+          "documents": "Travel documents",
+          "records": "Medical records"
+        },
+        "process": "VIP airport pickup with luxury vehicle, direct transfer to your accommodation, and immediate consultation with your assigned doctor.",
+        "benefits": {
+          "arrival": "Stress-free arrival",
+          "support": "Immediate support",
+          "guidance": "Professional guidance"
+        }
+      },
+      "step4": { 
+        "title": "Operation", 
+        "desc": "Comfort-focused process; experienced team and sterile environment.",
+        "duration": "Varies by procedure",
+        "requirements": {
+          "tests": "Pre-operative tests",
+          "fasting": "Fasting instructions",
+          "clothing": "Comfortable clothing"
+        },
+        "process": "State-of-the-art facilities with experienced medical team. Continuous monitoring and immediate post-operative care in recovery room.",
+        "benefits": {
+          "technology": "Advanced technology",
+          "team": "Expert team",
+          "care": "Comprehensive care"
+        }
+      },
+      "step5": { 
+        "title": "Care & Training", 
+        "desc": "First wash, medication kit; 10-min personal care training.",
+        "duration": "1-2 Hours",
+        "requirements": {
+          "instructions": "Post-op instructions",
+          "medication": "Medication schedule",
+          "appointments": "Follow-up appointments"
+        },
+        "process": "Detailed care instructions, medication management, and practical training for home care. Includes comprehensive care kit and emergency contacts.",
+        "benefits": {
+          "confidence": "Confidence building",
+          "care": "Proper care",
+          "support": "Emergency support"
+        }
+      },
+      "step6": { 
+        "title": "Remote Follow-up", 
+        "desc": "3, 6, 12 month checks; photo follow-up and doctor review.",
+        "duration": "Ongoing",
+        "requirements": {
+          "photos": "Progress photos",
+          "updates": "Health updates",
+          "symptoms": "Symptom reports"
+        },
+        "process": "Regular check-ins at 3, 6, and 12 months. Photo-based progress tracking and virtual consultations with your doctor.",
+        "benefits": {
+          "support": "Continuous support",
+          "tracking": "Progress tracking",
+          "guidance": "Professional guidance"
+        }
+      }
     }
   },
   "reviews": {

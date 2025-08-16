@@ -221,12 +221,102 @@
       "button": "Hemen Başlayın"
     },
     "steps": {
-      "step1": { "title": "Hızlı Ön Değerlendirme", "desc": "Fotoğraf ve bilgilerinizi gönderin; aynı gün uygunluk ve tahmini planı çıkartalım." },
-      "step2": { "title": "Kişisel Planlama", "desc": "Uçuş/konaklama seçenekleri ve operasyon takvimi; bütçe ve beklentinize göre." },
-      "step3": { "title": "Varış ve Karşılama", "desc": "VIP transfer ve check‑in; doktorla ön görüşme ve saç çizgisi tasarımı." },
-      "step4": { "title": "Operasyon", "desc": "Konfor odaklı süreç yönetimi; deneyimli ekip ve steril ortam." },
-      "step5": { "title": "Bakım & Eğitim", "desc": "İlk yıkama, ilaç ve bakım kiti; 10 dakikalık birebir bakım eğitimi." },
-      "step6": { "title": "Uzaktan Takip", "desc": "3, 6 ve 12. ay kontrolleri; fotoğrafla sonuç takibi ve doktor değerlendirmesi." }
+      "step1": { 
+        "title": "Hızlı Ön Değerlendirme", 
+        "desc": "Fotoğraf ve bilgilerinizi gönderin; aynı gün uygunluk ve tahmini planı çıkartalım.",
+        "duration": "Aynı Gün",
+        "requirements": {
+          "photo": "Güncel fotoğraflar",
+          "history": "Tıbbi geçmiş",
+          "medications": "Mevcut ilaçlar"
+        },
+        "process": "Fotoğraflarınızı ve temel bilgilerinizi güvenli portalımız üzerinden gönderin. Tıbbi ekibimiz 24 saat içinde inceleme yapıp ilk değerlendirmeyi sunacak.",
+        "benefits": {
+          "response": "Hızlı yanıt",
+          "travel": "Seyahat gerekmez",
+          "evaluation": "Profesyonel değerlendirme"
+        }
+      },
+      "step2": { 
+        "title": "Kişisel Planlama", 
+        "desc": "Uçuş/konaklama seçenekleri ve operasyon takvimi; bütçe ve beklentinize göre.",
+        "duration": "2-3 Gün",
+        "requirements": {
+          "dates": "Tercih edilen tarihler",
+          "budget": "Bütçe aralığı",
+          "requests": "Özel istekler"
+        },
+        "process": "Koordinatörlerimiz tercihlerinize göre uçuş seçenekleri, konaklama tercihleri ve detaylı tedavi programı içeren kişiselleştirilmiş bir plan oluşturacak.",
+        "benefits": {
+          "scheduling": "Esnek programlama",
+          "options": "Çoklu seçenek",
+          "cost": "Maliyet optimizasyonu"
+        }
+      },
+      "step3": { 
+        "title": "Varış ve Karşılama", 
+        "desc": "VIP transfer ve check‑in; doktorla ön görüşme ve saç çizgisi tasarımı.",
+        "duration": "1-2 Saat",
+        "requirements": {
+          "passport": "Pasaport",
+          "documents": "Seyahat belgeleri",
+          "records": "Tıbbi kayıtlar"
+        },
+        "process": "VIP havalimanı karşılama, lüks araç ile doğrudan konaklama yerinize transfer ve atanan doktorunuzla anında konsültasyon.",
+        "benefits": {
+          "arrival": "Stresiz varış",
+          "support": "Anında destek",
+          "guidance": "Profesyonel rehberlik"
+        }
+      },
+      "step4": { 
+        "title": "Operasyon", 
+        "desc": "Konfor odaklı süreç yönetimi; deneyimli ekip ve steril ortam.",
+        "duration": "İşleme göre değişir",
+        "requirements": {
+          "tests": "Ameliyat öncesi testler",
+          "fasting": "Açlık talimatları",
+          "clothing": "Rahat kıyafet"
+        },
+        "process": "En son teknoloji ile donatılmış tesislerde deneyimli tıbbi ekip. Sürekli izleme ve ameliyat sonrası bakım odasında anında bakım.",
+        "benefits": {
+          "technology": "Gelişmiş teknoloji",
+          "team": "Uzman ekip",
+          "care": "Kapsamlı bakım"
+        }
+      },
+      "step5": { 
+        "title": "Bakım & Eğitim", 
+        "desc": "İlk yıkama, ilaç ve bakım kiti; 10 dakikalık birebir bakım eğitimi.",
+        "duration": "1-2 Saat",
+        "requirements": {
+          "instructions": "Ameliyat sonrası talimatlar",
+          "medication": "İlaç programı",
+          "appointments": "Takip randevuları"
+        },
+        "process": "Detaylı bakım talimatları, ilaç yönetimi ve ev bakımı için pratik eğitim. Kapsamlı bakım kiti ve acil durum kontakları dahil.",
+        "benefits": {
+          "confidence": "Güven oluşturma",
+          "care": "Uygun bakım",
+          "support": "Acil durum desteği"
+        }
+      },
+      "step6": { 
+        "title": "Uzaktan Takip", 
+        "desc": "3, 6 ve 12. ay kontrolleri; fotoğrafla sonuç takibi ve doktor değerlendirmesi.",
+        "duration": "Devam eden",
+        "requirements": {
+          "photos": "İlerleme fotoğrafları",
+          "updates": "Sağlık güncellemeleri",
+          "symptoms": "Semptom raporları"
+        },
+        "process": "3, 6 ve 12. aylarda düzenli kontroller. Fotoğraf tabanlı ilerleme takibi ve doktorunuzla sanal konsültasyonlar.",
+        "benefits": {
+          "support": "Sürekli destek",
+          "tracking": "İlerleme takibi",
+          "guidance": "Profesyonel rehberlik"
+        }
+      }
     }
   },
   "reviews": {

@@ -16,40 +16,78 @@ export default function HeroSection() {
       const userAgent = navigator.userAgent.toLowerCase();
       const isMobileDevice = /mobile|android|iphone|ipad|phone|tablet/i.test(userAgent);
       const isSmallScreen = window.innerWidth < 768;
-      setIsMobile(isMobileDevice || isSmallScreen);
+      const newIsMobile = isMobileDevice || isSmallScreen;
+      console.log(`📱 Mobile Detection:`, {
+        userAgent: userAgent.substring(0, 50) + '...',
+        isMobileDevice,
+        isSmallScreen,
+        windowWidth: window.innerWidth,
+        threshold: 768,
+        finalResult: newIsMobile
+      });
+      setIsMobile(newIsMobile);
     };
 
     checkMobile();
     window.addEventListener('resize', checkMobile);
 
-    // Only load video on desktop
-    if (!isMobile && videoRef.current) {
+    // Video loading logic - now works for both mobile and desktop
+    if (videoRef.current) {
       const v = videoRef.current;
       const tryPlay = () => {
-        v.play().catch(() => {
-          console.log("Video autoplay failed, will play on user interaction");
+        console.log(`🎥 Attempting to play video on ${isMobile ? 'mobile' : 'desktop'}`);
+        v.play().catch((error) => {
+          console.log("❌ Video autoplay failed:", error.message);
         });
       };
       
-      v.addEventListener("canplay", tryPlay, { once: true });
+      v.addEventListener("canplay", () => {
+        console.log(`✅ Video can play on ${isMobile ? 'mobile' : 'desktop'}`);
+        tryPlay();
+      }, { once: true });
+      
       v.addEventListener("loadeddata", () => {
-        // setVideoLoaded(true); // This line is removed as per the edit hint
+        console.log(`📹 Video data loaded on ${isMobile ? 'mobile' : 'desktop'}`);
       });
+      
+      v.addEventListener("playing", () => {
+        console.log(`▶️ Video is now playing on ${isMobile ? 'mobile' : 'desktop'}`);
+      });
+      
+      v.addEventListener("error", (e) => {
+        console.error(`❌ Video error on ${isMobile ? 'mobile' : 'desktop'}:`, e);
+      });
+      
+      // Try to play immediately
       tryPlay();
       
-      return () => v.removeEventListener("canplay", tryPlay);
+      return () => {
+        v.removeEventListener("canplay", tryPlay);
+        v.removeEventListener("loadeddata", () => {});
+        v.removeEventListener("playing", () => {});
+        v.removeEventListener("error", () => {});
+      };
     }
 
     return () => window.removeEventListener('resize', checkMobile);
-  }, [isMobile]);
+  }, []); // Removed isMobile dependency to prevent infinite loops
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[#0b0b0b] overflow-hidden">
-      {/* Background video - Only on desktop */}
-      {isClient && !isMobile && (
+    <section className="relative min-h-screen flex items-center justify-center bg-[#0b0b0b] overflow-hidden py-16 sm:py-20 lg:py-0">
+      {/* Background video - Show on all devices with different sources for mobile/desktop */}
+      {isClient && (
         <video
           ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover z-0"
+          style={{
+            top: isMobile ? '0' : '0',
+            left: '0',
+            right: '0',
+            bottom: '0',
+            width: '100%',
+            height: '100%',
+            minHeight: '100vh'
+          }}
           autoPlay
           muted
           playsInline
@@ -57,22 +95,29 @@ export default function HeroSection() {
           preload="metadata"
           aria-hidden="true"
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-          <source src="/videos/hero.webm" type="video/webm" />
+          {/* Mobile video source */}
+          {isMobile && (
+            <source src="/videos/hero-mobile.mp4" type="video/mp4" />
+          )}
+          {/* Desktop video source */}
+          {!isMobile && (
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          )}
+          {/* Fallback webm sources */}
+          {isMobile && (
+            <source src="/videos/hero-mobile.webm" type="video/webm" />
+          )}
+          {!isMobile && (
+            <source src="/videos/hero.webm" type="video/webm" />
+          )}
         </video>
       )}
 
-      {/* Mobile fallback background */}
-      {isClient && isMobile && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-          {/* Animated background pattern for mobile */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 left-0 w-64 h-64 bg-yellow-400/20 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-400/20 rounded-full blur-3xl animate-pulse delay-1000" />
-            <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-yellow-500/30 rounded-full blur-2xl animate-pulse delay-500" />
-          </div>
-        </div>
-      )}
+      {/* 
+        Video is now enabled on all devices including mobile.
+        Note: Mobile devices may have performance considerations with video autoplay.
+      */}
+
 
       {/* Readability overlay */}
       <div
@@ -87,7 +132,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[calc(100vh-8rem)] sm:min-h-[calc(100vh-10rem)] lg:min-h-screen">
           {/* Left Side - Hero Content */}
           <div className="text-center lg:text-left">
             <motion.h1

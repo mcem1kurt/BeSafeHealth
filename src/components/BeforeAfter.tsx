@@ -16,11 +16,11 @@ export default function BeforeAfter() {
           {items.map((it, i) => (
             <div key={i} className="rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur">
               <div className="grid grid-cols-2">
-                <div className="relative h-44">
+                <div className="relative h-50">
                   <Image src={it.before} alt="before" fill className="object-cover" />
                   <div className="absolute bottom-2 left-2 text-xs px-2 py-0.5 rounded bg-black/60 text-white">{t("beforeAfter.before")}</div>
                 </div>
-                <div className="relative h-44">
+                <div className="relative h-50">
                   <Image src={it.after} alt="after" fill className="object-cover" />
                   <div className="absolute bottom-2 left-2 text-xs px-2 py-0.5 rounded bg-black/60 text-white">{t("beforeAfter.after")}</div>
                 </div>
