@@ -1,378 +1,375 @@
 {
-  "navbar": { "home": "Home", "about": "About", "services": "Services", "partners": "Partners", "contact": "Contact" },
-  "hero": { 
-    "title": "Welcome to the Perfect Starting Point.", 
-    "subtitle": "We provide quality tourism services and an unforgettable travel experience to people from all over the world.", 
-    "cta": "Get a Free Consultation", 
-    "explore": "Explore Services",
+  "navbar": { "home": "Home", "about": "About", "services": "Services", "contact": "Contact" },
+  "hero": {
+    "title": "Welcome to the Perfect Starting Point.",
+    "subtitle": "Your reliable partner in your health tourism journey. Come to Turkey for quality health services.",
+    "cta": "Get Started Now",
+    "scroll": "Scroll Down",
+    "explore": "Explore",
     "contactForm": {
-      "title": "Get Your Free Consultation",
-      "subtitle": "Fill out the form below and our experts will contact you shortly.",
-      "name": "Full Name",
-      "phone": "Phone Number",
-      "email": "Email Address",
+      "title": "Free Consultation",
+      "subtitle": "Consult with our expert team to determine the most suitable treatment plan for you.",
+      "name": "Your Full Name",
+      "phone": "Your Phone Number",
+      "email": "Your Email Address",
       "service": "Select Service",
-      "message": "Tell us about your needs...",
-      "submit": "Send Request"
+      "message": "Your Message (Optional)",
+      "submit": "Send"
     }
   },
-  "services": { 
-    "title": "Our Services", 
-    "hair": { "title": "Hair Transplant", "subtitle": "Modern hair transplant techniques for natural and permanent results" },
-    "dental": { "title": "Dental", "subtitle": "Comprehensive dental treatments with modern technology" },
-    "aesthetic": { "title": "Aesthetic Surgery", "subtitle": "Natural and harmonious results with expert surgeons" }
+  "heroTrust": {
+    "certified": "Certified Doctors",
+    "experience": "10+ Years Experience",
+    "support": "24/7 Support"
   },
-  "tourism": {
-    "quality_services": "Quality Tourism Services",
-    "intro": "We provide quality tourism services and an unforgettable travel experience to people from all over the world.",
-    "accommodation": "Accommodation Services",
-    "professional": "Professional Service",
-    "consulting": "Consultancy Service",
-    "planning": "Travel Planning",
-    "transfer": "Transfer Service",
-    "tours": "Touristic Tours"
-  },
-  "agency": {
-    "title": "Be Safe Health and Tourism Agency",
-    "paragraph1": "When you choose the Be Safe Health clinic, you can rest assured that nothing is more important to us than your health.",
-    "paragraph2": "Everything we do is designed to make your journey more enjoyable. Our longevity in the sector comes from the results we achieve and the lives we change.",
-    "paragraph3": "In our healthcare facilities equipped with the most advanced technologies of modern medicine, our specialist doctors and experienced healthcare staff prepare the most suitable treatment and rehabilitation programs for you. We offer a professional approach for surgeries, aesthetic procedures, dental treatments, medical check-ups, and more."
-  },
-  "agencySection": {
-    "title": "Be Safe Health",
-    "subtitle": "and Tourism Agency",
-    "p1": "When you choose the Be Safe Health clinic, you can rest assured that nothing is more important to us than your health.",
-    "p2": "Everything we do is designed to make your journey more enjoyable. Our longevity in the sector comes from the results we achieve and the lives we change.",
-    "p3": "In our healthcare facilities equipped with the most advanced technologies of modern medicine, our specialist doctors and experienced healthcare staff prepare the most suitable treatment and rehabilitation programs for you. We offer a professional approach for surgeries, aesthetic procedures, dental treatments, medical check-ups, and more."
-  },
-  "partners": { "title": "Contracted Institutions", "subtitle": "We deliver quality healthcare with trusted partners." },
-  "contact": { 
-    "title": "Contact Us", 
-    "subtitle": "Our coordinators will get back within 24 hours.", 
-    "form": {
-      "name": "Name",
-      "namePlaceholder": "Enter your full name",
-      "email": "Email",
-      "emailPlaceholder": "Enter your email address",
-      "phone": "Phone",
-      "phonePlaceholder": "Enter your phone number",
-      "message": "Message",
-      "messagePlaceholder": "Tell us about your needs",
-      "send": "Send Message",
-      "sending": "Sending...",
-      "success": "Message sent successfully!"
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We provide the highest quality healthcare services with our expert team and modern technology.",
+    "hair": {
+      "title": "Hair Transplant",
+      "subtitle": "Expert hair transplant services for natural and permanent results.",
+      "description": "We achieve natural and permanent results with modern hair transplant techniques. We prepare personalized treatment plans for each patient.",
+      "fue": {
+        "title": "FUE Technique",
+        "description": "We achieve natural results by extracting hair follicles one by one using the Follicular Unit Extraction technique. Minimal invasive with fast recovery process."
+      },
+      "sapphire": {
+        "title": "Sapphire FUE Technique",
+        "description": "We make more precise and sharp incisions using sapphire blades. We provide less trauma and faster recovery."
+      },
+      "dhi": {
+        "title": "DHI Technique",
+        "description": "We place hair follicles directly to the target area with Direct Hair Implantation. Maximum density and natural appearance."
+      },
+      "women": {
+        "title": "Women's Hair Transplant",
+        "description": "We achieve natural results with women-specific hair transplant techniques while preserving fine hair strands."
+      },
+      "beard": {
+        "title": "Beard Transplant",
+        "description": "We perform natural-looking beard transplantation with special techniques for beard and mustache areas."
+      }
     },
-    "name": "Name", 
-    "email": "Email", 
-    "phone": "Phone (WhatsApp)", 
-    "message": "Message", 
-    "send": "Send Message", 
-    "whatsapp": "Chat on WhatsApp" 
+    "dental": {
+      "title": "Dental Treatments",
+      "subtitle": "Renew your smile with modern dentistry technologies.",
+      "description": "We provide aesthetic and functional results with comprehensive dental treatments. We perfect your smile with modern technology and expert team.",
+      "smile": {
+        "title": "Smile Aesthetics",
+        "description": "We create personalized aesthetic tooth design by analyzing your smile. We achieve natural and harmonious results."
+      },
+      "laminate": {
+        "title": "Laminate Veneer",
+        "description": "We achieve perfect smile by covering the front surface of your teeth with thin porcelain sheets."
+      },
+      "zirconium": {
+        "title": "Zirconium Coating",
+        "description": "We make natural-looking and long-lasting tooth coatings with durable zirconium material."
+      },
+      "implant": {
+        "title": "Implant",
+        "description": "We complete your missing teeth with modern implant technologies. We provide natural appearance and function."
+      },
+      "orthodontics": {
+        "title": "Orthodontic Treatments",
+        "description": "We achieve aesthetic and healthy tooth alignment by straightening crooked teeth."
+      },
+      "whitening": {
+        "title": "Teeth Whitening",
+        "description": "We achieve bright and white smile with professional teeth whitening techniques."
+      }
+    },
+    "plastic": {
+      "title": "Plastic Surgery",
+      "subtitle": "Reveal your beauty with safe and natural aesthetic surgeries.",
+      "description": "We achieve safe and natural results with our experienced plastic surgeons. We prepare personalized treatment plans for each patient.",
+      "rhinoplasty": {
+        "title": "Rhinoplasty",
+        "description": "We achieve natural appearance that harmonizes with your face by improving nose shape and function."
+      },
+      "breastAugmentation": {
+        "title": "Breast Augmentation",
+        "description": "We perform safe and natural-looking breast augmentation surgeries with modern implant technologies."
+      },
+      "breastReduction": {
+        "title": "Breast Reduction",
+        "description": "We balance your body proportions and eliminate physical discomforts by reducing large breasts."
+      },
+      "tummyTuck": {
+        "title": "Tummy Tuck",
+        "description": "We achieve flat and toned abdomen by tightening loose abdominal skin."
+      },
+      "armLift": {
+        "title": "Arm Lift",
+        "description": "We provide younger and toned arm appearance by tightening saggy arm skin."
+      },
+      "bbl": {
+        "title": "BBL",
+        "description": "We achieve fuller and more aesthetic appearance by shaping your hip area with Brazilian Butt Lift."
+      },
+      "neckLift": {
+        "title": "Neck Lift",
+        "description": "We provide younger and tighter appearance by eliminating sagging in the neck area."
+      },
+      "earSurgery": {
+        "title": "Ear Surgery",
+        "description": "We achieve natural ear shape that harmonizes with your face by correcting protruding ears."
+      }
+    }
+  },
+  "journey": {
+    "title": "Your Journey",
+    "subtitle": "We guide you through your health tourism process.",
+    "steps": {
+      "step1": {
+        "title": "Initial Consultation",
+        "desc": "We evaluate your health condition and offer you the most suitable treatment plan.",
+        "duration": "1-2 days",
+        "requirements": {
+          "photo": "Recent photos",
+          "history": "Medical history",
+          "medications": "Current medications"
+        },
+        "process": "Detailed analysis of your health condition and presentation of treatment options",
+        "benefits": {
+          "response": "Quick response and evaluation",
+          "travel": "Travel planning support",
+          "evaluation": "Comprehensive health assessment"
+        }
+      },
+      "step2": {
+        "title": "Planning",
+        "desc": "We plan your treatment process in detail and make all necessary arrangements.",
+        "duration": "3-5 days",
+        "requirements": {
+          "dates": "Preferred dates",
+          "budget": "Budget planning",
+          "requests": "Special requests"
+        },
+        "process": "Creation of treatment program, accommodation and transfer arrangements",
+        "benefits": {
+          "scheduling": "Flexible scheduling",
+          "options": "Multiple options",
+          "cost": "Clear cost information"
+        }
+      },
+      "step3": {
+        "title": "Travel",
+        "desc": "We make all arrangements for safe and comfortable travel to Turkey.",
+        "duration": "1-2 days",
+        "requirements": {
+          "passport": "Valid passport",
+          "documents": "Required documents",
+          "records": "Medical records"
+        },
+        "process": "Transfer, accommodation and welcome services",
+        "benefits": {
+          "arrival": "Airport pickup",
+          "support": "Continuous support",
+          "guidance": "Guidance services"
+        }
+      },
+      "step4": {
+        "title": "Treatment",
+        "desc": "We perform your treatment with modern medical devices and our expert team.",
+        "duration": "1-7 days",
+        "requirements": {
+          "tests": "Required tests",
+          "fasting": "Fasting requirements",
+          "clothing": "Appropriate clothing"
+        },
+        "process": "Professional treatment process, continuous monitoring and care",
+        "benefits": {
+          "technology": "Modern technology",
+          "team": "Expert team",
+          "care": "Personal care"
+        }
+      },
+      "step5": {
+        "title": "Recovery",
+        "desc": "We support you in the post-treatment process and monitor your recovery.",
+        "duration": "2-4 weeks",
+        "requirements": {
+          "instructions": "Care instructions",
+          "medication": "Medication usage",
+          "appointments": "Follow-up appointments"
+        },
+        "process": "Post-treatment monitoring, checkups and necessary adjustments",
+        "benefits": {
+          "confidence": "Safe recovery",
+          "care": "Continuous care",
+          "support": "24/7 support"
+        }
+      },
+      "step6": {
+        "title": "Follow-up",
+        "desc": "We monitor long-term results and make necessary adjustments.",
+        "duration": "Ongoing",
+        "requirements": {
+          "photos": "Progress photos",
+          "updates": "Regular updates",
+          "symptoms": "Symptom tracking"
+        },
+        "process": "Long-term monitoring and necessary adjustments",
+        "benefits": {
+          "support": "Continuous support",
+          "tracking": "Progress tracking",
+          "guidance": "Expert guidance"
+        }
+      }
+    },
+    "cta": {
+      "title": "Start Your Journey",
+      "subtitle": "Meet our expert team and create your treatment plan.",
+      "button": "Get Started"
+    }
+  },
+  "reviews": {
+    "title": "Customer Reviews",
+    "subtitle": "Feedback from our customers who share their experiences.",
+    "heading": "What Our Customers Say",
+    "swipeHint": "Swipe to see more reviews",
+    "googleBadge": "Google Reviews"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "What you wonder about health tourism.",
+    "heading": "Frequently Asked Questions",
+    "q1": "What is health tourism?",
+    "a1": "Health tourism is traveling to another country to receive medical treatment, often at a lower cost or with better quality than available locally.",
+    "q2": "How long does the treatment process take?",
+    "q3": "What documents do I need?",
+    "a2": "Treatment duration varies depending on the procedure. Simple treatments may take 1-2 days, while complex surgeries may require 1-2 weeks.",
+    "a3": "You will need your passport, medical records, recent photos, and any previous treatment documentation. We will provide a complete list during consultation."
+  },
+  "cta": {
+    "title": "Take Action Now for Your Health",
+    "subtitle": "We provide you with the best service with our expert team and accredited partners.",
+    "button": "Contact Us"
   },
   "footer": {
     "quick_links": "Quick Links",
-    "links": { "about": "About", "services": "Services", "partners": "Partners", "contact": "Contact" },
     "contact": "Contact",
-    "address": "Mecidiyeköy Mah, Hark Sokak no2, Şişli/İstanbul, Türkiye",
+    "address": "Istanbul, Turkey",
     "phone": "+90 212 356 36 08",
-    "email": "info@besafehealth.com.tr",
-    "copyright": "All rights reserved."
+    "email": "info@besafehealth.com",
+    "copyright": "All rights reserved.",
+    "links": {
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+    }
   },
-  "cta": { "viewAllServices": "View all services", "learnMore": "Learn more" },
+  "links": { "about": "About", "services": "Services", "contact": "Contact" },
   "chatForm": {
-    "title": "Chat with us",
-    "subtitle": "We're here to help! Send us a message.",
-    "namePlaceholder": "Your name",
-    "emailPlaceholder": "Your email",
-    "messagePlaceholder": "Your message",
-    "sendButton": "Send Message"
+    "title": "Live Support",
+    "subtitle": "We're here to help! Send us a message and we'll respond as soon as possible.",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email Address",
+    "messagePlaceholder": "Your Message",
+    "sendButton": "Send"
+  },
+  "contact": {
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "message": "Message",
+      "messagePlaceholder": "Enter your message",
+      "sending": "Sending...",
+      "send": "Send Message"
+    }
   },
   "stepDetails": {
     "duration": "Duration",
     "requirements": "Requirements",
     "process": "Process",
     "benefits": "Benefits",
-    "getStarted": "Get Started with This Step"
+    "getStarted": "Get Started",
+    "clickForDetails": "Click for details"
   },
   "notifications": {
     "messages": [
-      "New consultation request received",
-      "Patient inquiry about hair transplant",
-      "Dental treatment consultation request",
-      "Aesthetic surgery inquiry received",
-      "New patient from Turkey",
-      "Consultation scheduled for tomorrow",
-      "Patient feedback received",
-      "New appointment request",
-      "Treatment plan inquiry",
-      "Price quote requested"
+      "New hair transplant appointment",
+      "Dental treatment planning completed",
+      "Aesthetic consultation confirmed",
+      "Post-treatment checkup reminder",
+      "Accommodation reservation confirmed",
+      "Transfer service planned",
+      "Health report ready",
+      "Medication prescription updated",
+      "Physical therapy program started",
+      "Checkup appointment created"
     ],
     "titles": [
-      "Be Safe Health",
-      "New Patient Inquiry",
-      "Consultation Request",
-      "Patient Message",
-      "Appointment Update",
-      "Treatment Inquiry",
-      "Patient Feedback",
-      "New Request",
-      "Health Consultation",
-      "Medical Tourism"
+      "Hair Transplant Appointment",
+      "Dental Treatment Plan",
+      "Aesthetic Consultation",
+      "Checkup Reminder",
+      "Accommodation Confirmation",
+      "Transfer Plan",
+      "Health Report",
+      "Prescription Update",
+      "Physical Therapy",
+      "Checkup Appointment"
     ]
   },
-  "stats": {
-    "happy_patients": "Happy Patients",
-    "years_experience": "15+ Years Experience",
-    "support": "Support"
+  "agency": {
+    "title": "Be Safe Health Agency",
+    "paragraph1": "Be Safe Health Agency is an organization specialized in health tourism, providing reliable and quality services. We work to provide our customers with the best healthcare services.",
+    "paragraph2": "With our experienced team and reliable partners, we guide you through your health tourism process. We provide the highest quality treatment services with modern medical devices and expert doctors.",
+    "paragraph3": "With our customer satisfaction-oriented approach and transparent pricing policy, we serve as a reliable partner in the field of health tourism."
   },
-  "heroTrust": {
-    "certified": "Certified Medical Tourism",
-    "experience": "15+ Years Experience",
-    "support": "24/7 Support"
+  "aboutExtra": {
+    "valuesTitle": "Our Values",
+    "patient_first": "Patient-Focused Approach",
+    "transparent_pricing": "Transparent Pricing",
+    "world_class": "World-Class Quality",
+    "coordination": "Perfect Coordination",
+    "teamTitle": "Our Expert Team",
+    "teamDesc": "We provide the highest quality healthcare services with our experienced and expert team. Each member works to provide our customers with the best experience.",
+    "tourismTitle": "Health Tourism",
+    "tourismDesc": "Using Turkey's advantages in health tourism, we provide services at international standards. We provide reliable treatment services with modern hospitals and expert doctors."
+  },
+  "beforeAfter": {
+    "heading": "Before & After Results",
+    "before": "Before",
+    "after": "After",
+    "moreImages": "More Before & After Images"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "Working with trusted healthcare institutions",
+    "list": [
+      "GoodLook",
+      "100. Yıl Hastanesi"
+    ]
+  },
+  "agency": {
+    "title": "About Our Agency",
+    "paragraph1": "We are a leading health tourism agency that provides comprehensive healthcare services to international patients. Our mission is to connect patients with the best medical facilities and specialists in Turkey.",
+    "paragraph2": "With years of experience in the healthcare industry, we have established strong partnerships with renowned hospitals and clinics across Turkey. We ensure that every patient receives personalized care and attention throughout their medical journey.",
+    "paragraph3": "Our team of healthcare professionals and travel coordinators work together to provide seamless medical tourism experiences, from initial consultation to post-treatment care and follow-up."
   },
   "aboutExtra": {
     "valuesTitle": "Our Values",
     "values": {
-      "patient_first": "Patient-first care",
-      "transparent_pricing": "Transparent pricing",
-      "world_class": "World-class standards",
-      "coordination": "End-to-end coordination"
+      "patient_first": "Patient-First Approach: We prioritize your health and well-being above everything else.",
+      "transparent_pricing": "Transparent Pricing: No hidden costs, clear and honest pricing for all services.",
+      "world_class": "World-Class Standards: We maintain international healthcare standards in all our services.",
+      "coordination": "Complete Coordination: We handle all aspects of your medical journey from start to finish."
     },
-    "teamTitle": "Our Team",
-    "teamDesc": "A multidisciplinary team of surgeons, dentists, and patient coordinators.",
-    "tourismTitle": "Medical Tourism",
-    "tourismDesc": "From arrival to departure, we arrange VIP transfers, interpretation, and tailored recovery plans."
+    "teamTitle": "Our Expert Team",
+    "teamDesc": "Our team consists of experienced healthcare professionals, travel coordinators, and patient care specialists who are dedicated to providing exceptional service. We work closely with leading medical institutions and specialists to ensure the best possible outcomes for our patients.",
+    "tourismTitle": "Health Tourism Excellence",
+    "tourismDesc": "Turkey has become a global destination for health tourism, offering world-class medical facilities at competitive prices. We leverage this advantage to provide our patients with access to cutting-edge medical technology and highly skilled healthcare professionals."
   },
-  "servicesPage": {
-    "descriptions": {
-      "hair": "FUE, DHI, Sapphire techniques",
-      "dental": "Implants, Hollywood smile, veneers",
-      "aesthetic": "Rhinoplasty, BBL, mommy makeover"
-    }
-  },
-  "serviceDetails": {
-    "hair": {
-      "title": "Saç Ekimi",
-      "description": "Modern saç ekimi teknikleri ile doğal ve kalıcı sonuçlar elde ediyoruz. FUE (Follicular Unit Extraction) ve DHI (Direct Hair Implantation) gibi en gelişmiş yöntemleri kullanarak, hastalarımıza en iyi deneyimi sunuyoruz.",
-      "features": [
-        "FUE Tekniği ile doğal sonuçlar",
-        "Uzman doktor ekibi",
-        "Kişiselleştirilmiş tedavi planları",
-        "Kapsamlı bakım ve takip"
-      ]
-    },
-    "dental": {
-      "title": "Diş Tedavileri",
-      "description": "Modern diş hekimliği teknolojileri ile estetik ve fonksiyonel diş tedavileri sunuyoruz. İmplant, zirkonyum kaplama, ortodonti ve estetik diş beyazlatma gibi kapsamlı hizmetlerimizle gülüşünüzü yeniden tasarlıyoruz.",
-      "features": [
-        "İmplant tedavileri",
-        "Zirkonyum kaplamalar",
-        "Ortodonti tedavileri",
-        "Estetik diş beyazlatma"
-      ]
-    },
-    "aesthetic": {
-      "title": "Rinoplasti",
-      "description": "Estetik cerrahi alanında uzman doktorlarımız ile doğal ve uyumlu sonuçlar elde ediyoruz. Rinoplasti, yüz estetiği ve vücut kontürü gibi işlemlerde en gelişmiş teknikleri kullanarak hastalarımızın beklentilerini aşıyoruz.",
-      "features": [
-        "Rinoplasti ve burun estetiği",
-        "Yüz estetiği ve gençleştirme",
-        "Vücut kontürü ve liposuction",
-        "Minimal invaziv teknikler"
-      ]
-    }
-  },
-  "servicesDetail": {
-    "accommodation": {
-      "title": "Accommodation Services",
-      "p1": "Throughout your health tourism journey, your comfort and convenience are our priority. Our accommodation services are carefully designed to provide you with the best experience.",
-      "p2": "We plan the most suitable options and coordinate requests on your behalf, in sync with VIP transport, interpreter support and clinical appointments."
-    },
-    "professional": {
-      "title": "Professional Service",
-      "p1": "Your health and satisfaction are our priority. We deliver top-tier professional healthcare with an experienced team and accredited partners.",
-      "p2": "Our coordination team is with you at every step to guide your consultations, surgery planning and follow-ups."
-    },
-    "consulting": {
-      "title": "Consultancy Service",
-      "p1": "Our consultants help you research options, choose the right treatment, and organize travel.",
-      "p2": "We provide a single point of contact for your questions and requests to make your experience effortless."
-    },
-    "planning": {
-      "title": "Travel Planning",
-      "p1": "We combine flights, accommodation, transfers, and clinic visits into a single schedule for a seamless experience.",
-      "p2": "We offer flexible choices and coordinate details ahead of time, so you can focus on a healthy journey."
-    },
-    "transfer": {
-      "title": "Transfer Service",
-      "p1": "Friendly, experienced drivers safely transport you from the airport or any location to your accommodation.",
-      "p2": "We track flights, handle delays, and provide VIP vehicles with on-time clinic-hotel transfers."
-    },
-    "tours": {
-      "title": "Touristic Tours",
-      "p1": "Beyond treatment, we offer curated tour programs for a delightful, satisfying trip.",
-      "p2": "From guided tours to custom itineraries, we plan flexibly around your care schedule."
-    }
-  },
-  "journey": {
-    "title": "Your Journey",
-    "subtitle": "From Application to Follow-up",
-    "step": "Step",
-    "cta": {
-      "title": "Are you ready to start?",
-      "subtitle": "Take the first step with our expert team in 5 minutes.",
-      "button": "Start Now"
-    },
-    "steps": {
-      "step1": { 
-        "title": "Quick Pre-Evaluation", 
-        "desc": "Send your photo and info; get suitability and a plan the same day.",
-        "duration": "Same Day",
-        "requirements": {
-          "photo": "Recent photos",
-          "history": "Medical history",
-          "medications": "Current medications"
-        },
-        "process": "Send your photos and basic information through our secure portal. Our medical team will review and provide initial assessment within 24 hours.",
-        "benefits": {
-          "response": "Quick response",
-          "travel": "No travel required",
-          "evaluation": "Professional evaluation"
-        }
-      },
-      "step2": { 
-        "title": "Personal Planning", 
-        "desc": "Flight/accommodation options and operation schedule; tailored to your budget and needs.",
-        "duration": "2-3 Days",
-        "requirements": {
-          "dates": "Preferred dates",
-          "budget": "Budget range",
-          "requests": "Special requests"
-        },
-        "process": "Our coordinators will create a personalized plan including flight options, accommodation choices, and detailed treatment schedule based on your preferences.",
-        "benefits": {
-          "scheduling": "Flexible scheduling",
-          "options": "Multiple options",
-          "cost": "Cost optimization"
-        }
-      },
-      "step3": { 
-        "title": "Arrival & Welcome", 
-        "desc": "VIP transfer and check-in; pre-op consult and hairline design.",
-        "duration": "1-2 Hours",
-        "requirements": {
-          "passport": "Passport",
-          "documents": "Travel documents",
-          "records": "Medical records"
-        },
-        "process": "VIP airport pickup with luxury vehicle, direct transfer to your accommodation, and immediate consultation with your assigned doctor.",
-        "benefits": {
-          "arrival": "Stress-free arrival",
-          "support": "Immediate support",
-          "guidance": "Professional guidance"
-        }
-      },
-      "step4": { 
-        "title": "Operation", 
-        "desc": "Comfort-focused process; experienced team and sterile environment.",
-        "duration": "Varies by procedure",
-        "requirements": {
-          "tests": "Pre-operative tests",
-          "fasting": "Fasting instructions",
-          "clothing": "Comfortable clothing"
-        },
-        "process": "State-of-the-art facilities with experienced medical team. Continuous monitoring and immediate post-operative care in recovery room.",
-        "benefits": {
-          "technology": "Advanced technology",
-          "team": "Expert team",
-          "care": "Comprehensive care"
-        }
-      },
-      "step5": { 
-        "title": "Care & Training", 
-        "desc": "First wash, medication kit; 10-min personal care training.",
-        "duration": "1-2 Hours",
-        "requirements": {
-          "instructions": "Post-op instructions",
-          "medication": "Medication schedule",
-          "appointments": "Follow-up appointments"
-        },
-        "process": "Detailed care instructions, medication management, and practical training for home care. Includes comprehensive care kit and emergency contacts.",
-        "benefits": {
-          "confidence": "Confidence building",
-          "care": "Proper care",
-          "support": "Emergency support"
-        }
-      },
-      "step6": { 
-        "title": "Remote Follow-up", 
-        "desc": "3, 6, 12 month checks; photo follow-up and doctor review.",
-        "duration": "Ongoing",
-        "requirements": {
-          "photos": "Progress photos",
-          "updates": "Health updates",
-          "symptoms": "Symptom reports"
-        },
-        "process": "Regular check-ins at 3, 6, and 12 months. Photo-based progress tracking and virtual consultations with your doctor.",
-        "benefits": {
-          "support": "Continuous support",
-          "tracking": "Progress tracking",
-          "guidance": "Professional guidance"
-        }
-      }
-    }
-  },
-  "reviews": {
-    "heading": "Google Reviews",
-    "viewAll": "View on Google",
-    "r1": "Professional and friendly team. Seamless coordination.",
-    "r2": "Great experience from arrival to aftercare.",
-    "r3": "Highly recommend. Felt supported at every step.",
-    "subtitle": "Discover our clients' experiences",
-    "googleBadge": "Google Review",
-    "swipeHint": "Swipe left/right to navigate"
-  },
-  "beforeAfter": {
-    "before": "Before",
-    "after": "After"
-  },
-  "faq": {
-    "heading": "Frequently Asked Questions",
-    "q1": "What is included in the price?",
-    "a1": "Transfers and accommodation planning, consultation, aftercare guidance.",
-    "q2": "How long do I need to stay?",
-    "a2": "Plan at least 2 days in Istanbul for operation and check-in/out.",
-    "q3": "Do you offer online consultation?",
-    "a3": "Yes, we provide free online consultation prior to your trip."
-  },
-  "services": {
-    "title": "Services",
-    "description": "We provide world-class healthcare services to guests from all around the globe, ensuring a comfortable and unforgettable experience.",
-    "hair": { "title": "Hair Transplant", "subtitle": "FUE, DHI, Sapphire" },
-    "dental": { "title": "Dental Treatments", "subtitle": "Implants, Veneers" },
-    "aesthetic": { "title": "Aesthetic Surgery", "subtitle": "Rhinoplasty, BBL" },
-    "planning": { "title": "Travel Planning", "subtitle": "Flights, schedule" },
-    "transfer": { "title": "VIP Transfer", "subtitle": "Airport, clinic" },
-    "tours": { "title": "Touristic Tours", "subtitle": "Experiences" }
-  },
-  "floatingContact": {
-    "title": "Free Consultation",
-    "subtitle": "Our experts will get back to you as soon as possible",
-    "button": "Contact Us"
-  },
-  "backButton": {
-    "hair": "Back to All Techniques",
-    "dental": "Back to All Treatments",
-    "aesthetic": "Back to All Procedures"
-  },
-  "consultation": {
-    "title": "Free Consultation",
-    "subtitle": "Fill out the form to get detailed information about"
-  },
-  "premium": {
-    "hair": "Premium Hair Transplant",
-    "dental": "Premium Dental Care",
-    "aesthetic": "Premium Aesthetic Surgery",
-    "services": "Premium Services"
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for any questions or to schedule your consultation.",
+    "whatsapp": "WhatsApp"
   }
 }

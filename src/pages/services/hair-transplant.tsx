@@ -1,260 +1,212 @@
-import { useTranslation } from "next-i18next";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import ContactForm from "@/components/ContactForm";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { useState } from "react";
+import { CheckCircle2, ArrowRight, Clock, Users, Award, Shield } from "lucide-react";
 
-export default function HairTransplantService() {
+export default function HairTransplantPage() {
   const { t } = useTranslation("common");
-  const [selectedProcedure, setSelectedProcedure] = useState<string | null>(null);
-
-  const procedures = [
+  
+  const hairServices = [
     {
-      id: "fue",
-      title: "FUE",
-      subtitle: "Follicular Unit Extraction",
-      description: "Modern saç ekimi tekniği ile doğal ve kalıcı sonuçlar",
-      image: "/images/services/FUE.png"
+      title: t("services.hair.fue.title"),
+      description: t("services.hair.fue.description"),
+      features: ["Minimal invaziv", "Hızlı iyileşme", "Doğal sonuçlar", "Az iz"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     },
     {
-      id: "dhi",
-      title: "DHI",
-      subtitle: "Direct Hair Implantation",
-      description: "Choi kalemleri ile hassas implantasyon",
-      image: "/images/services/DHI.png"
+      title: t("services.hair.sapphire.title"),
+      description: t("services.hair.sapphire.description"),
+      features: ["Safir bıçaklar", "Hassas kesim", "Daha az travma", "Hızlı iyileşme"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     },
     {
-      id: "sapphire",
-      title: "Sapphire",
-      subtitle: "Safir Bıçak Tekniği",
-      description: "İnce kesiler ile doğal görünümlü saç çizgileri",
-      image: "/images/services/sapphire.png"
+      title: t("services.hair.dhi.title"),
+      description: t("services.hair.dhi.description"),
+      features: ["Maksimum yoğunluk", "Doğal görünüm", "Direkt yerleştirme", "Yüksek başarı"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+    },
+    {
+      title: t("services.hair.women.title"),
+      description: t("services.hair.women.description"),
+      features: ["Kadına özel teknikler", "İnce saç korunması", "Doğal sonuçlar", "Uzman ekip"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+    },
+    {
+      title: t("services.hair.beard.title"),
+      description: t("services.hair.beard.description"),
+      features: ["Sakal ve bıyık", "Doğal görünüm", "Özel teknikler", "Kalıcı sonuçlar"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     }
   ];
 
-  const procedureDetails = {
-    fue: {
-      title: "FUE Saç Ekimi",
-      description: "Modern saç ekimi teknikleri ile doğal ve kalıcı sonuçlar elde ediyoruz. FUE (Follicular Unit Extraction) tekniği ile saç kökleri tek tek alınarak, özel olarak hazırlanan kanallara yerleştirilir.",
-      longDescription: [
-        "FUE tekniği ile saç kökleri mikroskop altında tek tek alınır",
-        "Minimal invaziv yöntem ile iz bırakmaz",
-        "Doğal saç çizgisi tasarımı yapılır",
-        "Hızlı iyileşme süreci",
-        "Uzman doktor ekibi tarafından uygulanır"
-      ],
-      image: "/images/services/FUE.png"
+  const benefits = [
+    {
+      icon: <Award className="w-8 h-8 text-yellow-400" />,
+      title: "Uzman Ekip",
+      description: "Deneyimli saç ekimi uzmanları ile çalışıyoruz"
     },
-    dhi: {
-      title: "DHI Saç Ekimi",
-      description: "DHI (Direct Hair Implantation) tekniği, Choi kalemleri kullanılarak saç köklerinin doğrudan implantasyonu ile gerçekleştirilir. Bu yöntem daha hassas ve kontrollü sonuçlar sağlar.",
-      longDescription: [
-        "Choi kalemleri ile hassas implantasyon",
-        "Daha az travma ve hızlı iyileşme",
-        "Yüksek yoğunluklu saç ekimi",
-        "Doğal görünüm ve yoğunluk",
-        "Uzman cerrahi ekip"
-      ],
-      image: "/images/services/DHI.png"
+    {
+      icon: <Shield className="w-8 h-8 text-yellow-400" />,
+      title: "Güvenli Tedavi",
+      description: "En son teknoloji ve steril ortamda tedavi"
     },
-    sapphire: {
-      title: "Sapphire Saç Ekimi",
-      description: "Sapphire bıçak tekniği ile çok ince kesiler açılarak, doğal görünümlü saç çizgileri oluşturulur. Bu yöntem özellikle ön saç çizgisi tasarımında tercih edilir.",
-      longDescription: [
-        "Sapphire bıçaklar ile ince kesiler",
-        "Doğal saç çizgisi tasarımı",
-        "Minimal doku hasarı",
-        "Hızlı iyileşme süreci",
-        "Estetik sonuçlar"
-      ],
-      image: "/images/services/sapphire.png"
+    {
+      icon: <Clock className="w-8 h-8 text-yellow-400" />,
+      title: "Hızlı İyileşme",
+      description: "Minimal invaziv teknikler ile hızlı toparlanma"
+    },
+    {
+      icon: <Users className="w-8 h-8 text-yellow-400" />,
+      title: "Kişisel Bakım",
+      description: "Her hasta için özel tedavi planı"
     }
-  };
-
-  if (selectedProcedure) {
-    const detail = procedureDetails[selectedProcedure as keyof typeof procedureDetails];
-    
-    return (
-      <div className="min-h-screen bg-[#0b0b0b]">
-        {/* Large Logo Section - Above Navbar */}
-        <section className="relative bg-[#0b0b0b] py-8 border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex justify-center"
-            >
-              <Link href="/" className="cursor-pointer">
-                <Image 
-                  src="/images/logo-besafe-dark.png" 
-                  alt="Be Safe Health" 
-                  width={320} 
-                  height={80} 
-                  priority 
-                  className="h-20 w-auto hover:scale-105 transition-transform duration-300" 
-                />
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-        
-        <Navbar />
-    
-        {/* Back Button */}
-        <div className="pt-6 sm:pt-8 px-4 sm:px-6 lg:px-8">
-                  <button
-          onClick={() => setSelectedProcedure(null)}
-          className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-200 mb-8 cursor-pointer"
-        >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-                         {t("backButton.hair")}
-          </button>
-        </div>
-
-        {/* Hero Section */}
-        <section className="relative py-12 sm:py-16 bg-[#0b0b0b]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12 sm:mb-16"
-            >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">{detail.title}</h1>
-              <p className="text-xl text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200 max-w-3xl mx-auto">{detail.description}</p>
-            </motion.div>
-
-            {/* Main Grid Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16">
-              {/* First Row - Service Description */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-6"
-              >
-                <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
-                  <p>{detail.description}</p>
-                  <ul className="space-y-2 text-gray-300">
-                    {detail.longDescription.map((feature, index) => (
-                      <li key={index} className="flex items-center">
-                        <span className="w-2 h-2 bg-[var(--color-gold-500)] rounded-full mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-
-              {/* First Row - Service Photo */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="relative"
-              >
-                <div className="relative h-96 rounded-2xl overflow-hidden">
-                  <Image
-                    src={detail.image}
-                    alt={detail.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Second Row - Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="max-w-4xl mx-auto"
-            >
-                             <div className="text-center mb-8">
-                 <h2 className="text-3xl font-bold text-white mb-4">{t("consultation.title")}</h2>
-                 <p className="text-gray-300">{t("consultation.subtitle")} {detail.title}</p>
-               </div>
-              <ContactForm />
-            </motion.div>
-          </div>
-        </section>
-        <Footer />
-      </div>
-    );
-  }
+  ];
 
   return (
-    <div className="min-h-screen bg-[#0b0b0b]">
+    <div>
+      {/* Large Logo Section - Above Navbar */}
+      <section id="top" className="relative bg-[#0b0b0b] py-8 border-b border-yellow-500/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex justify-center"
+          >
+            <Link href="/" className="cursor-pointer">
+              <Image 
+                src="/images/logo-besafe-dark.png" 
+                alt="Be Safe Health" 
+                width={320} 
+                height={80} 
+                priority 
+                className="h-20 w-auto hover:scale-105 transition-transform duration-300" 
+              />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+      
       <Navbar />
-      {/* Hero Section */}
-      <section className="relative py-24 bg-[#0b0b0b]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                     <motion.div
-             initial={{ opacity: 0, y: 20 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.6 }}
-             className="text-center mb-16"
-           >
-                           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
-                <span className="w-2 h-2 bg-white rounded-full"></span>
-                {t("premium.hair")}
-              </div>
-             <h1 className="text-5xl font-bold text-white mb-6">{t("services.hair.title")}</h1>
-             <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t("services.hair.subtitle")}</p>
-           </motion.div>
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {t("services.hair.title")}
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+              {t("services.hair.description")}
+            </p>
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 text-yellow-300 px-4 py-2 rounded-full border border-yellow-500/30">
+              <CheckCircle2 className="w-5 h-5" />
+              <span className="font-medium">Uzman Saç Ekimi Hizmetleri</span>
+            </div>
+          </motion.div>
+        </div>
 
-          {/* Procedure Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {procedures.map((procedure, index) => (
+        {/* Benefits Section */}
+        <section className="mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
               <motion.div
-                key={procedure.id}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ 
-                  scale: 1.02, 
-                  y: -4,
-                  transition: { duration: 0.2 }
-                }}
-                className="group cursor-pointer"
-                onClick={() => setSelectedProcedure(procedure.id)}
+                className="text-center p-6 rounded-2xl border border-gray-700 bg-gray-800/50 hover:border-yellow-500/30 hover:bg-gray-800/70 transition-all duration-300"
               >
-                <div className="bg-gray-800/50 backdrop-blur rounded-2xl overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-[0_32px_100px_-20px_rgba(0,0,0,0.4)] hover:bg-gray-800/95 group-hover:border-[var(--color-gold-500)] group-hover:ring-2 group-hover:ring-[var(--color-gold-500)]/20">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={procedure.image}
-                      alt={procedure.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="flex justify-center mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-400 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Saç Ekimi Tekniklerimiz</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Modern teknoloji ve uzman ekibimizle her hasta için en uygun tekniği seçiyoruz
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {hairServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group rounded-2xl border border-gray-700 bg-gray-800/50 overflow-hidden hover:border-yellow-500/30 hover:bg-gray-800/70 transition-all duration-300"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                  
+                  <div className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center gap-2 text-sm text-gray-400">
+                        <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                        <span>{feature}</span>
+                      </div>
+                    ))}
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{procedure.title}</h3>
-                    <p className="text-lg text-[var(--color-gold-500)] font-semibold mb-3">{procedure.subtitle}</p>
-                    <p className="text-gray-300 mb-4">{procedure.description}</p>
-                    <div className="flex items-center justify-between text-sm text-gray-400 group-hover:text-[var(--color-gold-500)] transition-colors duration-300">
-                      <span className="font-medium group-hover:text-[var(--color-gold-500)]">Detayları Gör</span>
-                      <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[var(--color-gold-500)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                  </div>
+                  
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-200 font-medium"
+                  >
+                    Ücretsiz Danışmanlık Al
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center">
+          <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-2xl border border-yellow-500/20 p-8 md:p-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Saç Ekimi İçin Hemen Başlayın
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Uzman ekibimizle görüşerek size en uygun saç ekimi tekniğini belirleyelim. 
+              Ücretsiz danışmanlık için hemen iletişime geçin.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold rounded-xl hover:from-yellow-600 hover:to-yellow-700 transition-all duration-200 hover:scale-105 hover:shadow-lg"
+            >
+              Ücretsiz Danışmanlık Al
+              <CheckCircle2 className="w-5 h-5" />
+            </Link>
+          </div>
+        </section>
+      </main>
       <Footer />
     </div>
   );

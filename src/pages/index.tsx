@@ -49,38 +49,85 @@ export default function Home() {
       {/* Before & After */}
       <BeforeAfter />
 
-      {/* Services section */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-transparent"
-      >
-        <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] text-white px-4 sm:px-6 py-2 rounded-full text-sm font-medium mb-4">
-            <span className="w-2 h-2 bg-white rounded-full"></span>
-            {t("premium.services")}
+      {/* Services Section */}
+      <section className="py-16 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              {t("services.title")}
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {t("services.subtitle")}
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{t("services.title")}</h2>
-          <p className="text-lg sm:text-xl text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200 max-w-3xl mx-auto">{t("services.description")}</p>
-        </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {/* Hair Transplant */}
+            <ServiceCard
+              title={t("services.hair.title")}
+              subtitle={t("services.hair.subtitle")}
+              description={t("services.hair.description")}
+              image="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+              href="/services/hair-transplant"
+              subServices={[
+                { title: t("services.hair.fue.title"), description: t("services.hair.fue.description") },
+                { title: t("services.hair.sapphire.title"), description: t("services.hair.sapphire.description") },
+                { title: t("services.hair.dhi.title"), description: t("services.hair.dhi.description") },
+                { title: t("services.hair.women.title"), description: t("services.hair.women.description") },
+                { title: t("services.hair.beard.title"), description: t("services.hair.beard.description") }
+              ]}
+            />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <ServiceCard title={t("services.hair.title")} href="/services/hair-transplant" imageSrc="/images/services/hair-transplant.jpg" />
-          <ServiceCard title={t("services.dental.title")} href="/services/dental" imageSrc="/images/services/dental.jpg" />
-          <ServiceCard title={t("services.aesthetic.title")} href="/services/aesthetic" imageSrc="/images/services/aesthetic.jpg" />
-        </div>
+            {/* Dental Treatments */}
+            <ServiceCard
+              title={t("services.dental.title")}
+              subtitle={t("services.dental.subtitle")}
+              description={t("services.dental.description")}
+              image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+              href="/services/dental"
+              subServices={[
+                { title: t("services.dental.smile.title"), description: t("services.dental.smile.description") },
+                { title: t("services.dental.laminate.title"), description: t("services.dental.laminate.description") },
+                { title: t("services.dental.zirconium.title"), description: t("services.dental.zirconium.description") },
+                { title: t("services.dental.implant.title"), description: t("services.dental.implant.description") },
+                { title: t("services.dental.orthodontics.title"), description: t("services.dental.orthodontics.description") },
+                { title: t("services.dental.whitening.title"), description: t("services.dental.whitening.description") }
+              ]}
+            />
 
-        <div className="text-center mt-8 sm:mt-12">
-          <Link href="/services" className="inline-flex items-center gap-3 bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] hover:from-[var(--color-gold-600)] hover:to-[var(--color-gold-700)] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.4)] hover:scale-105">
-            {t("cta.viewAllServices")}
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+            {/* Plastic Surgery */}
+            <ServiceCard
+              title={t("services.plastic.title")}
+              subtitle={t("services.plastic.subtitle")}
+              description={t("services.plastic.description")}
+              image="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+              href="/services/plastic"
+              subServices={[
+                { title: t("services.plastic.rhinoplasty.title"), description: t("services.plastic.rhinoplasty.description") },
+                { title: t("services.plastic.breastAugmentation.title"), description: t("services.plastic.breastAugmentation.description") },
+                { title: t("services.plastic.breastReduction.title"), description: t("services.plastic.breastReduction.description") },
+                { title: t("services.plastic.tummyTuck.title"), description: t("services.plastic.tummyTuck.description") },
+                { title: t("services.plastic.armLift.title"), description: t("services.plastic.armLift.description") },
+                { title: t("services.plastic.bbl.title"), description: t("services.plastic.bbl.description") },
+                { title: t("services.plastic.neckLift.title"), description: t("services.plastic.neckLift.description") },
+                { title: t("services.plastic.earSurgery.title"), description: t("services.plastic.earSurgery.description") }
+              ]}
+            />
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold rounded-xl hover:from-yellow-600 hover:to-yellow-700 transition-all duration-200 hover:scale-105 hover:shadow-lg"
+            >
+              Tüm Hizmetleri Gör
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
-      </motion.section>
+      </section>
 
 
 

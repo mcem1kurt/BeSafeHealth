@@ -145,14 +145,14 @@ export default function StepsTimeline() {
   };
 
   return (
-    <section className="relative min-h-[90vh] w-full bg-transparent text-white py-16 md:py-24">
+    <section className="relative min-h-[60vh] md:min-h-[90vh] w-full bg-transparent text-white py-8 md:py-16 lg:py-24">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-40 h-96 w-96 rounded-full blur-3xl opacity-20 bg-yellow-400" />
         <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full blur-3xl opacity-20 bg-orange-400" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 ">
-        <div className="text-center mb-14 ">
+        <div className="text-center mb-8 md:mb-14 ">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-white">
             {t("journey.title")}
           </h2>
@@ -166,7 +166,7 @@ export default function StepsTimeline() {
           {steps.map((s, i) => (
             <div key={s.id} className={`contents`}>
               <div className={`flex justify-end items-center ${i % 2 === 0 ? 'md:pr-8' : 'md:pr-8 invisible md:visible'}`}>
-                {i % 2 === 0 && <StepCard step={s} side="left" onClick={() => openStepDetails(s.id)} />}
+                {i % 2 === 0 && <StepCard step={s} side="left" onClick={() => openStepDetails(s.id)} t={t} />}
               </div>
 
               <div className="flex flex-col items-center">
@@ -178,40 +178,57 @@ export default function StepsTimeline() {
               </div>
 
               <div className={`flex justify-start items-center ${i % 2 === 1 ? 'md:pl-8' : 'md:pl-8 invisible md:visible'}`}>
-                {i % 2 === 1 && <StepCard step={s} side="right" onClick={() => openStepDetails(s.id)} />}
+                {i % 2 === 1 && <StepCard step={s} side="right" onClick={() => openStepDetails(s.id)} t={t} />}
               </div>
             </div>
           ))}
         </div>
 
         {/* Mobile Layout - Vertical stack with clickable icons only */}
-        <div className="md:hidden space-y-8">
+        <div className="md:hidden space-y-4 md:space-y-8">
           {steps.map((s, i) => (
             <div key={s.id} className="flex flex-col items-center">
-              {/* Step Icon - Now clickable */}
+              {/* Step Icon - Now clickable with enhanced hover effects */}
               <button
                 onClick={() => openStepDetails(s.id)}
-                className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-b from-yellow-400 to-yellow-700 text-gray-800 border-2 border-yellow-400/70 shadow-[0_10px_24px_-8px_rgba(234,179,8,0.3)] mb-4 hover:scale-110 hover:shadow-[0_15px_35px_-8px_rgba(234,179,8,0.4)] transition-all duration-200 cursor-pointer group"
+                className="group relative z-10 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full 
+                           bg-gradient-to-b from-yellow-400 to-yellow-700 text-gray-800 
+                           border-2 border-yellow-400/70 
+                           shadow-[0_10px_24px_-8px_rgba(234,179,8,0.3)] 
+                           hover:scale-110 hover:shadow-[0_15px_35px_-8px_rgba(234,179,8,0.4)] 
+                           hover:shadow-[0_0_25px_rgba(234,179,8,0.3)]
+                           hover:border-yellow-300/90
+                           transition-all duration-300 ease-out cursor-pointer
+                           hover:-translate-y-1"
               >
-                <div className="group-hover:scale-110 transition-transform duration-200">
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-300/20 to-orange-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Icon with enhanced hover animation */}
+                <div className="relative z-10 group-hover:scale-110 transition-transform duration-300">
                   {s.icon}
                 </div>
+                
+                {/* Pulse effect on hover */}
+                <div className="absolute inset-0 rounded-full border-2 border-yellow-300/50 opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300" />
               </button>
               
-              {/* Step Title - Small text below icon */}
-              <div className="text-center mb-2">
-                <h3 className="text-sm font-medium text-white/90">{s.title}</h3>
+              {/* Step Title - Small text below icon with hover effect */}
+              <div className="text-center mb-1 md:mb-2 group">
+                <h3 className="text-xs md:text-sm font-medium text-white/90 group-hover:text-yellow-300 transition-colors duration-300">
+                  {s.title}
+                </h3>
               </div>
               
               {/* Connecting line (except for last step) */}
               {i < steps.length - 1 && (
-                <div className="w-[2px] h-8 bg-gradient-to-b from-gray-600 via-gray-500 to-gray-600 mt-2" />
+                <div className="w-[2px] h-6 md:h-8 bg-gradient-to-b from-gray-600 via-gray-500 to-gray-600 mt-1 md:mt-2" />
               )}
             </div>
           ))}
         </div>
 
-        <div className="mx-auto mt-16 max-w-2xl rounded-2xl border border-gray-700 bg-gray-800/80 backdrop-blur-xl p-5 shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]">
+        <div className="mx-auto mt-8 md:mt-16 max-w-2xl rounded-2xl border border-gray-700 bg-gray-800/80 backdrop-blur-xl p-5 shadow-[0_20px_80px_-20px_rgba(0,0,0,0.3)]">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <p className="text-lg font-semibold text-white">
@@ -223,12 +240,23 @@ export default function StepsTimeline() {
             </div>
             <button
               onClick={handleCta}
-              className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white 
+              className="group inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white 
                          bg-gradient-to-b from-yellow-400 to-yellow-700 border border-orange-400/60 
-                         shadow-[0_20px_60px_-16px_rgba(251,146,60,0.45)] hover:translate-y-[-1px] transition-all duration-300 hover:shadow-[0_25px_70px_-20px_rgba(251,146,60,0.6)] cursor-pointer"
+                         shadow-[0_20px_60px_-16px_rgba(251,146,60,0.45)] 
+                         hover:translate-y-[-2px] hover:scale-105
+                         transition-all duration-300 ease-out
+                         hover:shadow-[0_25px_70px_-20px_rgba(251,146,60,0.6)]
+                         hover:shadow-[0_0_30px_rgba(251,146,60,0.3)]
+                         hover:border-yellow-300/80
+                         hover:from-yellow-500 hover:to-yellow-600
+                         cursor-pointer relative overflow-hidden"
             >
-              {t("journey.cta.button")}
-              <CheckCircle2 className="size-5" />
+              {/* Hover glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-300/20 to-orange-300/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+              
+              {/* Content */}
+              <span className="relative z-10">{t("journey.cta.button")}</span>
+              <CheckCircle2 className="relative z-10 size-5 group-hover:scale-110 transition-transform duration-300" />
             </button>
           </div>
         </div>
@@ -348,19 +376,47 @@ export default function StepsTimeline() {
   );
 }
 
-function StepCard({ step, side, onClick }: { 
+function StepCard({ step, side, onClick, t }: { 
   step: { id: number; title: string; desc: string; icon: React.ReactElement }; 
   side: "left" | "right" | "center";
   onClick: () => void;
+  t: (key: string) => string;
 }) {
   const align = side === "left" ? "text-right" : side === "right" ? "text-left" : "text-center";
   return (
     <div
       onClick={onClick}
-      className={`max-w-md w-full rounded-2xl border border-gray-700 bg-gray-800/90 backdrop-blur-xl p-4 md:p-5 lg:p-6 shadow-[0_24px_80px_-28px_rgba(0,0,0,0.3)] hover:shadow-[0_32px_100px_-20px_rgba(0,0,0,0.4)] hover:border-gray-600 hover:bg-gray-800/95 transition-all duration-200 cursor-pointer ${align}`}
+      className={`group max-w-md w-full rounded-2xl border border-gray-700 bg-gray-800/90 backdrop-blur-xl p-4 md:p-5 lg:p-6 
+                 shadow-[0_24px_80px_-28px_rgba(0,0,0,0.3)] 
+                 hover:shadow-[0_32px_100px_-20px_rgba(0,0,0,0.4)] 
+                 hover:border-yellow-500/50 hover:bg-gray-800/95 
+                 hover:scale-105 hover:-translate-y-1
+                 transition-all duration-300 ease-out cursor-pointer 
+                 hover:shadow-[0_0_30px_rgba(234,179,8,0.2)] 
+                 ${align}
+                 relative overflow-hidden`}
     >
-      <h3 className="text-base md:text-lg font-semibold text-white">{step.title}</h3>
-      <p className="mt-1.5 text-sm md:text-[15px] leading-relaxed text-gray-300">{step.desc}</p>
+      {/* Hover glow effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+      
+      {/* Animated border on hover */}
+      <div className="absolute inset-0 rounded-2xl border border-transparent group-hover:border-yellow-500/30 transition-all duration-300" />
+      
+      {/* Content with enhanced hover effects */}
+      <div className="relative z-10">
+        <h3 className="text-base md:text-lg font-semibold text-white group-hover:text-yellow-300 transition-colors duration-300">
+          {step.title}
+        </h3>
+        <p className="mt-1.5 text-sm md:text-[15px] leading-relaxed text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
+          {step.desc}
+        </p>
+        
+        {/* Hover indicator */}
+        <div className="mt-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+          <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+          <span className="text-xs text-yellow-400 font-medium">{t("stepDetails.clickForDetails")}</span>
+        </div>
+      </div>
     </div>
   );
 }

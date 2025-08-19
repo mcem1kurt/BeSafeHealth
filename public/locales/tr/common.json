@@ -1,376 +1,358 @@
 {
-  "navbar": { "home": "Anasayfa", "about": "Hakkımızda", "services": "Hizmetlerimiz", "partners": "Anlaşmalı Kurumlar", "contact": "İletişim" },
-  "hero": { 
-    "title": "Kusursuzluğun Başlangıç Noktasına Hoş Geldiniz.", 
-    "subtitle": "Dünyanın dört bir yanından gelen kişilere kaliteli turizm hizmetleri ve unutulmaz bir seyahat deneyimi sunuyoruz.", 
-    "cta": "Ücretsiz Danışmanlık Al", 
-    "explore": "Hizmetleri Keşfet",
+  "navbar": { "home": "Anasayfa", "about": "Hakkımızda", "services": "Hizmetlerimiz", "contact": "İletişim" },
+  "hero": {
+    "title": "Kusursuz Başlangıç Noktasına Hoş Geldiniz.",
+    "subtitle": "Sağlık turizmi yolculuğunuzda güvenilir partneriniz. Kaliteli sağlık hizmetleri için Türkiye'ye gelin.",
+    "cta": "Hemen Başlayın",
+    "scroll": "Aşağı Kaydırın",
+    "explore": "Keşfet",
     "contactForm": {
-      "title": "Ücretsiz Danışmanlığınızı Alın",
-      "subtitle": "Aşağıdaki formu doldurun, uzmanlarımız çok kısa bir zaman içinde sizinle iletişime geçecek",
-      "name": "Ad Soyad",
-      "phone": "Telefon Numarası",
-      "email": "E-posta Adresi",
-      "service": "Hizmet Seçin",
-      "message": "İhtiyaçlarınız hakkında bize bilgi verin...",
-      "submit": "Talebi Gönder"
+      "title": "Ücretsiz Danışmanlık",
+      "subtitle": "Uzman ekibimizle görüşün, size en uygun tedavi planını belirleyelim.",
+      "name": "Adınız Soyadınız",
+      "phone": "Telefon Numaranız",
+      "email": "E-posta Adresiniz",
+      "service": "Hizmet Seçiniz",
+      "message": "Mesajınız (Opsiyonel)",
+      "submit": "Gönder"
     }
   },
-  "services": { 
-    "title": "Hizmetlerimiz", 
-    "hair": { "title": "Saç Ekimi", "subtitle": "Modern saç ekimi teknikleri ile doğal ve kalıcı sonuçlar" },
-    "dental": { "title": "Diş", "subtitle": "Modern teknoloji ile kapsamlı diş tedavileri" },
-    "aesthetic": { "title": "Estetik Cerrahi", "subtitle": "Uzman cerrahlar ile doğal ve uyumlu sonuçlar" }
+  "heroTrust": {
+    "certified": "Sertifikalı Doktorlar",
+    "experience": "10+ Yıl Deneyim",
+    "support": "7/24 Destek"
   },
-  "tourism": {
-    "quality_services": "Kusursuz Başlangıç Noktasına Hoş Geldiniz.",
-    "intro": "Dünyanın dört bir yanından gelen kişilere kaliteli turizm hizmetleri ve unutulmaz bir seyahat deneyimi sunuyoruz.",
-    "accommodation": "Konaklama Hizmetleri",
-    "professional": "Profesyonel Hizmet",
-    "consulting": "Danışmanlık Hizmeti",
-    "planning": "Seyahat Planlaması",
-    "transfer": "Transfer Hizmeti",
-    "tours": "Turistik Geziler"
-  },
-  "agency": {
-    "title": "Be Safe Health ve Turizm Acentası",
-    "paragraph1": "Be Safe Health kliniği seçtiğinizde, bizim için hiçbir şeyin sizin sağlığınızdan daha önemli olmadığının rahatlığını yaşayabilirsiniz.",
-    "paragraph2": "Yaptığımız her şey yolculuğunuzu daha keyifli hale getirmek için yapıldı. Sektördeki uzun ömürlülüğümüz, elde ettiğimiz sonuçlardan ve değiştirdiğimiz hayatlardan kaynaklanmaktadır.",
-    "paragraph3": "Modern tıbbın en ileri teknolojileriyle donatılmış sağlık tesislerimizde, uzman doktorlarımız ve deneyimli sağlık personelimizle birlikte, sizin için en uygun tedavi ve rehabilitasyon programlarını hazırlıyoruz. Ameliyatlar, estetik cerrahi, diş tedavileri, tıbbi kontroller ve daha fazlası için profesyonel bir yaklaşım sunuyoruz."
-  },
-  "agencySection": {
-    "title": "Be Safe Health",
-    "subtitle": "and Tourism Agency",
-    "p1": "Be Safe Health kliniği seçtiğinizde, bizim için hiçbir şeyin sizin sağlığınızdan daha önemli olmadığının rahatlığını yaşayabilirsiniz.",
-    "p2": "Yaptığımız her şey yolculuğunuzu daha keyifli hale getirmek için yapıldı. Sektördeki uzun ömürlülüğümüz, elde ettiğimiz sonuçlardan ve değiştirdiğimiz hayatlardan kaynaklanmaktadır.",
-    "p3": "Modern tıbbın en ileri teknolojileriyle donatılmış sağlık tesislerimizde, uzman doktorlarımız ve deneyimli sağlık personelimizle birlikte, sizin için en uygun tedavi ve rehabilitasyon programlarını hazırlıyoruz. Ameliyatlar, estetik cerrahi, diş tedavileri, tıbbi kontroller ve daha fazlası için profesyonel bir yaklaşım sunuyoruz."
-  },
-  "partners": { "title": "Anlaşmalı Kurumlar", "subtitle": "Güvenilir çözüm ortaklarımız ile kaliteli sağlık hizmeti sunuyoruz." },
-  "contact": {
-    "title": "İletişime Geçin",
-    "subtitle": "Koordinatörlerimiz 24 saat içinde dönüş yapacaktır.",
-    "whatsapp": "WhatsApp'tan Yaz",
-    "form": {
-      "name": "Ad Soyad",
-      "namePlaceholder": "Tam adınızı girin",
-      "email": "E-posta",
-      "emailPlaceholder": "E-posta adresinizi girin",
-      "phone": "Telefon",
-      "phonePlaceholder": "Telefon numaranızı girin",
-      "message": "Mesaj",
-      "messagePlaceholder": "İhtiyaçlarınız hakkında bilgi verin",
-      "send": "Mesajı Gönder",
-      "sending": "Gönderiliyor...",
-      "success": "Teşekkürler! En kısa sürede size dönüş yapacağız.",
-      "error": "Bir hata oluştu. Lütfen tekrar deneyin."
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Uzman ekibimiz ve modern teknolojimizle en kaliteli sağlık hizmetlerini sunuyoruz.",
+    "hair": {
+      "title": "Saç Ekimi",
+      "subtitle": "Doğal ve kalıcı sonuçlar için uzman saç ekimi hizmetleri.",
+      "description": "Modern saç ekimi teknikleri ile doğal ve kalıcı sonuçlar elde ediyoruz. Her hasta için kişiselleştirilmiş tedavi planları hazırlıyoruz.",
+      "fue": {
+        "title": "FUE Tekniği",
+        "description": "Follicular Unit Extraction tekniği ile tek tek saç köklerini alarak doğal sonuçlar elde ediyoruz. Minimal invaziv ve hızlı iyileşme süreci."
+      },
+      "sapphire": {
+        "title": "Safir FUE Tekniği",
+        "description": "Safir bıçaklar kullanarak daha hassas ve keskin kesimler yapıyoruz. Daha az travma ve daha hızlı iyileşme sağlıyoruz."
+      },
+      "dhi": {
+        "title": "DHI Tekniği",
+        "description": "Direct Hair Implantation ile saç köklerini doğrudan hedef bölgeye yerleştiriyoruz. Maksimum yoğunluk ve doğal görünüm."
+      },
+      "women": {
+        "title": "Kadın Saç Ekimi",
+        "description": "Kadınlara özel saç ekimi teknikleri ile ince saç tellerini koruyarak doğal sonuçlar elde ediyoruz."
+      },
+      "beard": {
+        "title": "Sakal Ekimi",
+        "description": "Sakal ve bıyık bölgelerine özel tekniklerle doğal görünümlü sakal ekimi yapıyoruz."
+      }
+    },
+    "dental": {
+      "title": "Diş Tedavileri",
+      "subtitle": "Modern diş hekimliği teknolojileri ile gülüşünüzü yenileyin.",
+      "description": "Kapsamlı diş tedavileri ile estetik ve fonksiyonel sonuçlar sunuyoruz. Modern teknoloji ve uzman ekip ile gülüşünüzü mükemmelleştiriyoruz.",
+      "smile": {
+        "title": "Gülüş Estetiği",
+        "description": "Gülüşünüzü analiz ederek kişiye özel estetik diş tasarımı yapıyoruz. Doğal ve uyumlu sonuçlar elde ediyoruz."
+      },
+      "laminate": {
+        "title": "Lamine Veneer",
+        "description": "İnce porselen yapraklar ile dişlerinizin ön yüzeyini kaplayarak mükemmel gülüş elde ediyoruz."
+      },
+      "zirconium": {
+        "title": "Zirkonyum Kaplama",
+        "description": "Dayanıklı zirkonyum materyali ile doğal görünümlü ve uzun ömürlü diş kaplamaları yapıyoruz."
+      },
+      "implant": {
+        "title": "İmplant",
+        "description": "Modern implant teknolojileri ile eksik dişlerinizi tamamlıyoruz. Doğal görünüm ve fonksiyon sağlıyoruz."
+      },
+      "orthodontics": {
+        "title": "Ortodonti Tedavileri",
+        "description": "Çapraşık dişleri düzelterek estetik ve sağlıklı diş dizilimi elde ediyoruz."
+      },
+      "whitening": {
+        "title": "Diş Beyazlatma",
+        "description": "Profesyonel diş beyazlatma teknikleri ile parlak ve beyaz gülüş elde ediyoruz."
+      }
+    },
+    "plastic": {
+      "title": "Plastik Cerrahi",
+      "subtitle": "Güvenli ve doğal estetik ameliyatlar ile güzelliğinizi ortaya çıkarın.",
+      "description": "Deneyimli plastik cerrahlarımız ile güvenli ve doğal sonuçlar elde ediyoruz. Her hasta için kişiselleştirilmiş tedavi planları hazırlıyoruz.",
+      "rhinoplasty": {
+        "title": "Burun Estetiği",
+        "description": "Burun şeklini ve fonksiyonunu iyileştirerek yüzünüzle uyumlu doğal görünüm elde ediyoruz."
+      },
+      "breastAugmentation": {
+        "title": "Meme Büyütme",
+        "description": "Modern implant teknolojileri ile güvenli ve doğal görünümlü meme büyütme ameliyatları yapıyoruz."
+      },
+      "breastReduction": {
+        "title": "Meme Küçültme",
+        "description": "Büyük memeleri küçülterek vücut oranlarınızı dengeleyip fiziksel rahatsızlıkları gideriyoruz."
+      },
+      "tummyTuck": {
+        "title": "Karın Germe",
+        "description": "Gevşek karın derisini sıkılaştırarak düz ve tonlu karın elde ediyoruz."
+      },
+      "armLift": {
+        "title": "Kol Germe",
+        "description": "Sarkık kol derisini sıkılaştırarak daha genç ve tonlu kol görünümü sağlıyoruz."
+      },
+      "bbl": {
+        "title": "BBL",
+        "description": "Brazilian Butt Lift ile kalça bölgenizi şekillendirerek daha dolgun ve estetik görünüm elde ediyoruz."
+      },
+      "neckLift": {
+        "title": "Boyun Germe",
+        "description": "Boyun bölgesindeki sarkmaları gidererek daha genç ve sıkı görünüm sağlıyoruz."
+      },
+      "earSurgery": {
+        "title": "Kepçe Kulak Ameliyatı",
+        "description": "Kepçe kulakları düzelterek yüzünüzle uyumlu doğal kulak şekli elde ediyoruz."
+      }
     }
+  },
+  "journey": {
+    "title": "Yolculuğunuz",
+    "subtitle": "Sağlık turizmi sürecinizde size rehberlik ediyoruz.",
+    "steps": {
+      "step1": {
+        "title": "İlk Görüşme",
+        "desc": "Sağlık durumunuzu değerlendiriyoruz ve size en uygun tedavi planını sunuyoruz.",
+        "duration": "1-2 gün",
+        "requirements": {
+          "photo": "Güncel fotoğraflar",
+          "history": "Tıbbi geçmiş",
+          "medications": "Kullanılan ilaçlar"
+        },
+        "process": "Sağlık durumunuzun detaylı analizi ve tedavi seçeneklerinin sunulması",
+        "benefits": {
+          "response": "Hızlı yanıt ve değerlendirme",
+          "travel": "Seyahat planlaması desteği",
+          "evaluation": "Kapsamlı sağlık değerlendirmesi"
+        }
+      },
+      "step2": {
+        "title": "Planlama",
+        "desc": "Tedavi sürecinizi detaylı olarak planlıyoruz ve gerekli tüm düzenlemeleri yapıyoruz.",
+        "duration": "3-5 gün",
+        "requirements": {
+          "dates": "Tercih edilen tarihler",
+          "budget": "Bütçe planlaması",
+          "requests": "Özel istekler"
+        },
+        "process": "Tedavi programının oluşturulması, konaklama ve transfer düzenlemeleri",
+        "benefits": {
+          "scheduling": "Esnek programlama",
+          "options": "Çoklu seçenekler",
+          "cost": "Net maliyet bilgisi"
+        }
+      },
+      "step3": {
+        "title": "Seyahat",
+        "desc": "Türkiye'ye güvenli ve konforlu seyahat için tüm düzenlemeleri yapıyoruz.",
+        "duration": "1-2 gün",
+        "requirements": {
+          "passport": "Geçerli pasaport",
+          "documents": "Gerekli belgeler",
+          "records": "Tıbbi kayıtlar"
+        },
+        "process": "Transfer, konaklama ve karşılama hizmetleri",
+        "benefits": {
+          "arrival": "Havalimanında karşılama",
+          "support": "Sürekli destek",
+          "guidance": "Rehberlik hizmeti"
+        }
+      },
+      "step4": {
+        "title": "Tedavi",
+        "desc": "Modern tıbbi cihazlar ve uzman ekibimizle tedavinizi gerçekleştiriyoruz.",
+        "duration": "1-7 gün",
+        "requirements": {
+          "tests": "Gerekli testler",
+          "fasting": "Açlık gereksinimleri",
+          "clothing": "Uygun kıyafet"
+        },
+        "process": "Profesyonel tedavi süreci, sürekli izleme ve bakım",
+        "benefits": {
+          "technology": "Modern teknoloji",
+          "team": "Uzman ekip",
+          "care": "Kişisel bakım"
+        }
+      },
+      "step5": {
+        "title": "İyileşme",
+        "desc": "Tedavi sonrası süreçte size destek oluyoruz ve iyileşmenizi takip ediyoruz.",
+        "duration": "2-4 hafta",
+        "requirements": {
+          "instructions": "Bakım talimatları",
+          "medication": "İlaç kullanımı",
+          "appointments": "Kontrol randevuları"
+        },
+        "process": "Tedavi sonrası izleme, kontroller ve gerekli düzenlemeler",
+        "benefits": {
+          "confidence": "Güvenli iyileşme",
+          "care": "Sürekli bakım",
+          "support": "7/24 destek"
+        }
+      },
+      "step6": {
+        "title": "Takip",
+        "desc": "Uzun vadeli sonuçları takip ediyoruz ve gerekli düzenlemeleri yapıyoruz.",
+        "duration": "Sürekli",
+        "requirements": {
+          "photos": "İlerleme fotoğrafları",
+          "updates": "Düzenli güncellemeler",
+          "symptoms": "Belirti takibi"
+        },
+        "process": "Uzun vadeli izleme ve gerekli düzenlemeler",
+        "benefits": {
+          "support": "Sürekli destek",
+          "tracking": "İlerleme takibi",
+          "guidance": "Uzman rehberliği"
+        }
+      }
+    },
+    "cta": {
+      "title": "Yolculuğunuza Başlayın",
+      "subtitle": "Uzman ekibimizle tanışın ve tedavi planınızı oluşturun.",
+      "button": "Hemen Başlayın"
+    }
+  },
+  "reviews": {
+    "title": "Müşteri Yorumları",
+    "subtitle": "Deneyimlerimizi paylaşan müşterilerimizin geri bildirimleri.",
+    "heading": "Müşterilerimiz Ne Diyor",
+    "swipeHint": "Daha fazla yorum için kaydırın",
+    "googleBadge": "Google Yorumları"
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "subtitle": "Sağlık turizmi hakkında merak edilenler.",
+    "heading": "Sık Sorulan Sorular",
+    "q1": "Sağlık turizmi nedir?",
+    "a1": "Sağlık turizmi, genellikle yerel olarak mevcut olandan daha düşük maliyetle veya daha iyi kalitede tıbbi tedavi almak için başka bir ülkeye seyahat etmektir.",
+    "q2": "Tedavi süreci ne kadar sürer?",
+    "q3": "Hangi belgelere ihtiyacım var?",
+    "a2": "Tedavi süresi prosedüre bağlı olarak değişir. Basit tedaviler 1-2 gün sürebilirken, karmaşık ameliyatlar 1-2 hafta gerektirebilir.",
+    "a3": "Pasaportunuza, tıbbi kayıtlarınıza, güncel fotoğraflarınıza ve önceki tedavi dokümantasyonunuza ihtiyacınız olacak. Konsültasyon sırasında tam liste sağlayacağız."
+  },
+  "cta": {
+    "title": "Sağlığınız İçin Hemen Harekete Geçin",
+    "subtitle": "Uzman ekibimiz ve akredite ortaklarımızla size en iyi hizmeti sunuyoruz.",
+    "button": "İletişime Geçin"
   },
   "footer": {
-    "quick_links": "Hızlı Linkler",
-    "links": { "about": "Hakkımızda", "services": "Neler Yapıyoruz?", "partners": "Anlaşmalı Kurumlar", "contact": "İletişim" },
+    "quick_links": "Hızlı Bağlantılar",
     "contact": "İletişim",
-    "address": "Mecidiyeköy Mah, Hark Sokak no2, Şişli/İstanbul, Türkiye",
+    "address": "İstanbul, Türkiye",
     "phone": "+90 212 356 36 08",
-    "email": "info@besafehealth.com.tr",
-    "copyright": "Tüm hakları saklıdır."
+    "email": "info@besafehealth.com",
+    "copyright": "Tüm hakları saklıdır.",
+    "links": {
+      "about": "Hakkımızda",
+      "services": "Hizmetlerimiz",
+      "contact": "İletişim"
+    }
   },
-  "cta": { "viewAllServices": "Tüm hizmetleri görüntüle", "learnMore": "Daha fazla bilgi" },
+  "links": { "about": "Hakkımızda", "services": "Neler Yapıyoruz?", "contact": "İletişim" },
   "chatForm": {
-    "title": "Bizimle Sohbet Edin",
-    "subtitle": "Size yardımcı olmak için buradayız! Bize mesaj gönderin.",
+    "title": "Canlı Destek",
+    "subtitle": "Size yardım etmek için buradayız! Bize mesaj gönderin, en kısa sürede yanıtlayacağız.",
     "namePlaceholder": "Adınız",
     "emailPlaceholder": "E-posta adresiniz",
     "messagePlaceholder": "Mesajınız",
-    "sendButton": "Mesajı Gönder"
+    "sendButton": "Gönder"
+  },
+  "contact": {
+    "form": {
+      "name": "Ad Soyad",
+      "namePlaceholder": "Adınızı ve soyadınızı girin",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "phone": "Telefon Numarası",
+      "phonePlaceholder": "Telefon numaranızı girin",
+      "message": "Mesaj",
+      "messagePlaceholder": "Mesajınızı girin",
+      "sending": "Gönderiliyor...",
+      "send": "Mesaj Gönder"
+    }
   },
   "stepDetails": {
     "duration": "Süre",
     "requirements": "Gereksinimler",
     "process": "Süreç",
     "benefits": "Faydalar",
-    "getStarted": "Bu Adımla Başlayın"
+    "getStarted": "Başlayın",
+    "clickForDetails": "Detaylar için tıklayın"
   },
   "notifications": {
     "messages": [
-      "Yeni danışmanlık talebi alındı",
-      "Saç ekimi hakkında hasta sorgusu",
-      "Diş tedavisi danışmanlık talebi",
-      "Estetik cerrahi sorgusu alındı",
-      "Türkiye'den yeni hasta",
-      "Yarın için danışmanlık planlandı",
-      "Hasta geri bildirimi alındı",
-      "Yeni randevu talebi",
-      "Tedavi planı sorgusu",
-      "Fiyat teklifi istendi"
+      "Yeni saç ekimi randevusu",
+      "Diş tedavisi planlaması tamamlandı",
+      "Estetik konsültasyon onaylandı",
+      "Tedavi sonrası kontrol hatırlatması",
+      "Konaklama rezervasyonu onaylandı",
+      "Transfer hizmeti planlandı",
+      "Sağlık raporu hazır",
+      "İlaç reçetesi güncellendi",
+      "Fizik tedavi programı başladı",
+      "Kontrol randevusu oluşturuldu"
     ],
     "titles": [
-      "Be Safe Health",
-      "Yeni Hasta Sorgusu",
-      "Danışmanlık Talebi",
-      "Hasta Mesajı",
-      "Randevu Güncellemesi",
-      "Tedavi Sorgusu",
-      "Hasta Geri Bildirimi",
-      "Yeni Talep",
-      "Sağlık Danışmanlığı",
-      "Sağlık Turizmi"
+      "Saç Ekimi Randevusu",
+      "Diş Tedavisi Planı",
+      "Estetik Konsültasyon",
+      "Kontrol Hatırlatması",
+      "Konaklama Onayı",
+      "Transfer Planı",
+      "Sağlık Raporu",
+      "Reçete Güncellemesi",
+      "Fizik Tedavi",
+      "Kontrol Randevusu"
     ]
   },
-  "stats": {
-    "happy_patients": "Mutlu Hasta",
-    "years_experience": "15+ Yıllık Deneyim",
-    "support": "Destek"
+  "partners": {
+    "title": "Ortaklarımız",
+    "subtitle": "Güvenilir sağlık kuruluşları ile çalışıyoruz",
+    "list": [
+      "GoodLook",
+      "100. Yıl Hastanesi"
+    ]
   },
-  "heroTrust": {
-    "certified": "Sertifikalı Sağlık Turizmi",
-    "experience": "15+Yıllık Deneyim",
-    "support": "7/24 Destek"
+  "agency": {
+    "title": "Ajansımız Hakkında",
+    "paragraph1": "Uluslararası hastalara kapsamlı sağlık hizmetleri sunan önde gelen bir sağlık turizmi ajansıyız. Misyonumuz, hastaları Türkiye'deki en iyi tıbbi tesisler ve uzmanlarla buluşturmaktır.",
+    "paragraph2": "Sağlık sektöründe yılların deneyimi ile Türkiye genelindeki tanınmış hastane ve kliniklerle güçlü ortaklıklar kurduk. Her hastanın tıbbi yolculuğu boyunca kişiselleştirilmiş bakım ve ilgi almasını sağlıyoruz.",
+    "paragraph3": "Sağlık profesyonelleri ve seyahat koordinatörlerinden oluşan ekibimiz, ilk konsültasyondan tedavi sonrası bakım ve takibe kadar kusursuz sağlık turizmi deneyimleri sağlamak için birlikte çalışır."
   },
   "aboutExtra": {
     "valuesTitle": "Değerlerimiz",
     "values": {
-      "patient_first": "Hasta odaklı bakım",
-      "transparent_pricing": "Şeffaf fiyatlandırma",
-      "world_class": "Dünya standartlarında kalite",
-      "coordination": "Uçtan uca koordinasyon"
+      "patient_first": "Hasta Odaklı Yaklaşım: Sağlığınızı ve refahınızı her şeyin üstünde tutuyoruz.",
+      "transparent_pricing": "Şeffaf Fiyatlandırma: Gizli maliyet yok, tüm hizmetler için net ve dürüst fiyatlandırma.",
+      "world_class": "Dünya Standartları: Tüm hizmetlerimizde uluslararası sağlık standartlarını koruyoruz.",
+      "coordination": "Tam Koordinasyon: Tıbbi yolculuğunuzun tüm yönlerini baştan sona ele alıyoruz."
     },
-    "teamTitle": "Ekibimiz",
-    "teamDesc": "Cerrahlar, diş hekimleri ve hasta koordinatörlerinden oluşan çok disiplinli bir ekip.",
-    "tourismTitle": "Sağlık Turizmi",
-    "tourismDesc": "Varıştan dönüşe kadar VIP transfer, tercüme ve kişisel iyileşme planlarını organize ediyoruz."
+    "teamTitle": "Uzman Ekibimiz",
+    "teamDesc": "Ekibimiz, olağanüstü hizmet sağlamaya adanmış deneyimli sağlık profesyonelleri, seyahat koordinatörleri ve hasta bakım uzmanlarından oluşur. Hastalarımız için en iyi olası sonuçları sağlamak üzere önde gelen tıbbi kurumlar ve uzmanlarla yakın çalışırız.",
+    "tourismTitle": "Sağlık Turizmi Mükemmelliği",
+    "tourismDesc": "Türkiye, rekabetçi fiyatlarla dünya standartlarında tıbbi tesisler sunarak sağlık turizmi için küresel bir destinasyon haline gelmiştir. Bu avantajı, hastalarımıza en son teknoloji tıbbi teknoloji ve yüksek becerili sağlık profesyonellerine erişim sağlamak için kullanıyoruz."
   },
-  "servicesPage": {
-    "descriptions": {
-      "title": "Hizmetlerimiz",
-      "hair": "FUE, DHI, Safir teknikleri",
-      "dental": "İmplant, Hollywood gülüşü, lamine",
-      "aesthetic": "Rinoplasti, BBL, anne estetiği"
-    }
-  },
-  "serviceDetails": {
-    "hair": {
-      "title": "Saç Ekimi",
-      "description": "Modern saç ekimi teknikleri ile doğal ve kalıcı sonuçlar elde ediyoruz. FUE (Follicular Unit Extraction) ve DHI (Direct Hair Implantation) gibi en gelişmiş yöntemleri kullanarak, hastalarımıza en iyi deneyimi sunuyoruz.",
-      "features": [
-        "FUE Tekniği ile doğal sonuçlar",
-        "Uzman doktor ekibi",
-        "Kişiselleştirilmiş tedavi planları",
-        "Kapsamlı bakım ve takip"
-      ]
-    },
-    "dental": {
-      "title": "Diş Tedavileri",
-      "description": "Modern diş hekimliği teknolojileri ile estetik ve fonksiyonel diş tedavileri sunuyoruz. İmplant, zirkonyum kaplama, ortodonti ve estetik diş beyazlatma gibi kapsamlı hizmetlerimizle gülüşünüzü yeniden tasarlıyoruz.",
-      "features": [
-        "İmplant tedavileri",
-        "Zirkonyum kaplamalar",
-        "Ortodonti tedavileri",
-        "Estetik diş beyazlatma"
-      ]
-    },
-    "aesthetic": {
-      "title": "Rinoplasti",
-      "description": "Estetik cerrahi alanında uzman doktorlarımız ile doğal ve uyumlu sonuçlar elde ediyoruz. Rinoplasti, yüz estetiği ve vücut kontürü gibi işlemlerde en gelişmiş teknikleri kullanarak hastalarımızın beklentilerini aşıyoruz.",
-      "features": [
-        "Rinoplasti ve burun estetiği",
-        "Yüz estetiği ve gençleştirme",
-        "Vücut kontürü ve liposuction",
-        "Minimal invaziv teknikler"
-      ]
-    }
-  },
-  "servicesDetail": {
-    "accommodation": {
-      "title": "Konaklama Hizmetleri",
-      "p1": "Sağlık turizmi yolculuğunuz boyunca, konforunuz ve rahatınız bizim önceliğimizdir. Konaklama hizmetlerimiz sizin için en iyi deneyimi sunmak için özenle tasarlanmıştır.",
-      "p2": "VIP ulaşım, tercüman desteği ve klinik randevuları ile eşgüdümlü bir programla tüm detayları ekibimiz yönetir."
-    },
-    "professional": {
-      "title": "Profesyonel Hizmet",
-      "p1": "Sağlığınız ve memnuniyetiniz önceliğimizdir. Deneyimli ekibimiz ve akredite ortaklarımızla üst düzey sağlık hizmeti sunarız.",
-      "p2": "Koordinasyon ekibimiz muayene, ameliyat planı ve takip süreçlerinde yanınızdadır."
-    },
-    "consulting": {
-      "title": "Danışmanlık Hizmeti",
-      "p1": "Uzman danışmanlarımız seçenekleri araştırma, doğru tedaviyi seçme ve seyahat planınızı düzenlemede yanınızdadır.",
-      "p2": "Tek irtibat noktası ile tüm soru ve talepleriniz için hızlı çözüm sunarız."
-    },
-    "planning": {
-      "title": "Seyahat Planlaması",
-      "p1": "Uçuş, konaklama, transfer ve klinik ziyaretlerini tek programda birleştirerek sorunsuz bir deneyim sunarız.",
-      "p2": "Esnek seçenekler ve önceden koordinasyon ile zamandan kazanmanızı sağlarız."
-    },
-    "transfer": {
-      "title": "Transfer Hizmeti",
-      "p1": "Güler yüzlü şoförlerimiz sizi havaalanından veya istediğiniz noktadan güvenle ulaştırır.",
-      "p2": "Uçuş takibi, olası gecikmelerde esnek plan ve VIP araç seçenekleri sunarız."
-    },
-    "tours": {
-      "title": "Turistik Geziler",
-      "p1": "Tedavinizin yanı sıra keyifli bir seyahat için özel tur programları sunuyoruz.",
-      "p2": "Rehberli turlar ve kişisel planları, tedavi süreçlerinize uygun şekilde esnek olarak düzenleriz."
-    }
-  },
-  "journey": {
-    "title": "Yolculuğunuz",
-    "subtitle": "Başvurudan Sonuç Takibine",
-    "step": "Adım",
-    "cta": {
-      "title": "Başlamak için hazır mısınız?",
-      "subtitle": "Uzman ekibimizle 5 dakikada ilk adımı atın.",
-      "button": "Hemen Başlayın"
-    },
-    "steps": {
-      "step1": { 
-        "title": "Hızlı Ön Değerlendirme", 
-        "desc": "Fotoğraf ve bilgilerinizi gönderin; aynı gün uygunluk ve tahmini planı çıkartalım.",
-        "duration": "Aynı Gün",
-        "requirements": {
-          "photo": "Güncel fotoğraflar",
-          "history": "Tıbbi geçmiş",
-          "medications": "Mevcut ilaçlar"
-        },
-        "process": "Fotoğraflarınızı ve temel bilgilerinizi güvenli portalımız üzerinden gönderin. Tıbbi ekibimiz 24 saat içinde inceleme yapıp ilk değerlendirmeyi sunacak.",
-        "benefits": {
-          "response": "Hızlı yanıt",
-          "travel": "Seyahat gerekmez",
-          "evaluation": "Profesyonel değerlendirme"
-        }
-      },
-      "step2": { 
-        "title": "Kişisel Planlama", 
-        "desc": "Uçuş/konaklama seçenekleri ve operasyon takvimi; bütçe ve beklentinize göre.",
-        "duration": "2-3 Gün",
-        "requirements": {
-          "dates": "Tercih edilen tarihler",
-          "budget": "Bütçe aralığı",
-          "requests": "Özel istekler"
-        },
-        "process": "Koordinatörlerimiz tercihlerinize göre uçuş seçenekleri, konaklama tercihleri ve detaylı tedavi programı içeren kişiselleştirilmiş bir plan oluşturacak.",
-        "benefits": {
-          "scheduling": "Esnek programlama",
-          "options": "Çoklu seçenek",
-          "cost": "Maliyet optimizasyonu"
-        }
-      },
-      "step3": { 
-        "title": "Varış ve Karşılama", 
-        "desc": "VIP transfer ve check‑in; doktorla ön görüşme ve saç çizgisi tasarımı.",
-        "duration": "1-2 Saat",
-        "requirements": {
-          "passport": "Pasaport",
-          "documents": "Seyahat belgeleri",
-          "records": "Tıbbi kayıtlar"
-        },
-        "process": "VIP havalimanı karşılama, lüks araç ile doğrudan konaklama yerinize transfer ve atanan doktorunuzla anında konsültasyon.",
-        "benefits": {
-          "arrival": "Stresiz varış",
-          "support": "Anında destek",
-          "guidance": "Profesyonel rehberlik"
-        }
-      },
-      "step4": { 
-        "title": "Operasyon", 
-        "desc": "Konfor odaklı süreç yönetimi; deneyimli ekip ve steril ortam.",
-        "duration": "İşleme göre değişir",
-        "requirements": {
-          "tests": "Ameliyat öncesi testler",
-          "fasting": "Açlık talimatları",
-          "clothing": "Rahat kıyafet"
-        },
-        "process": "En son teknoloji ile donatılmış tesislerde deneyimli tıbbi ekip. Sürekli izleme ve ameliyat sonrası bakım odasında anında bakım.",
-        "benefits": {
-          "technology": "Gelişmiş teknoloji",
-          "team": "Uzman ekip",
-          "care": "Kapsamlı bakım"
-        }
-      },
-      "step5": { 
-        "title": "Bakım & Eğitim", 
-        "desc": "İlk yıkama, ilaç ve bakım kiti; 10 dakikalık birebir bakım eğitimi.",
-        "duration": "1-2 Saat",
-        "requirements": {
-          "instructions": "Ameliyat sonrası talimatlar",
-          "medication": "İlaç programı",
-          "appointments": "Takip randevuları"
-        },
-        "process": "Detaylı bakım talimatları, ilaç yönetimi ve ev bakımı için pratik eğitim. Kapsamlı bakım kiti ve acil durum kontakları dahil.",
-        "benefits": {
-          "confidence": "Güven oluşturma",
-          "care": "Uygun bakım",
-          "support": "Acil durum desteği"
-        }
-      },
-      "step6": { 
-        "title": "Uzaktan Takip", 
-        "desc": "3, 6 ve 12. ay kontrolleri; fotoğrafla sonuç takibi ve doktor değerlendirmesi.",
-        "duration": "Devam eden",
-        "requirements": {
-          "photos": "İlerleme fotoğrafları",
-          "updates": "Sağlık güncellemeleri",
-          "symptoms": "Semptom raporları"
-        },
-        "process": "3, 6 ve 12. aylarda düzenli kontroller. Fotoğraf tabanlı ilerleme takibi ve doktorunuzla sanal konsültasyonlar.",
-        "benefits": {
-          "support": "Sürekli destek",
-          "tracking": "İlerleme takibi",
-          "guidance": "Profesyonel rehberlik"
-        }
-      }
-    }
-  },
-  "reviews": {
-    "heading": "Google Yorumları",
-    "viewAll": "Google’da Görüntüle",
-    "r1": "Profesyonel ve güler yüzlü ekip. Süreç kusursuz ilerledi.",
-    "r2": "Karşılamadan bakıma kadar harika bir deneyim.",
-    "r3": "Her adımda yanında hissediyorsun. Tavsiye ederim.",
-    "subtitle": "Müşterilerimizin deneyimlerini keşfedin",
-    "googleBadge": "Google Yorumu",
-    "swipeHint": "Sola/sağa kaydırarak gezinin"
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Herhangi bir sorunuz için veya konsültasyon randevunuzu planlamak için bizimle iletişime geçin.",
+    "whatsapp": "WhatsApp"
   },
   "beforeAfter": {
-    "heading": "Önce ve Sonra",
+    "heading": "Öncesi & Sonrası Sonuçlar",
     "before": "Öncesi",
-    "after": "Sonrası"
-  },
-  "faq": {
-    "heading": "Sık Sorulan Sorular",
-    "q1": "Fiyata neler dahil?",
-    "a1": "Transfer ve konaklama planlaması, danışmanlık, sonrası yönlendirme.",
-    "q2": "Kaç gün kalmalıyım?",
-    "a2": "Operasyon ve kontroller için en az 2 gün ayırın.",
-    "q3": "Online danışmanlık sağlıyor musunuz?",
-    "a3": "Evet, seyahatinizden önce ücretsiz online danışmanlık veriyoruz."
-  },
-  "services": {
-    "title": "Hizmetlerimiz",
-    "description": "Dünyanın dört bir yanından gelen misafirlere en yüksek standartlarda sağlık hizmetleri sunarak, konforlu ve unutulmaz bir deneyim yaşatıyoruz.",
-    "hair": { "title": "Saç Ekimi", "subtitle": "FUE, DHI, Safir" },
-    "dental": { "title": "Diş Tedavileri", "subtitle": "İmplant, Lamine" },
-    "aesthetic": { "title": "Estetik Cerrahi", "subtitle": "Rinoplasti, BBL" },
-    "planning": { "title": "Seyahat Planlaması", "subtitle": "Uçuş, program" },
-    "transfer": { "title": "VIP Transfer", "subtitle": "Havalimanı, klinik" },
-    "tours": { "title": "Turistik Geziler", "subtitle": "Deneyimler" }
-  },
-  "floatingContact": {
-    "title": "Ücretsiz Danışmanlık",
-    "subtitle": "Uzmanlarımız size en kısa sürede dönüş yapacak",
-    "button": "Bize Ulaşın"
-  },
-  "backButton": {
-    "hair": "Tüm Tekniklere Dön",
-    "dental": "Tüm Tedavilere Dön",
-    "aesthetic": "Tüm İşlemlere Dön"
-  },
-  "consultation": {
-    "title": "Ücretsiz Danışmanlık",
-    "subtitle": "Hakkında detaylı bilgi almak için formu doldurun"
-  },
-  "premium": {
-    "hair": "Premium Saç Ekimi",
-    "dental": "Premium Diş Bakımı",
-    "aesthetic": "Premium Estetik Cerrahi",
-    "services": "Premium Hizmetler"
+    "after": "Sonrası",
+    "moreImages": "Daha Fazla Öncesi & Sonrası Görsel"
   }
 }

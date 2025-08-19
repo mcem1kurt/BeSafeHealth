@@ -18,8 +18,20 @@ export default function Footer() {
           <div className="text-base font-semibold">{t("footer.quick_links")}</div>
           <div className="mt-3 flex flex-col gap-2 text-foreground/80">
             <Link href="/about" className="cursor-pointer">{t("footer.links.about")}</Link>
-            <Link href="/services" className="cursor-pointer">{t("footer.links.services")}</Link>
-            <Link href="/partners" className="cursor-pointer">{t("footer.links.partners")}</Link>
+            <div className="space-y-1">
+              <Link href="/services" className="cursor-pointer block">{t("footer.links.services")}</Link>
+              <div className="ml-4 space-y-1 text-xs text-gray-400">
+                <Link href="/services/hair-transplant" className="block hover:text-[var(--color-gold-400)] transition-colors duration-200">
+                  {t("services.hair.title")}
+                </Link>
+                <Link href="/services/dental" className="block hover:text-[var(--color-gold-400)] transition-colors duration-200">
+                  {t("services.dental.title")}
+                </Link>
+                <Link href="/services/plastic" className="block hover:text-[var(--color-gold-400)] transition-colors duration-200">
+                  {t("services.plastic.title")}
+                </Link>
+              </div>
+            </div>
             <Link href="/contact" className="cursor-pointer">{t("footer.links.contact")}</Link>
           </div>
         </div>

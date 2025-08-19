@@ -5,70 +5,82 @@ import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, Clock, Award, Shield, Smile } from "lucide-react";
+import { CheckCircle2, ArrowRight, Clock, Award, Shield, Heart } from "lucide-react";
 
-export default function DentalPage() {
+export default function PlasticSurgeryPage() {
   const { t } = useTranslation("common");
   
-  const dentalServices = [
+  const plasticServices = [
     {
-      title: t("services.dental.smile.title"),
-      description: t("services.dental.smile.description"),
-      features: ["Gülüş analizi", "Kişiye özel tasarım", "Doğal sonuçlar", "Uyumlu görünüm"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      title: t("services.plastic.rhinoplasty.title"),
+      description: t("services.plastic.rhinoplasty.description"),
+      features: ["Burun şekli", "Fonksiyon iyileştirme", "Doğal görünüm", "Yüz uyumu"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     },
     {
-      title: t("services.dental.laminate.title"),
-      description: t("services.dental.laminate.description"),
-      features: ["İnce porselen", "Ön yüzey kaplama", "Mükemmel gülüş", "Estetik sonuçlar"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      title: t("services.plastic.breastAugmentation.title"),
+      description: t("services.plastic.breastAugmentation.description"),
+      features: ["Modern implantlar", "Güvenli ameliyat", "Doğal sonuçlar", "Uzman cerrahlar"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     },
     {
-      title: t("services.dental.zirconium.title"),
-      description: t("services.dental.zirconium.description"),
-      features: ["Dayanıklı materyal", "Doğal görünüm", "Uzun ömürlü", "Yüksek kalite"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      title: t("services.plastic.breastReduction.title"),
+      description: t("services.plastic.breastReduction.description"),
+      features: ["Vücut oranları", "Fiziksel rahatlık", "Estetik görünüm", "Sağlık iyileştirme"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     },
     {
-      title: t("services.dental.implant.title"),
-      description: t("services.dental.implant.description"),
-      features: ["Modern teknoloji", "Doğal görünüm", "Fonksiyonel", "Kalıcı çözüm"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      title: t("services.plastic.tummyTuck.title"),
+      description: t("services.plastic.tummyTuck.description"),
+      features: ["Karın sıkılaştırma", "Düz karın", "Tonlu görünüm", "Gençleştirme"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     },
     {
-      title: t("services.dental.orthodontics.title"),
-      description: t("services.dental.orthodontics.description"),
-      features: ["Çapraşık düzeltme", "Estetik dizilim", "Sağlıklı dişler", "Profesyonel tedavi"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      title: t("services.plastic.armLift.title"),
+      description: t("services.plastic.armLift.description"),
+      features: ["Kol sıkılaştırma", "Genç görünüm", "Tonlu kollar", "Estetik sonuçlar"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     },
     {
-      title: t("services.dental.whitening.title"),
-      description: t("services.dental.whitening.description"),
-      features: ["Profesyonel teknik", "Parlak gülüş", "Beyaz dişler", "Hızlı sonuç"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      title: t("services.plastic.bbl.title"),
+      description: t("services.plastic.bbl.description"),
+      features: ["Kalça şekillendirme", "Dolgun görünüm", "Estetik oranlar", "Doğal sonuçlar"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+    },
+    {
+      title: t("services.plastic.neckLift.title"),
+      description: t("services.plastic.neckLift.description"),
+      features: ["Boyun sıkılaştırma", "Genç görünüm", "Sarkma giderme", "Estetik sonuçlar"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+    },
+    {
+      title: t("services.plastic.earSurgery.title"),
+      description: t("services.plastic.earSurgery.description"),
+      features: ["Kepçe kulak düzeltme", "Doğal şekil", "Yüz uyumu", "Estetik sonuçlar"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
     }
   ];
 
   const benefits = [
     {
       icon: <Award className="w-8 h-8 text-yellow-400" />,
-      title: "Uzman Diş Hekimleri",
-      description: "Deneyimli ve uzman diş hekimleri ile çalışıyoruz"
+      title: "Uzman Cerrahlar",
+      description: "Deneyimli plastik cerrahlar ile çalışıyoruz"
     },
     {
       icon: <Shield className="w-8 h-8 text-yellow-400" />,
-      title: "Modern Teknoloji",
-      description: "En son diş hekimliği teknolojilerini kullanıyoruz"
+      title: "Güvenli Ameliyat",
+      description: "Modern teknoloji ve steril ortamda ameliyat"
     },
     {
       icon: <Clock className="w-8 h-8 text-yellow-400" />,
-      title: "Hızlı Tedavi",
-      description: "Etkili ve hızlı tedavi süreçleri"
+      title: "Hızlı İyileşme",
+      description: "Minimal invaziv teknikler ile hızlı toparlanma"
     },
     {
-      icon: <Smile className="w-8 h-8 text-yellow-400" />,
-      title: "Estetik Sonuçlar",
-      description: "Doğal ve estetik gülüş tasarımı"
+      icon: <Heart className="w-8 h-8 text-yellow-400" />,
+      title: "Doğal Sonuçlar",
+      description: "Yüzünüzle uyumlu doğal görünüm"
     }
   ];
 
@@ -107,14 +119,14 @@ export default function DentalPage() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              {t("services.dental.title")}
+              {t("services.plastic.title")}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-              {t("services.dental.description")}
+              {t("services.plastic.description")}
             </p>
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 text-yellow-300 px-4 py-2 rounded-full border border-yellow-500/30">
-              <Smile className="w-5 h-5" />
-              <span className="font-medium">Profesyonel Diş Tedavileri</span>
+              <Heart className="w-5 h-5" />
+              <span className="font-medium">Güvenli Estetik Cerrahi</span>
             </div>
           </motion.div>
         </div>
@@ -143,14 +155,14 @@ export default function DentalPage() {
         {/* Services Grid */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Diş Tedavi Hizmetlerimiz</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">Estetik Cerrahi Hizmetlerimiz</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Modern teknoloji ve uzman ekibimizle gülüşünüzü mükemmelleştiriyoruz
+              Modern teknoloji ve uzman ekibimizle güzelliğinizi ortaya çıkarıyoruz
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {dentalServices.map((service, index) => (
+            {plasticServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -197,10 +209,10 @@ export default function DentalPage() {
         <section className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-2xl border border-yellow-500/20 p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Gülüşünüzü Yenileyin
+              Güzelliğinizi Ortaya Çıkarın
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Uzman diş hekimlerimizle görüşerek size en uygun tedavi planını belirleyelim. 
+              Uzman plastik cerrahlarımızla görüşerek size en uygun estetik ameliyat planını belirleyelim. 
               Ücretsiz danışmanlık için hemen iletişime geçin.
             </p>
             <Link
