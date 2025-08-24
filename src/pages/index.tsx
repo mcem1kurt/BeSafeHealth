@@ -101,7 +101,7 @@ export default function Home() {
               title={t("services.hair.title")}
               subtitle={t("services.hair.subtitle")}
               description={t("services.hair.description")}
-              image="/images/services/hair-transplant.jpg"
+              image="/images/services/hair-transplant.png"
               href="/services/hair-transplant"
               subServices={[
                 { title: t("services.hair.fue.title"), description: t("services.hair.fue.description") },
