@@ -4,6 +4,7 @@ import { DefaultSeo } from "next-seo";
 import { useEffect } from "react";
 import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../../next-i18next.config.js";
+import { siteConfig } from "../config";
 
 // Type for navigator with maxTouchPoints
 interface NavigatorWithMaxTouchPoints extends Navigator {
@@ -91,14 +92,14 @@ function App({ Component, pageProps }: AppProps) {
     <>
       {/* Head tags moved to _document for proper global font loading */}
       <DefaultSeo
-        titleTemplate="%s | BeSafe Health"
-        defaultTitle="BeSafe Health"
-        description="Premium health tourism services in Turkey: hair transplant, dental, and aesthetic surgery with world-class doctors."
+        titleTemplate={`%s | ${siteConfig.name}`}
+        defaultTitle={siteConfig.name}
+        description={siteConfig.description}
         openGraph={{
           type: "website",
           locale: "en_US",
-          url: "https://besafehealth.com.tr",
-          siteName: "BeSafe Health",
+          url: siteConfig.url,
+          siteName: siteConfig.name,
         }}
         twitter={{ cardType: "summary_large_image" }}
       />

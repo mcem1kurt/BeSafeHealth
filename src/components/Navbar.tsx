@@ -79,12 +79,12 @@ export default function Navbar() {
                   alt="Besafe Health Logo"
                   width={32}
                   height={32}
-                  className="w-8 h-8 object-contain"
+                  className="w-10 h-10 object-contain"
                 />
               </motion.div>
             )}
           </div>
-          <nav className="hidden md:flex items-center gap-8 text-sm">
+          <nav className="hidden md:flex items-center gap-8 text-base">
             <Link href="/" className="navbar-link text-white hover:text-[var(--color-gold-400)] transition-colors duration-200 cursor-pointer font-medium">{t("navbar.home")}</Link>
             <Link href="/about" className="navbar-link text-white hover:text-[var(--color-gold-400)] transition-colors duration-200 cursor-pointer font-medium">{t("navbar.about")}</Link>
             <div className="relative" onMouseEnter={() => setOpenMega(true)} onMouseLeave={() => {
@@ -92,7 +92,7 @@ export default function Navbar() {
               setTimeout(() => setOpenMega(false), 150);
             }}>
               <button className="navbar-link inline-flex items-center gap-1 text-white hover:text-[var(--color-gold-400)] transition-colors duration-200 cursor-pointer font-medium">
-                {t("navbar.services")} <ChevronDown size={14} />
+                {t("navbar.services")} <ChevronDown size={16} />
               </button>
               {openMega && (
                 <>
@@ -115,10 +115,10 @@ export default function Navbar() {
                bg-gray-800/80 hover:bg-gray-800/90 
                transition-all duration-300"
                         >
-                          <div className="font-semibold text-white group-hover:text-[var(--color-gold-400)] text-base">
+                          <div className="font-semibold text-white group-hover:text-[var(--color-gold-400)] text-lg">
                             {t("services.hair.title")}
                           </div>
-                          <div className="text-gray-300 mt-2 text-sm opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="text-gray-300 mt-2 text-base opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                             {t("services.hair.subtitle")}
                           </div>
                         </Link>
@@ -133,10 +133,10 @@ export default function Navbar() {
                bg-gray-800/80 hover:bg-gray-800/90 
                transition-all duration-300"
                         >
-                          <div className="font-semibold text-white group-hover:text-[var(--color-gold-400)] text-base">
+                          <div className="font-semibold text-white group-hover:text-[var(--color-gold-400)] text-lg">
                             {t("services.dental.title")}
                           </div>
-                          <div className="text-gray-300 mt-2 text-sm opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="text-gray-300 mt-2 text-base opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                             {t("services.dental.subtitle")}
                           </div>
                         </Link>
@@ -151,10 +151,10 @@ export default function Navbar() {
                bg-gray-800/80 hover:bg-gray-800/90 
                transition-all duration-300"
                         >
-                          <div className="font-semibold text-white group-hover:text-[var(--color-gold-400)] text-base">
+                          <div className="font-semibold text-white group-hover:text-[var(--color-gold-400)] text-lg">
                             {t("services.plastic.title")}
                           </div>
-                          <div className="text-gray-300 mt-2 text-sm opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="text-gray-300 mt-2 text-base opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                             {t("services.plastic.subtitle")}
                           </div>
                         </Link>
@@ -224,18 +224,18 @@ export default function Navbar() {
             </button>
           </div>
           <div className="h-full flex items-center justify-center">
-            <div className="grid gap-6 text-xl text-center">
+            <div className="grid gap-6 text-2xl text-center">
               <Link href="/" onClick={() => setOpenMobile(false)} className="hover:text-[var(--color-gold-400)] transition-colors duration-200 cursor-pointer font-medium">{t("navbar.home")}</Link>
               <Link href="/about" onClick={() => setOpenMobile(false)} className="hover:text-[var(--color-gold-400)] transition-colors duration-200 cursor-pointer font-medium">{t("navbar.about")}</Link>
               <Link href="/services" onClick={() => setOpenMobile(false)} className="hover:text-[var(--color-gold-400)] transition-colors duration-200 cursor-pointer font-medium">{t("navbar.services")}</Link>
               <div className="space-y-2 ml-4">
-                <Link href="/services/hair-transplant" onClick={() => setOpenMobile(false)} className="block text-sm text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200">
+                <Link href="/services/hair-transplant" onClick={() => setOpenMobile(false)} className="block text-base text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200">
                   {t("services.hair.title")}
                 </Link>
-                <Link href="/services/dental" onClick={() => setOpenMobile(false)} className="block text-sm text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200">
+                <Link href="/services/dental" onClick={() => setOpenMobile(false)} className="block text-base text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200">
                   {t("services.dental.title")}
                 </Link>
-                <Link href="/services/plastic" onClick={() => setOpenMobile(false)} className="block text-sm text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200">
+                <Link href="/services/plastic" onClick={() => setOpenMobile(false)} className="block text-base text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200">
                   {t("services.plastic.title")}
                 </Link>
               </div>

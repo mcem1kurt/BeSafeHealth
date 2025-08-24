@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "next-i18next";
+import { useEmailJS } from "@/hooks/useEmailJS";
+import { emailJSConfig } from "@/config/emailjs";
 
 export default function ContactForm() {
   const { t } = useTranslation("common");
@@ -9,8 +11,8 @@ export default function ContactForm() {
     phone: "",
     message: ""
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const { sendEmail, isSubmitting, isSubmitted, error, resetForm } = useEmailJS(emailJSConfig);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -21,19 +23,12 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Send email using EmailJS
+    await sendEmail(formData);
     
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 3000);
+    // Reset form data
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   if (isSubmitted) {
@@ -44,8 +39,8 @@ export default function ContactForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">Teşekkürler!</h3>
-        <p className="text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200">Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.</p>
+        <h3 className="text-2xl font-bold text-white mb-2">{t("contact.form.thankYou")}</h3>
+        <p className="text-gray-300 hover:text-[var(--color-gold-400)] transition-colors duration-200">{t("contact.form.successMessage")}</p>
       </div>
     );
   }
@@ -117,23 +112,32 @@ export default function ContactForm() {
         />
       </div>
       
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] hover:from-[var(--color-gold-600)] hover:to-[var(--color-gold-700)] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-      >
-        {isSubmitting ? (
-          <div className="flex items-center justify-center">
-            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-            {t("contact.form.sending")}
-          </div>
-        ) : (
-          t("contact.form.send")
-        )}
-      </button>
-    </form>
-  );
-}
+      {/* Error Message */}
+      {error && (
+        <div className="mb-4 text-center">
+          <p className="text-red-400 text-sm">{error}</p>
+        </div>
+      )}
+      
+              <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] hover:from-[var(--color-gold-600)] hover:to-[var(--color-gold-700)] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+        >
+          {isSubmitting ? (
+            <div className="flex items-center justify-center">
+              <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              {t("contact.form.sending")}
+            </div>
+          ) : (
+            t("contact.form.send")
+          )}
+        </button>
+        
+
+      </form>
+    );
+  }

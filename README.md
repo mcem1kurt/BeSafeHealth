@@ -1,8 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Be Safe Health Tourism Website
 
-## Getting Started
+Bu proje [Next.js](https://nextjs.org) kullanılarak geliştirilmiş bir sağlık turizmi web sitesidir.
 
-First, run the development server:
+## 🚀 Kurulum
+
+### 1. Environment Variables
+
+Projeyi çalıştırmadan önce `.env.local` dosyası oluşturun:
+
+```bash
+# .env.local dosyası oluşturun
+touch .env.local
+```
+
+`.env.local` dosyasına gerekli bilgileri ekleyin:
+
+```env
+# Site Configuration
+NEXT_PUBLIC_SITE_URL=https://besafehealth.com.tr
+
+# EmailJS Configuration
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id_here
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id_here
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key_here
+
+# Google Services
+GOOGLE_PLACES_API_KEY=your_google_places_api_key_here
+GOOGLE_PLACE_ID=your_google_place_id_here
+
+# Google Analytics (Optional)
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+
+# Google Tag Manager (Optional)
+NEXT_PUBLIC_GTM_CONTAINER_ID=GTM-XXXXXXX
+```
+
+### Environment Variables Açıklaması:
+
+- **NEXT_PUBLIC_***: Client-side'da erişilebilir (public)
+- **GOOGLE_PLACES_API_KEY**: Google Places API için gerekli
+- **GOOGLE_PLACE_ID**: Be Safe Health'in Google Places ID'si
+- **EmailJS**: Form gönderimi için gerekli
+- **Analytics**: İsteğe bağlı tracking için
+
+### 2. Development Server
+
+Geliştirme sunucusunu başlatın:
 
 ```bash
 npm run dev
@@ -24,14 +67,42 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 📧 EmailJS Kurulumu
 
-To learn more about Next.js, take a look at the following resources:
+Bu proje form gönderimi için EmailJS kullanır. Kurulum için:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+1. [EmailJS](https://www.emailjs.com) hesabı oluşturun
+2. Email Service ekleyin (Gmail, Outlook, vs.)
+3. Email Template oluşturun
+4. API Keys > Public Key alın
+5. `.env.local` dosyasına bilgileri ekleyin
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Configuration Kullanımı
+
+Proje artık merkezi config sistemi kullanır:
+
+```typescript
+import { config, siteConfig, emailJSConfig, googleConfig } from '../config';
+
+// Site bilgileri
+console.log(config.site.name); // "Be Safe Health"
+console.log(config.site.url); // "https://besafehealth.com.tr"
+
+// EmailJS config
+console.log(config.emailjs.serviceId); // EmailJS service ID
+
+// Google config
+console.log(config.google.places.apiKey); // Google Places API key
+```
+
+## 📚 Daha Fazla Bilgi
+
+Next.js hakkında daha fazla bilgi için:
+
+- [Next.js Documentation](https://nextjs.org/docs) - Next.js özellikleri ve API'si
+- [Learn Next.js](https://nextjs.org/learn-pages-router) - İnteraktif Next.js tutorial'ı
+
+[Next.js GitHub repository](https://github.com/vercel/next.js)'sini inceleyebilirsiniz.
 
 ## Deploy on Vercel
 

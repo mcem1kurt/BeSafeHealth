@@ -53,7 +53,7 @@ export default function ServicesPage() {
             title={t("services.hair.title")}
             subtitle={t("services.hair.subtitle")}
             description={t("services.hair.description")}
-            image="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+            image="/images/services/hair-transplant.jpg"
             href="/services/hair-transplant"
             subServices={[
               { title: t("services.hair.fue.title"), description: t("services.hair.fue.description") },
@@ -69,7 +69,7 @@ export default function ServicesPage() {
             title={t("services.dental.title")}
             subtitle={t("services.dental.subtitle")}
             description={t("services.dental.description")}
-            image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+            image="/images/services/dental.jpg"
             href="/services/dental"
             subServices={[
               { title: t("services.dental.smile.title"), description: t("services.dental.smile.description") },
@@ -86,7 +86,7 @@ export default function ServicesPage() {
             title={t("services.plastic.title")}
             subtitle={t("services.plastic.subtitle")}
             description={t("services.plastic.description")}
-            image="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+            image="/images/services/aesthetic.jpg"
             href="/services/plastic"
             subServices={[
               { title: t("services.plastic.rhinoplasty.title"), description: t("services.plastic.rhinoplasty.description") },

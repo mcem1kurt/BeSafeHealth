@@ -3,12 +3,42 @@ import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
+import { useEmailJS } from "@/hooks/useEmailJS";
+import { emailJSConfig } from "@/config/emailjs";
 
 export default function HeroSection() {
   const { t } = useTranslation("common");
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  
+  // Form state for contact form
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    message: ""
+  });
+  
+  const { sendEmail, isSubmitting, isSubmitted, error, resetForm } = useEmailJS(emailJSConfig);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Send email using EmailJS
+    await sendEmail(formData);
+    
+    // Form data will be reset only after successful submission
+    // No need to reset here as the form will show success message
+  };
 
   useEffect(() => {
     setIsClient(true);
@@ -184,58 +214,107 @@ export default function HeroSection() {
                 </p>
               </div>
 
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+{isSubmitted ? (
+                /* Success Message */
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{t("hero.contactForm.successTitle")}</h3>
+                  <p className="text-gray-300 text-sm sm:text-base mb-6">{t("hero.contactForm.successMessage")}</p>
+                  <button
+                    onClick={() => {
+                      resetForm();
+                      setFormData({ name: "", phone: "", email: "", service: "", message: "" });
+                    }}
+                    className="bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] hover:from-[var(--color-gold-600)] hover:to-[var(--color-gold-700)] text-white font-semibold py-2 px-6 rounded-xl transition-all duration-200 transform hover:scale-105"
+                  >
+                    {t("hero.contactForm.newMessage")}
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder={t("hero.contactForm.name")}
+                        className="w-full px-3 sm:px-4 py-3 bg-white/10 backdrop-blur-sm border border-[var(--color-gold-400)]/60 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold-500)] focus:border-[var(--color-gold-500)] transition-all duration-200"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder={t("hero.contactForm.phone")}
+                        className="w-full px-3 sm:px-4 py-3 bg-white/10 backdrop-blur-sm border border-[var(--color-gold-400)]/60 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold-500)] focus:border-[var(--color-gold-500)] transition-all duration-200"
+                      />
+                    </div>
+                  </div>
+
                   <div>
                     <input
-                      type="text"
-                      placeholder={t("hero.contactForm.name")}
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder={t("hero.contactForm.email")}
                       className="w-full px-3 sm:px-4 py-3 bg-white/10 backdrop-blur-sm border border-[var(--color-gold-400)]/60 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold-500)] focus:border-[var(--color-gold-500)] transition-all duration-200"
+                      required
                     />
                   </div>
+
                   <div>
-                    <input
-                      type="tel"
-                      placeholder={t("hero.contactForm.phone")}
-                      className="w-full px-3 sm:px-4 py-3 bg-white/10 backdrop-blur-sm border border-[var(--color-gold-400)]/60 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold-500)] focus:border-[var(--color-gold-500)] transition-all duration-200"
+                    <select 
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-3 sm:px-4 py-3 bg-white/10 backdrop-blur-sm border border-[var(--color-gold-400)]/60 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold-500)] focus:border-[var(--color-gold-500)] transition-all duration-200 [&>option]:bg-gray-800 [&>option]:text-white [&>option]:py-2"
+                    >
+                      <option value="" className="bg-gray-800 text-gray-300">
+                        {t("hero.contactForm.service")}
+                      </option>
+                      <option value="hair">{t("services.hair.title")}</option>
+                      <option value="dental">{t("services.dental.title")}</option>
+                      <option value="plastic">{t("services.plastic.title")}</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder={t("hero.contactForm.message")}
+                      rows={3}
+                      className="w-full px-3 sm:px-4 py-3 bg-white/10 backdrop-blur-sm border border-[var(--color-gold-400)]/60 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold-500)] focus:border-[var(--color-gold-500)] transition-all duration-200 resize-none"
                     />
                   </div>
-                </div>
 
-                <div>
-                  <input
-                    type="email"
-                    placeholder={t("hero.contactForm.email")}
-                    className="w-full px-3 sm:px-4 py-3 bg-white/10 backdrop-blur-sm border border-[var(--color-gold-400)]/60 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold-500)] focus:border-[var(--color-gold-500)] transition-all duration-200"
-                  />
-                </div>
+                  {/* Error Message */}
+                  {error && (
+                    <div className="text-center mb-4">
+                      <p className="text-red-400 text-sm">{error}</p>
+                    </div>
+                  )}
 
-                <div>
-                  <select className="w-full px-3 sm:px-4 py-3 bg-white/10 backdrop-blur-sm border border-[var(--color-gold-400)]/60 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-gold-500)] focus:border-[var(--color-gold-500)] transition-all duration-200 [&>option]:bg-gray-800 [&>option]:text-white [&>option]:py-2">
-                    <option value="" className="bg-gray-800 text-gray-300">
-                      {t("hero.contactForm.service")}
-                    </option>
-                    <option value="hair">{t("services.hair.title")}</option>
-                    <option value="dental">{t("services.dental.title")}</option>
-                    <option value="plastic">{t("services.plastic.title")}</option>
-                  </select>
-                </div>
-
-                <div>
-                  <textarea
-                    placeholder={t("hero.contactForm.message")}
-                    rows={3}
-                    className="w-full px-3 sm:px-4 py-3 bg-white/10 backdrop-blur-sm border border-[var(--color-gold-400)]/60 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-gold-500)] focus:border-[var(--color-gold-500)] transition-all duration-200 resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] hover:from-[var(--color-gold-600)] hover:to-[var(--color-gold-700)] text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  {t("hero.contactForm.submit")}
-                </button>
-              </form>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-[var(--color-gold-500)] to-[var(--color-gold-600)] hover:from-[var(--color-gold-600)] hover:to-[var(--color-gold-700)] text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? t("hero.contactForm.sending") : t("hero.contactForm.submit")}
+                  </button>
+                </form>
+              )}
             </div>
           </motion.div>
         </div>

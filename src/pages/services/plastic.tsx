@@ -15,49 +15,49 @@ export default function PlasticSurgeryPage() {
       title: t("services.plastic.rhinoplasty.title"),
       description: t("services.plastic.rhinoplasty.description"),
       features: ["Burun şekli", "Fonksiyon iyileştirme", "Doğal görünüm", "Yüz uyumu"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/rhinoplasty.png"
     },
     {
       title: t("services.plastic.breastAugmentation.title"),
       description: t("services.plastic.breastAugmentation.description"),
       features: ["Modern implantlar", "Güvenli ameliyat", "Doğal sonuçlar", "Uzman cerrahlar"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/meme-buyutme.png"
     },
     {
       title: t("services.plastic.breastReduction.title"),
       description: t("services.plastic.breastReduction.description"),
       features: ["Vücut oranları", "Fiziksel rahatlık", "Estetik görünüm", "Sağlık iyileştirme"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/meme-kucultme.png"
     },
     {
       title: t("services.plastic.tummyTuck.title"),
       description: t("services.plastic.tummyTuck.description"),
       features: ["Karın sıkılaştırma", "Düz karın", "Tonlu görünüm", "Gençleştirme"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/karın-germe.png"
     },
     {
       title: t("services.plastic.armLift.title"),
       description: t("services.plastic.armLift.description"),
       features: ["Kol sıkılaştırma", "Genç görünüm", "Tonlu kollar", "Estetik sonuçlar"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/kol-germe.png"
     },
     {
       title: t("services.plastic.bbl.title"),
       description: t("services.plastic.bbl.description"),
       features: ["Kalça şekillendirme", "Dolgun görünüm", "Estetik oranlar", "Doğal sonuçlar"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/BBL.png"
     },
     {
       title: t("services.plastic.neckLift.title"),
       description: t("services.plastic.neckLift.description"),
       features: ["Boyun sıkılaştırma", "Genç görünüm", "Sarkma giderme", "Estetik sonuçlar"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/boyun-germe.png"
     },
     {
       title: t("services.plastic.earSurgery.title"),
       description: t("services.plastic.earSurgery.description"),
       features: ["Kepçe kulak düzeltme", "Doğal şekil", "Yüz uyumu", "Estetik sonuçlar"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/kepce-kulak.png"
     }
   ];
 

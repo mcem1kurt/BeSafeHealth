@@ -12,9 +12,13 @@
       "name": "Your Full Name",
       "phone": "Your Phone Number",
       "email": "Your Email Address",
-      "service": "Select Service",
-      "message": "Your Message (Optional)",
-      "submit": "Send"
+          "service": "Select Service",
+    "message": "Your Message (Optional)",
+    "submit": "Send",
+    "sending": "Sending...",
+    "successTitle": "Thank You!",
+    "successMessage": "Your message has been sent successfully. We will get back to you as soon as possible.",
+    "newMessage": "Send New Message"
     }
   },
   "heroTrust": {
@@ -262,12 +266,13 @@
   },
   "links": { "about": "About", "services": "Services", "contact": "Contact" },
   "chatForm": {
-    "title": "Live Support",
+    "title": "Contact Form",
     "subtitle": "We're here to help! Send us a message and we'll respond as soon as possible.",
     "namePlaceholder": "Your Name",
     "emailPlaceholder": "Your Email Address",
     "messagePlaceholder": "Your Message",
-    "sendButton": "Send"
+    "sendButton": "Send",
+    "sending": "Sending..."
   },
   "contact": {
     "form": {
@@ -318,8 +323,8 @@
     ]
   },
   "agency": {
-    "title": "Be Safe Health Agency",
-    "paragraph1": "Be Safe Health Agency is an organization specialized in health tourism, providing reliable and quality services. We work to provide our customers with the best healthcare services.",
+    "title": "Be Safe Health",
+    "paragraph1": "Be Safe Health Company is an organization specialized in health tourism, providing reliable and quality services. We work to provide our customers with the best healthcare services.",
     "paragraph2": "With our experienced team and reliable partners, we guide you through your health tourism process. We provide the highest quality treatment services with modern medical devices and expert doctors.",
     "paragraph3": "With our customer satisfaction-oriented approach and transparent pricing policy, we serve as a reliable partner in the field of health tourism."
   },
@@ -349,8 +354,8 @@
     ]
   },
   "agency": {
-    "title": "About Our Agency",
-    "paragraph1": "We are a leading health tourism agency that provides comprehensive healthcare services to international patients. Our mission is to connect patients with the best medical facilities and specialists in Turkey.",
+    "title": "About Us",
+    "paragraph1": "We are a leading health tourism company that provides comprehensive healthcare services to international patients. Our mission is to connect patients with the best medical facilities and specialists in Turkey.",
     "paragraph2": "With years of experience in the healthcare industry, we have established strong partnerships with renowned hospitals and clinics across Turkey. We ensure that every patient receives personalized care and attention throughout their medical journey.",
     "paragraph3": "Our team of healthcare professionals and travel coordinators work together to provide seamless medical tourism experiences, from initial consultation to post-treatment care and follow-up."
   },
@@ -370,6 +375,25 @@
   "contact": {
     "title": "Contact Us",
     "subtitle": "Get in touch with us for any questions or to schedule your consultation.",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your needs",
+      "sending": "Sending...",
+      "send": "Send Message",
+      "thankYou": "Thank You!",
+      "successMessage": "Your message has been sent successfully. We will get back to you as soon as possible."
+    }
+  },
+  "dailyLimit": {
+    "info": "Daily limit: {{remaining}}/{{limit}} forms",
+    "exceeded": "Daily limit exceeded! You can try again tomorrow. (Limit: {{limit}} forms/day)",
+    "remaining": "Remaining forms: {{remaining}}"
   }
 }

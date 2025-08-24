@@ -13,10 +13,44 @@ import GoogleReviews from "@/components/GoogleReviews";
 import BeforeAfter from "@/components/BeforeAfter";
 import FAQ from "@/components/FAQ";
 import { useState } from "react";
+import { useEmailJS } from "@/hooks/useEmailJS";
+import { emailJSConfig } from "@/config/emailjs";
 
 export default function Home() {
   const { t } = useTranslation("common");
   const [showChatForm, setShowChatForm] = useState(false);
+  
+  // Chat form state
+  const [chatFormData, setChatFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  
+  const { sendEmail, isSubmitting, isSubmitted, error } = useEmailJS(emailJSConfig);
+
+  const handleChatFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setChatFormData({
+      ...chatFormData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleChatFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Send email using EmailJS
+    await sendEmail(chatFormData);
+    
+    // Reset form data only after successful submission
+    if (!error) {
+      setChatFormData({ name: "", email: "", message: "" });
+      // Close chat form after successful submission
+      setTimeout(() => {
+        setShowChatForm(false);
+      }, 2000);
+    }
+  };
 
   return (
     <div>
@@ -67,7 +101,7 @@ export default function Home() {
               title={t("services.hair.title")}
               subtitle={t("services.hair.subtitle")}
               description={t("services.hair.description")}
-              image="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+              image="/images/services/hair-transplant.jpg"
               href="/services/hair-transplant"
               subServices={[
                 { title: t("services.hair.fue.title"), description: t("services.hair.fue.description") },
@@ -83,7 +117,7 @@ export default function Home() {
               title={t("services.dental.title")}
               subtitle={t("services.dental.subtitle")}
               description={t("services.dental.description")}
-              image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+              image="/images/services/dental.jpg"
               href="/services/dental"
               subServices={[
                 { title: t("services.dental.smile.title"), description: t("services.dental.smile.description") },
@@ -100,7 +134,7 @@ export default function Home() {
               title={t("services.plastic.title")}
               subtitle={t("services.plastic.subtitle")}
               description={t("services.plastic.description")}
-              image="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+              image="/images/services/aesthetic.jpg"
               href="/services/plastic"
               subServices={[
                 { title: t("services.plastic.rhinoplasty.title"), description: t("services.plastic.rhinoplasty.description") },
@@ -205,32 +239,74 @@ export default function Home() {
 
             {/* Chat Form Content */}
             <div className="p-6">
-              <p className="text-gray-300 mb-6 text-sm">{t("chatForm.subtitle")}</p>
-              
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder={t("chatForm.namePlaceholder")}
-                  className="w-full px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-                />
-                <input
-                  type="email"
-                  placeholder={t("chatForm.emailPlaceholder")}
-                  className="w-full px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-                />
-                <textarea
-                  placeholder={t("chatForm.messagePlaceholder")}
-                  rows={3}
-                  className="w-full px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-sm"
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm"
-                >
-                  {t("chatForm.sendButton")}
-                </button>
-              </form>
-            </div>
+              {isSubmitted ? (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Teşekkürler!</h3>
+                  <p className="text-gray-300">Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.</p>
+                </div>
+              ) : (
+                <>
+                  <p className="text-gray-300 mb-6 text-sm">{t("chatForm.subtitle")}</p>
+                  
+                  <form onSubmit={handleChatFormSubmit} className="space-y-4">
+                    <input
+                      type="text"
+                      name="name"
+                      value={chatFormData.name}
+                      onChange={handleChatFormChange}
+                      placeholder={t("chatForm.namePlaceholder")}
+                      className="w-full px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                      required
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      value={chatFormData.email}
+                      onChange={handleChatFormChange}
+                      placeholder={t("chatForm.emailPlaceholder")}
+                      className="w-full px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                      required
+                    />
+                    <textarea
+                      name="message"
+                      value={chatFormData.message}
+                      onChange={handleChatFormChange}
+                      placeholder={t("chatForm.messagePlaceholder")}
+                      rows={3}
+                      className="w-full px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-sm"
+                      required
+                    />
+                    {error && (
+                      <p className="text-red-400 text-sm text-center">{error}</p>
+                    )}
+                                         <button
+                       type="submit"
+                       disabled={isSubmitting}
+                       className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                     >
+                       {isSubmitting ? (
+                         <div className="flex items-center justify-center">
+                           <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                           </svg>
+                           {t("chatForm.sending")}
+                         </div>
+                       ) : (
+                         t("chatForm.sendButton")
+                       )}
+                     </button>
+                     
+
+                   </form>
+                 </>
+               )}
+             </div>
           </motion.div>
         </div>
       )}

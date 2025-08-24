@@ -15,37 +15,37 @@ export default function DentalPage() {
       title: t("services.dental.smile.title"),
       description: t("services.dental.smile.description"),
       features: ["Gülüş analizi", "Kişiye özel tasarım", "Doğal sonuçlar", "Uyumlu görünüm"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/dental.jpg"
     },
     {
       title: t("services.dental.laminate.title"),
       description: t("services.dental.laminate.description"),
       features: ["İnce porselen", "Ön yüzey kaplama", "Mükemmel gülüş", "Estetik sonuçlar"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/Lamine-Veneer.png"
     },
     {
       title: t("services.dental.zirconium.title"),
       description: t("services.dental.zirconium.description"),
       features: ["Dayanıklı materyal", "Doğal görünüm", "Uzun ömürlü", "Yüksek kalite"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/zirconium.png"
     },
     {
       title: t("services.dental.implant.title"),
       description: t("services.dental.implant.description"),
       features: ["Modern teknoloji", "Doğal görünüm", "Fonksiyonel", "Kalıcı çözüm"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/implant.png"
     },
     {
       title: t("services.dental.orthodontics.title"),
       description: t("services.dental.orthodontics.description"),
       features: ["Çapraşık düzeltme", "Estetik dizilim", "Sağlıklı dişler", "Profesyonel tedavi"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/orthodontics.png"
     },
     {
       title: t("services.dental.whitening.title"),
       description: t("services.dental.whitening.description"),
       features: ["Profesyonel teknik", "Parlak gülüş", "Beyaz dişler", "Hızlı sonuç"],
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/teeth-whitening.png"
     }
   ];
 

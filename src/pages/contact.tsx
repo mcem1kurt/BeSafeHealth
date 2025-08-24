@@ -8,6 +8,7 @@ import { useTranslation } from "next-i18next";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { contactConfig } from "@/config";
 
 export default function ContactPage() {
   const { t } = useTranslation("common");
@@ -59,7 +60,7 @@ export default function ContactPage() {
           <div className="aspect-video rounded-xl overflow-hidden border border-white/10">
             <iframe
               title={t("contact.title")}
-              src="https://www.google.com/maps?q=Mecidiyek%C3%B6y%20Mah%2C%20Hark%20Sokak%20no2%2C%20%C5%9Ei%C5%9Fli%2F%C4%B0stanbul%2C%20T%C3%BCrkiye&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src={contactConfig.googleMapsUrl}
               className="w-full h-full"
               loading="lazy"
             />

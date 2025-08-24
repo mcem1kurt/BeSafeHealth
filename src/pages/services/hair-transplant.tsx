@@ -15,31 +15,31 @@ export default function HairTransplantPage() {
       title: t("services.hair.fue.title"),
       description: t("services.hair.fue.description"),
       features: ["Minimal invaziv", "Hızlı iyileşme", "Doğal sonuçlar", "Az iz"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/FUE.png"
     },
     {
       title: t("services.hair.sapphire.title"),
       description: t("services.hair.sapphire.description"),
       features: ["Safir bıçaklar", "Hassas kesim", "Daha az travma", "Hızlı iyileşme"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/sapphire.png"
     },
     {
       title: t("services.hair.dhi.title"),
       description: t("services.hair.dhi.description"),
       features: ["Maksimum yoğunluk", "Doğal görünüm", "Direkt yerleştirme", "Yüksek başarı"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/DHI.png"
     },
     {
       title: t("services.hair.women.title"),
       description: t("services.hair.women.description"),
       features: ["Kadına özel teknikler", "İnce saç korunması", "Doğal sonuçlar", "Uzman ekip"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/woman-hair-transplant.jpg"
     },
     {
       title: t("services.hair.beard.title"),
       description: t("services.hair.beard.description"),
       features: ["Sakal ve bıyık", "Doğal görünüm", "Özel teknikler", "Kalıcı sonuçlar"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop&crop=center"
+      image: "/images/services/beard-transplant.png"
     }
   ];
 

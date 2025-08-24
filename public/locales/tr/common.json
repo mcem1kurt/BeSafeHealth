@@ -12,9 +12,13 @@
       "name": "Adınız Soyadınız",
       "phone": "Telefon Numaranız",
       "email": "E-posta Adresiniz",
-      "service": "Hizmet Seçiniz",
-      "message": "Mesajınız (Opsiyonel)",
-      "submit": "Gönder"
+          "service": "Hizmet Seçiniz",
+    "message": "Mesajınız (Opsiyonel)",
+    "submit": "Gönder",
+    "sending": "Gönderiliyor...",
+    "successTitle": "Teşekkürler!",
+    "successMessage": "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.",
+    "newMessage": "Yeni Mesaj Gönder"
     }
   },
   "heroTrust": {
@@ -262,12 +266,13 @@
   },
   "links": { "about": "Hakkımızda", "services": "Neler Yapıyoruz?", "contact": "İletişim" },
   "chatForm": {
-    "title": "Canlı Destek",
+    "title": "İletişim Formu",
     "subtitle": "Size yardım etmek için buradayız! Bize mesaj gönderin, en kısa sürede yanıtlayacağız.",
     "namePlaceholder": "Adınız",
     "emailPlaceholder": "E-posta adresiniz",
     "messagePlaceholder": "Mesajınız",
-    "sendButton": "Gönder"
+    "sendButton": "Gönder",
+    "sending": "Gönderiliyor..."
   },
   "contact": {
     "form": {
@@ -326,8 +331,8 @@
     ]
   },
   "agency": {
-    "title": "Ajansımız Hakkında",
-    "paragraph1": "Uluslararası hastalara kapsamlı sağlık hizmetleri sunan önde gelen bir sağlık turizmi ajansıyız. Misyonumuz, hastaları Türkiye'deki en iyi tıbbi tesisler ve uzmanlarla buluşturmaktır.",
+    "title": "Hakkımızda",
+    "paragraph1": "Uluslararası hastalara kapsamlı sağlık hizmetleri sunan önde gelen bir sağlık turizmi şirketiyiz. Misyonumuz, hastaları Türkiye'deki en iyi tıbbi tesisler ve uzmanlarla buluşturmaktır.",
     "paragraph2": "Sağlık sektöründe yılların deneyimi ile Türkiye genelindeki tanınmış hastane ve kliniklerle güçlü ortaklıklar kurduk. Her hastanın tıbbi yolculuğu boyunca kişiselleştirilmiş bakım ve ilgi almasını sağlıyoruz.",
     "paragraph3": "Sağlık profesyonelleri ve seyahat koordinatörlerinden oluşan ekibimiz, ilk konsültasyondan tedavi sonrası bakım ve takibe kadar kusursuz sağlık turizmi deneyimleri sağlamak için birlikte çalışır."
   },
@@ -347,7 +352,26 @@
   "contact": {
     "title": "İletişim",
     "subtitle": "Herhangi bir sorunuz için veya konsültasyon randevunuzu planlamak için bizimle iletişime geçin.",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "form": {
+      "name": "Ad Soyad",
+      "namePlaceholder": "Adınızı ve soyadınızı girin",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "phone": "Telefon Numarası",
+      "phonePlaceholder": "Telefon numaranızı girin",
+      "message": "Mesaj",
+      "messagePlaceholder": "İhtiyaçlarınız hakkında bize bilgi verin",
+      "sending": "Gönderiliyor...",
+      "send": "Mesaj Gönder",
+      "thankYou": "Teşekkürler!",
+      "successMessage": "Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız."
+    }
+  },
+  "dailyLimit": {
+    "info": "Günlük limit: {{remaining}}/{{limit}} form",
+    "exceeded": "Günlük limit doldu! Yarın tekrar deneyebilirsiniz. (Limit: {{limit}} form/gün)",
+    "remaining": "Kalan form hakkı: {{remaining}}"
   },
   "beforeAfter": {
     "heading": "Öncesi & Sonrası Sonuçlar",

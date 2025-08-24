@@ -11,7 +11,7 @@ export default function BeforeAfter() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { 
       loop: false,
-      align: "start",
+      align: "center",
       skipSnaps: false,
       dragFree: false,
       containScroll: "trimSnaps"
@@ -221,19 +221,35 @@ export default function BeforeAfter() {
             </button>
           </div>
 
-          {/* Dot Navigation */}
-          <div className="flex justify-center mt-6">
+                    {/* Dot Navigation - Hidden on mobile, visible on larger screens */}
+          <div className="hidden sm:flex justify-center mt-6">
             <div className="flex gap-2">
               {beforeAfterCases.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => scrollTo(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                    index === selectedIndex 
-                      ? 'bg-yellow-400 w-8' 
-                      : 'bg-gray-600 hover:bg-gray-500'
-                  }`}
-                />
+                  className={`
+                    relative overflow-hidden rounded-full transition-all duration-300 ease-out
+                    ${index === selectedIndex 
+                      ? 'bg-yellow-400 shadow-lg shadow-yellow-400/30 w-8 h-2' 
+                      : 'bg-gray-600 hover:bg-gray-500 w-3 h-3'
+                    }
+                  `}
+                >
+                  {/* Active dot inner glow */}
+                  {index === selectedIndex && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-full animate-pulse" />
+                  )}
+                  
+                  {/* Dot content */}
+                  <div className={`
+                    relative z-10 w-full h-full rounded-full transition-all duration-300
+                    ${index === selectedIndex 
+                      ? 'bg-yellow-400' 
+                      : 'bg-gray-600'
+                    }
+                  `} />
+                </button>
               ))}
             </div>
           </div>

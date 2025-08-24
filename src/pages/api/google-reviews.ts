@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { googleConfig } from "../../config/index";
 
 // This API proxies Google Places reviews. Provide PLACE_ID and API_KEY via env.
 // It returns a trimmed list of 3 reviews for the frontend.
@@ -6,8 +7,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 type Review = { author_name: string; rating: number; text: string };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const placeId = process.env.GOOGLE_PLACE_ID;
-  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
+  const placeId = googleConfig.places.placeId;
+  const apiKey = googleConfig.places.apiKey;
 
   if (!placeId || !apiKey) {
     res.status(200).json({ reviews: [] });
