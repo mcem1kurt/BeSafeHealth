@@ -33,7 +33,7 @@ export default function HairTransplantPage() {
       title: t("services.hair.women.title"),
       description: t("services.hair.women.description"),
       features: ["Kadına özel teknikler", "İnce saç korunması", "Doğal sonuçlar", "Uzman ekip"],
-      image: "/images/services/woman-hair-transplant.jpg"
+      image: "/images/services/woman-hair-transplant.png"
     },
     {
       title: t("services.hair.beard.title"),
