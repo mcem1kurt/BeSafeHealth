@@ -14,31 +14,31 @@ export default function HairTransplantPage() {
     {
       title: t("services.hair.fue.title"),
       description: t("services.hair.fue.description"),
-      features: ["Minimal invaziv", "Hızlı iyileşme", "Doğal sonuçlar", "Az iz"],
+      features: t("hairServices.fue.features", { returnObjects: true }) as string[],
       image: "/images/services/FUE.png"
     },
     {
       title: t("services.hair.sapphire.title"),
       description: t("services.hair.sapphire.description"),
-      features: ["Safir bıçaklar", "Hassas kesim", "Daha az travma", "Hızlı iyileşme"],
+      features: t("hairServices.sapphire.features", { returnObjects: true }) as string[],
       image: "/images/services/sapphire.png"
     },
     {
       title: t("services.hair.dhi.title"),
       description: t("services.hair.dhi.description"),
-      features: ["Maksimum yoğunluk", "Doğal görünüm", "Direkt yerleştirme", "Yüksek başarı"],
+      features: t("hairServices.dhi.features", { returnObjects: true }) as string[],
       image: "/images/services/DHI.png"
     },
     {
       title: t("services.hair.women.title"),
       description: t("services.hair.women.description"),
-      features: ["Kadına özel teknikler", "İnce saç korunması", "Doğal sonuçlar", "Uzman ekip"],
+      features: t("hairServices.women.features", { returnObjects: true }) as string[],
       image: "/images/services/woman-hair-transplant.png"
     },
     {
       title: t("services.hair.beard.title"),
       description: t("services.hair.beard.description"),
-      features: ["Sakal ve bıyık", "Doğal görünüm", "Özel teknikler", "Kalıcı sonuçlar"],
+      features: t("hairServices.beard.features", { returnObjects: true }) as string[],
       image: "/images/services/beard-transplant.png"
     }
   ];
@@ -46,23 +46,23 @@ export default function HairTransplantPage() {
   const benefits = [
     {
       icon: <Award className="w-8 h-8 text-yellow-400" />,
-      title: "Uzman Ekip",
-      description: "Deneyimli saç ekimi uzmanları ile çalışıyoruz"
+      title: t("benefits.hair.expertTeam.title"),
+      description: t("benefits.hair.expertTeam.description")
     },
     {
       icon: <Shield className="w-8 h-8 text-yellow-400" />,
-      title: "Güvenli Tedavi",
-      description: "En son teknoloji ve steril ortamda tedavi"
+      title: t("benefits.hair.safeTreatment.title"),
+      description: t("benefits.hair.safeTreatment.description")
     },
     {
       icon: <Clock className="w-8 h-8 text-yellow-400" />,
-      title: "Hızlı İyileşme",
-      description: "Minimal invaziv teknikler ile hızlı toparlanma"
+      title: t("benefits.hair.fastRecovery.title"),
+      description: t("benefits.hair.fastRecovery.description")
     },
     {
       icon: <Users className="w-8 h-8 text-yellow-400" />,
-      title: "Kişisel Bakım",
-      description: "Her hasta için özel tedavi planı"
+      title: t("benefits.hair.personalCare.title"),
+      description: t("benefits.hair.personalCare.description")
     }
   ];
 
@@ -108,7 +108,7 @@ export default function HairTransplantPage() {
             </p>
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 text-yellow-300 px-4 py-2 rounded-full border border-yellow-500/30">
               <CheckCircle2 className="w-5 h-5" />
-              <span className="font-medium">Uzman Saç Ekimi Hizmetleri</span>
+              <span className="font-medium">{t("pageHeaders.hair.expertServices")}</span>
             </div>
           </motion.div>
         </div>
@@ -137,9 +137,9 @@ export default function HairTransplantPage() {
         {/* Services Grid */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Saç Ekimi Tekniklerimiz</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t("serviceSections.hair.title")}</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Modern teknoloji ve uzman ekibimizle her hasta için en uygun tekniği seçiyoruz
+              {t("serviceSections.hair.subtitle")}
             </p>
           </div>
           
@@ -178,7 +178,7 @@ export default function HairTransplantPage() {
                     href="/contact"
                     className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-200 font-medium"
                   >
-                    Ücretsiz Danışmanlık Al
+                    {t("cta.freeConsultation")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -191,17 +191,16 @@ export default function HairTransplantPage() {
         <section className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-2xl border border-yellow-500/20 p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Saç Ekimi İçin Hemen Başlayın
+              {t("cta.hair.title")}
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Uzman ekibimizle görüşerek size en uygun saç ekimi tekniğini belirleyelim. 
-              Ücretsiz danışmanlık için hemen iletişime geçin.
+              {t("cta.hair.subtitle")}
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold rounded-xl hover:from-yellow-600 hover:to-yellow-700 transition-all duration-200 hover:scale-105 hover:shadow-lg"
             >
-              Ücretsiz Danışmanlık Al
+              {t("cta.freeConsultation")}
               <CheckCircle2 className="w-5 h-5" />
             </Link>
           </div>

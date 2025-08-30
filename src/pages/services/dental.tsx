@@ -14,37 +14,37 @@ export default function DentalPage() {
     {
       title: t("services.dental.smile.title"),
       description: t("services.dental.smile.description"),
-      features: ["Gülüş analizi", "Kişiye özel tasarım", "Doğal sonuçlar", "Uyumlu görünüm"],
+      features: t("dentalServices.smile.features", { returnObjects: true }) as string[],
       image: "/images/services/dental.jpg"
     },
     {
       title: t("services.dental.laminate.title"),
       description: t("services.dental.laminate.description"),
-      features: ["İnce porselen", "Ön yüzey kaplama", "Mükemmel gülüş", "Estetik sonuçlar"],
+      features: t("dentalServices.laminate.features", { returnObjects: true }) as string[],
       image: "/images/services/Lamine-Veneer.png"
     },
     {
       title: t("services.dental.zirconium.title"),
       description: t("services.dental.zirconium.description"),
-      features: ["Dayanıklı materyal", "Doğal görünüm", "Uzun ömürlü", "Yüksek kalite"],
+      features: t("dentalServices.zirconium.features", { returnObjects: true }) as string[],
       image: "/images/services/zirconium.png"
     },
     {
       title: t("services.dental.implant.title"),
       description: t("services.dental.implant.description"),
-      features: ["Modern teknoloji", "Doğal görünüm", "Fonksiyonel", "Kalıcı çözüm"],
+      features: t("dentalServices.implant.features", { returnObjects: true }) as string[],
       image: "/images/services/implant.png"
     },
     {
       title: t("services.dental.orthodontics.title"),
       description: t("services.dental.orthodontics.description"),
-      features: ["Çapraşık düzeltme", "Estetik dizilim", "Sağlıklı dişler", "Profesyonel tedavi"],
+      features: t("dentalServices.orthodontics.features", { returnObjects: true }) as string[],
       image: "/images/services/orthodontics.png"
     },
     {
       title: t("services.dental.whitening.title"),
       description: t("services.dental.whitening.description"),
-      features: ["Profesyonel teknik", "Parlak gülüş", "Beyaz dişler", "Hızlı sonuç"],
+      features: t("dentalServices.whitening.features", { returnObjects: true }) as string[],
       image: "/images/services/teeth-whitening.png"
     }
   ];
@@ -52,23 +52,23 @@ export default function DentalPage() {
   const benefits = [
     {
       icon: <Award className="w-8 h-8 text-yellow-400" />,
-      title: "Uzman Diş Hekimleri",
-      description: "Deneyimli ve uzman diş hekimleri ile çalışıyoruz"
+      title: t("benefits.dental.expertDentists.title"),
+      description: t("benefits.dental.expertDentists.description")
     },
     {
       icon: <Shield className="w-8 h-8 text-yellow-400" />,
-      title: "Modern Teknoloji",
-      description: "En son diş hekimliği teknolojilerini kullanıyoruz"
+      title: t("benefits.dental.modernTechnology.title"),
+      description: t("benefits.dental.modernTechnology.description")
     },
     {
       icon: <Clock className="w-8 h-8 text-yellow-400" />,
-      title: "Hızlı Tedavi",
-      description: "Etkili ve hızlı tedavi süreçleri"
+      title: t("benefits.dental.fastTreatment.title"),
+      description: t("benefits.dental.fastTreatment.description")
     },
     {
       icon: <Smile className="w-8 h-8 text-yellow-400" />,
-      title: "Estetik Sonuçlar",
-      description: "Doğal ve estetik gülüş tasarımı"
+      title: t("benefits.dental.aestheticResults.title"),
+      description: t("benefits.dental.aestheticResults.description")
     }
   ];
 
@@ -114,7 +114,7 @@ export default function DentalPage() {
             </p>
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 text-yellow-300 px-4 py-2 rounded-full border border-yellow-500/30">
               <Smile className="w-5 h-5" />
-              <span className="font-medium">Profesyonel Diş Tedavileri</span>
+              <span className="font-medium">{t("pageHeaders.dental.professionalServices")}</span>
             </div>
           </motion.div>
         </div>
@@ -143,9 +143,9 @@ export default function DentalPage() {
         {/* Services Grid */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Diş Tedavi Hizmetlerimiz</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t("serviceSections.dental.title")}</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Modern teknoloji ve uzman ekibimizle gülüşünüzü mükemmelleştiriyoruz
+              {t("serviceSections.dental.subtitle")}
             </p>
           </div>
           
@@ -184,7 +184,7 @@ export default function DentalPage() {
                     href="/contact"
                     className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-200 font-medium"
                   >
-                    Ücretsiz Danışmanlık Al
+                    {t("cta.freeConsultation")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -197,17 +197,16 @@ export default function DentalPage() {
         <section className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-2xl border border-yellow-500/20 p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Gülüşünüzü Yenileyin
+              {t("cta.dental.title")}
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Uzman diş hekimlerimizle görüşerek size en uygun tedavi planını belirleyelim. 
-              Ücretsiz danışmanlık için hemen iletişime geçin.
+              {t("cta.dental.subtitle")}
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold rounded-xl hover:from-yellow-600 hover:to-yellow-700 transition-all duration-200 hover:scale-105 hover:shadow-lg"
             >
-              Ücretsiz Danışmanlık Al
+              {t("cta.freeConsultation")}
               <CheckCircle2 className="w-5 h-5" />
             </Link>
           </div>

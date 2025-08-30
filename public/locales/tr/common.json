@@ -1,7 +1,7 @@
 {
   "navbar": { "home": "Anasayfa", "about": "Hakkımızda", "services": "Hizmetlerimiz", "contact": "İletişim" },
   "hero": {
-    "title": "Kusursuz Başlangıç Noktasına Hoş Geldiniz.",
+    "title": "Kusursuzluğun Başlangıç Noktasına Hoş Geldiniz.",
     "subtitle": "Sağlık turizmi yolculuğunuzda güvenilir partneriniz. Kaliteli sağlık hizmetleri için Türkiye'ye gelin.",
     "cta": "Hemen Başlayın",
     "scroll": "Aşağı Kaydırın",
@@ -119,6 +119,11 @@
         "title": "Kepçe Kulak Ameliyatı",
         "description": "Kepçe kulakları düzelterek yüzünüzle uyumlu doğal kulak şekli elde ediyoruz."
       }
+    },
+    "academy": {
+      "title": "Akademi",
+      "subtitle": "Sağlık profesyonelleri için kapsamlı eğitim ve sertifika programları.",
+      "description": "Be Safe Health Academy, sağlık sektöründe çalışan profesyonellere yönelik kapsamlı eğitim programları sunar. Modern tıbbi teknolojiler, tedavi yöntemleri ve hasta bakımı konularında uzmanlaşma fırsatı sağlıyoruz."
     }
   },
   "journey": {
@@ -378,5 +383,164 @@
     "before": "Öncesi",
     "after": "Sonrası",
     "moreImages": "Daha Fazla Öncesi & Sonrası Görsel"
+  },
+  "hairServices": {
+    "fue": {
+      "features": ["Minimal invaziv", "Hızlı iyileşme", "Doğal sonuçlar", "Az iz"]
+    },
+    "sapphire": {
+      "features": ["Safir bıçaklar", "Hassas kesim", "Daha az travma", "Hızlı iyileşme"]
+    },
+    "dhi": {
+      "features": ["Maksimum yoğunluk", "Doğal görünüm", "Direkt yerleştirme", "Yüksek başarı"]
+    },
+    "women": {
+      "features": ["Kadına özel teknikler", "İnce saç korunması", "Doğal sonuçlar", "Uzman ekip"]
+    },
+    "beard": {
+      "features": ["Sakal ve bıyık", "Doğal görünüm", "Özel teknikler", "Kalıcı sonuçlar"]
+    }
+  },
+  "dentalServices": {
+    "smile": {
+      "features": ["Gülüş analizi", "Kişiye özel tasarım", "Doğal sonuçlar", "Uyumlu görünüm"]
+    },
+    "laminate": {
+      "features": ["İnce porselen", "Ön yüzey kaplama", "Mükemmel gülüş", "Estetik sonuçlar"]
+    },
+    "zirconium": {
+      "features": ["Dayanıklı materyal", "Doğal görünüm", "Uzun ömürlü", "Yüksek kalite"]
+    },
+    "implant": {
+      "features": ["Modern teknoloji", "Doğal görünüm", "Fonksiyonel", "Kalıcı çözüm"]
+    },
+    "orthodontics": {
+      "features": ["Çapraşık düzeltme", "Estetik dizilim", "Sağlıklı dişler", "Profesyonel tedavi"]
+    },
+    "whitening": {
+      "features": ["Profesyonel teknik", "Parlak gülüş", "Beyaz dişler", "Hızlı sonuç"]
+    }
+  },
+  "plasticServices": {
+    "rhinoplasty": {
+      "features": ["Burun şekli", "Fonksiyon iyileştirme", "Doğal görünüm", "Yüz uyumu"]
+    },
+    "breastAugmentation": {
+      "features": ["Modern implantlar", "Güvenli ameliyat", "Doğal sonuçlar", "Uzman cerrahlar"]
+    },
+    "breastReduction": {
+      "features": ["Vücut oranları", "Fiziksel rahatlık", "Estetik görünüm", "Sağlık iyileştirme"]
+    },
+    "tummyTuck": {
+      "features": ["Karın sıkılaştırma", "Düz karın", "Tonlu görünüm", "Gençleştirme"]
+    },
+    "armLift": {
+      "features": ["Kol sıkılaştırma", "Genç görünüm", "Tonlu kollar", "Estetik sonuçlar"]
+    },
+    "bbl": {
+      "features": ["Kalça şekillendirme", "Dolgun görünüm", "Estetik oranlar", "Doğal sonuçlar"]
+    },
+    "neckLift": {
+      "features": ["Boyun sıkılaştırma", "Genç görünüm", "Sarkma giderme", "Estetik sonuçlar"]
+    },
+    "earSurgery": {
+      "features": ["Kepçe kulak düzeltme", "Doğal şekil", "Yüz uyumu", "Estetik sonuçlar"]
+    }
+  },
+  "benefits": {
+    "hair": {
+      "expertTeam": {
+        "title": "Uzman Ekip",
+        "description": "Deneyimli saç ekimi uzmanları ile çalışıyoruz"
+      },
+      "safeTreatment": {
+        "title": "Güvenli Tedavi",
+        "description": "En son teknoloji ve steril ortamda tedavi"
+      },
+      "fastRecovery": {
+        "title": "Hızlı İyileşme",
+        "description": "Minimal invaziv teknikler ile hızlı toparlanma"
+      },
+      "personalCare": {
+        "title": "Kişisel Bakım",
+        "description": "Her hasta için özel tedavi planı"
+      }
+    },
+    "dental": {
+      "expertDentists": {
+        "title": "Uzman Diş Hekimleri",
+        "description": "Deneyimli ve uzman diş hekimleri ile çalışıyoruz"
+      },
+      "modernTechnology": {
+        "title": "Modern Teknoloji",
+        "description": "En son diş hekimliği teknolojilerini kullanıyoruz"
+      },
+      "fastTreatment": {
+        "title": "Hızlı Tedavi",
+        "description": "Etkili ve hızlı tedavi süreçleri"
+      },
+      "aestheticResults": {
+        "title": "Estetik Sonuçlar",
+        "description": "Doğal ve estetik gülüş tasarımı"
+      }
+    },
+    "plastic": {
+      "expertSurgeons": {
+        "title": "Uzman Cerrahlar",
+        "description": "Deneyimli plastik cerrahlar ile çalışıyoruz"
+      },
+      "safeSurgery": {
+        "title": "Güvenli Ameliyat",
+        "description": "Modern teknoloji ve steril ortamda ameliyat"
+      },
+      "fastRecovery": {
+        "title": "Hızlı İyileşme",
+        "description": "Minimal invaziv teknikler ile hızlı toparlanma"
+      },
+      "naturalResults": {
+        "title": "Doğal Sonuçlar",
+        "description": "Yüzünüzle uyumlu doğal görünüm"
+      }
+    }
+  },
+  "pageHeaders": {
+    "hair": {
+      "expertServices": "Uzman Saç Ekimi Hizmetleri"
+    },
+    "dental": {
+      "professionalServices": "Profesyonel Diş Tedavileri"
+    },
+    "plastic": {
+      "safeAesthetic": "Güvenli Estetik Cerrahi"
+    }
+  },
+  "serviceSections": {
+    "hair": {
+      "title": "Saç Ekimi Tekniklerimiz",
+      "subtitle": "Modern teknoloji ve uzman ekibimizle her hasta için en uygun tekniği seçiyoruz"
+    },
+    "dental": {
+      "title": "Diş Tedavi Hizmetlerimiz",
+      "subtitle": "Modern teknoloji ve uzman ekibimizle gülüşünüzü mükemmelleştiriyoruz"
+    },
+    "plastic": {
+      "title": "Estetik Cerrahi Hizmetlerimiz",
+      "subtitle": "Modern teknoloji ve uzman ekibimizle güzelliğinizi ortaya çıkarıyoruz"
+    }
+  },
+  "cta": {
+    "freeConsultation": "Ücretsiz Danışmanlık Al",
+    "hair": {
+      "title": "Saç Ekimi İçin Hemen Başlayın",
+      "subtitle": "Uzman ekibimizle görüşerek size en uygun saç ekimi tekniğini belirleyelim. Ücretsiz danışmanlık için hemen iletişime geçin."
+    },
+    "dental": {
+      "title": "Gülüşünüzü Yenileyin",
+      "subtitle": "Uzman diş hekimlerimizle görüşerek size en uygun tedavi planını belirleyelim. Ücretsiz danışmanlık için hemen iletişime geçin."
+    },
+    "plastic": {
+      "title": "Güzelliğinizi Ortaya Çıkarın",
+      "subtitle": "Uzman plastik cerrahlarımızla görüşerek size en uygun estetik ameliyat planını belirleyelim. Ücretsiz danışmanlık için hemen iletişime geçin."
+    }
   }
 }

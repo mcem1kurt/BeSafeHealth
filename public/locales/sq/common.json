@@ -1,0 +1,631 @@
+{
+  "navbar": {
+    "home": "Shtëpi",
+    "about": "Afër",
+    "services": "Shërbime",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Mirësevini në pikën fillestare perfekte.",
+    "subtitle": "Partneri juaj i besueshëm në udhëtimin tuaj të turizmit shëndetësor. ",
+    "cta": "Filloni tani",
+    "scroll": "Lëviz poshtë",
+    "explore": "Eksploroj",
+    "contactForm": {
+      "title": "Konsultim falas",
+      "subtitle": "Konsultohuni me ekipin tonë të ekspertëve për të përcaktuar planin më të përshtatshëm të trajtimit për ju.",
+      "name": "Emri juaj i plotë",
+      "phone": "Numri juaj i telefonit",
+      "email": "Adresa juaj e emailit",
+      "service": "Zgjidhni Shërbimin",
+      "message": "Mesazhi juaj (opsional)",
+      "submit": "Vë",
+      "sending": "Dërgimi ...",
+      "successTitle": "Faleminderit!",
+      "successMessage": "Mesazhi juaj është dërguar me sukses. ",
+      "newMessage": "Dërgoni një mesazh të ri"
+    }
+  },
+  "heroTrust": {
+    "certified": "Mjekë të certifikuar",
+    "experience": "Përvojë 10+ vjet",
+    "support": "Mbështetje 24/7"
+  },
+  "services": {
+    "title": "Shërbimet tona",
+    "subtitle": "Ne ofrojmë shërbime të kujdesit shëndetësor me cilësi më të lartë me ekipin tonë të ekspertëve dhe teknologjinë moderne.",
+    "hair": {
+      "title": "Transplantim i flokëve",
+      "subtitle": "Shërbime ekspertësh të transplantimit të flokëve për rezultate natyrale dhe të përhershme.",
+      "description": "Ne arrijmë rezultate natyrale dhe të përhershme me teknikat moderne të transplantimit të flokëve. ",
+      "fue": {
+        "title": "FUE TEKNIKA",
+        "description": "Ne arrijmë rezultate natyrale duke nxjerrë gjëndrat e flokëve një nga një duke përdorur teknikën e nxjerrjes së njësisë folikulare. "
+      },
+      "sapphire": {
+        "title": "Teknika e Fue Sapphire",
+        "description": "Ne bëjmë prerje më të sakta dhe të mprehta duke përdorur blades safire. "
+      },
+      "dhi": {
+        "title": "Teknika DHI",
+        "description": "Ne vendosim gjëndrat e flokëve direkt në zonën e synuar me implantim të drejtpërdrejtë të flokëve. "
+      },
+      "women": {
+        "title": "Transplantimi i flokëve të grave",
+        "description": "Ne arrijmë rezultate natyrale me teknikat e transplantimit të flokëve specifike për gratë duke ruajtur fillesat e shkëlqyera të flokëve."
+      },
+      "beard": {
+        "title": "Transplantim i mjekrës",
+        "description": "Ne kryejmë transplantim të mjekrës me pamje natyrale me teknika të veçanta për zonat e mjekrës dhe mustaqeve."
+      }
+    },
+    "dental": {
+      "title": "Trajtime dentare",
+      "subtitle": "Rinovoni buzëqeshjen tuaj me teknologjitë moderne të stomatologjisë.",
+      "description": "Ne ofrojmë rezultate estetike dhe funksionale me trajtime gjithëpërfshirëse dentare. ",
+      "smile": {
+        "title": "Buzëqesh estetikën",
+        "description": "Ne krijojmë dizajn të personalizuar të dhëmbëve estetikë duke analizuar buzëqeshjen tuaj. "
+      },
+      "laminate": {
+        "title": "Rimeso",
+        "description": "Ne arrijmë buzëqeshje të përsosur duke mbuluar sipërfaqen e përparme të dhëmbëve tuaj me çarçafë prej porcelani të hollë."
+      },
+      "zirconium": {
+        "title": "Veshje me zirkon",
+        "description": "Ne bëjmë veshje dhëmbësh me pamje natyrale dhe të gjata me material të qëndrueshëm të zirkonit."
+      },
+      "implant": {
+        "title": "Ngulit",
+        "description": "Ne i plotësojmë dhëmbët tuaj të humbur me teknologji moderne të implantit. "
+      },
+      "orthodontics": {
+        "title": "Trajtimet ortodontike",
+        "description": "Ne arrijmë shtrirjen e dhëmbëve estetikë dhe të shëndetshëm duke rregulluar dhëmbët e shtrembër."
+      },
+      "whitening": {
+        "title": "Zbardh dhëmbësh",
+        "description": "Ne arrijmë buzëqeshje të ndritshme dhe të bardhë me teknika profesionale të zbardhjes së dhëmbëve."
+      }
+    },
+    "plastic": {
+      "title": "Kirurgji plastike",
+      "subtitle": "Zbuloni bukurinë tuaj me operacione estetike të sigurta dhe natyrore.",
+      "description": "Ne arrijmë rezultate të sigurta dhe natyrore me kirurgët tanë me përvojë plastike. ",
+      "rhinoplasty": {
+        "title": "Rinoplastikë",
+        "description": "Ne arrijmë pamje natyrale që harmonizohet me fytyrën tuaj duke përmirësuar formën dhe funksionin e hundës."
+      },
+      "breastAugmentation": {
+        "title": "Shtim i gjirit",
+        "description": "Ne kryejmë operacione të sigurta dhe natyrale të rritjes së gjirit me teknologji moderne të implantit."
+      },
+      "breastReduction": {
+        "title": "Ulje e gjirit",
+        "description": "Ne ekuilibrojmë proporcionet e trupit tuaj dhe eliminojmë sikletet fizike duke zvogëluar gjinjtë e mëdhenj."
+      },
+      "tummyTuck": {
+        "title": "Barkun",
+        "description": "Ne arrijmë bark të sheshtë dhe të tonifikuar duke shtrënguar lëkurën e lirshme të barkut."
+      },
+      "armLift": {
+        "title": "Ngritës",
+        "description": "Ne ofrojmë pamje më të re dhe të tonifikuar të krahut duke shtrënguar lëkurën e krahut të mprehtë."
+      },
+      "bbl": {
+        "title": "Bbl",
+        "description": "Ne arrijmë pamje më të plotë dhe më estetike duke formuar zonën e hip tuaj me ngritës të prapanicës braziliane."
+      },
+      "neckLift": {
+        "title": "Ngritës në qafë",
+        "description": "Ne ofrojmë pamje më të re dhe më të fortë duke eleminuar sagging në zonën e qafës."
+      },
+      "earSurgery": {
+        "title": "Operacion në vesh",
+        "description": "Ne arrijmë formën natyrale të veshit që harmonizohet me fytyrën tuaj duke korrigjuar veshët e zgjatur."
+      }
+    },
+    "academy": {
+      "title": "Akademi",
+      "subtitle": "Programe gjithëpërfshirëse të trajnimit dhe çertifikimit për profesionistët e kujdesit shëndetësor.",
+      "description": "Bëhu Akademia e Shëndetit të Sigurt ofron programe gjithëpërfshirëse trajnimi për profesionistët që punojnë në sektorin e kujdesit shëndetësor. "
+    }
+  },
+  "journey": {
+    "title": "Udhëtimi juaj",
+    "subtitle": "Ne ju udhëzojmë gjatë procesit tuaj të turizmit shëndetësor.",
+    "steps": {
+      "step1": {
+        "title": "Konsultimi fillestar",
+        "desc": "Ne vlerësojmë gjendjen tuaj shëndetësore dhe ju ofrojmë planin më të përshtatshëm të trajtimit.",
+        "duration": "1-2 ditë",
+        "requirements": {
+          "photo": "Fotografitë e fundit",
+          "history": "Histori mjekësore",
+          "medications": "Ilaçet aktuale"
+        },
+        "process": "Analizë e hollësishme e gjendjes suaj shëndetësore dhe prezantimit të opsioneve të trajtimit",
+        "benefits": {
+          "response": "Përgjigje dhe vlerësim i shpejtë",
+          "travel": "Mbështetja e planifikimit të udhëtimit",
+          "evaluation": "Vlerësimi gjithëpërfshirës i shëndetit"
+        }
+      },
+      "step2": {
+        "title": "Planifikim",
+        "desc": "Ne planifikojmë procesin tuaj të trajtimit në detaje dhe bëjmë të gjitha aranzhimet e nevojshme.",
+        "duration": "3-5 ditë",
+        "requirements": {
+          "dates": "Datat e preferuara",
+          "budget": "Planifikim i buxhetit",
+          "requests": "Kërkesa të veçanta"
+        },
+        "process": "Krijimi i programit të trajtimit, akomodimit dhe aranzhimeve të transferimit",
+        "benefits": {
+          "scheduling": "Caktimi fleksibël",
+          "options": "Opsione të shumta",
+          "cost": "Informacion i qartë i kostos"
+        }
+      },
+      "step3": {
+        "title": "Udhëtim",
+        "desc": "Ne bëjmë të gjitha marrëveshjet për udhëtime të sigurta dhe të rehatshme për në Turqi.",
+        "duration": "1-2 ditë",
+        "requirements": {
+          "passport": "Pasaportë e vlefshme",
+          "documents": "Dokumente të kërkuara",
+          "records": "Të dhëna mjekësore"
+        },
+        "process": "Shërbime të transferimit, akomodimit dhe të mirëseardhjes",
+        "benefits": {
+          "arrival": "Marrje në aeroport",
+          "support": "Mbështetje e vazhdueshme",
+          "guidance": "Shërbime udhëzuese"
+        }
+      },
+      "step4": {
+        "title": "Trajtim",
+        "desc": "Ne kryejmë trajtimin tuaj me pajisjet moderne mjekësore dhe ekipin tonë të ekspertëve.",
+        "duration": "1-7 ditë",
+        "requirements": {
+          "tests": "Testet e kërkuara",
+          "fasting": "Kërkesat e agjërimit",
+          "clothing": "Veshje e përshtatshme"
+        },
+        "process": "Procesi i trajtimit profesional, monitorimi dhe kujdesi i vazhdueshëm",
+        "benefits": {
+          "technology": "Teknologji moderne",
+          "team": "Ekip ekspert",
+          "care": "Kujdestar"
+        }
+      },
+      "step5": {
+        "title": "Rikthim",
+        "desc": "Ne ju mbështesim në procesin e pas-trajtimit dhe monitorojmë shërimin tuaj.",
+        "duration": "2-4 javë",
+        "requirements": {
+          "instructions": "Udhëzime për kujdesin",
+          "medication": "Përdorimi i ilaçeve",
+          "appointments": "Emërimet vijuese"
+        },
+        "process": "Monitorimi pas trajtimit, kontrollet dhe rregullimet e nevojshme",
+        "benefits": {
+          "confidence": "Shërim i sigurt",
+          "care": "Kujdes i vazhdueshëm",
+          "support": "Mbështetje 24/7"
+        }
+      },
+      "step6": {
+        "title": "Pasues",
+        "desc": "Ne monitorojmë rezultatet afatgjata dhe bëjmë rregullimet e nevojshme.",
+        "duration": "I vazhdueshëm",
+        "requirements": {
+          "photos": "Fotografitë e Progresit",
+          "updates": "Përditësimet e rregullta",
+          "symptoms": "Ndjekja e simptomave"
+        },
+        "process": "Monitorimi afatgjatë dhe rregullimet e nevojshme",
+        "benefits": {
+          "support": "Mbështetje e vazhdueshme",
+          "tracking": "Ndjekje e përparimit",
+          "guidance": "Udhëzime të ekspertëve"
+        }
+      }
+    },
+    "cta": {
+      "title": "Filloni udhëtimin tuaj",
+      "subtitle": "Takoni ekipin tonë të ekspertëve dhe krijoni planin tuaj të trajtimit.",
+      "button": "Filloj"
+    }
+  },
+  "reviews": {
+    "title": "Shqyrtimet e klientit",
+    "subtitle": "Reagime nga klientët tanë që ndajnë përvojat e tyre.",
+    "heading": "Çfarë thonë klientët tanë",
+    "swipeHint": "Rrëshqitni për të parë më shumë komente",
+    "googleBadge": "Shqyrtime të Google"
+  },
+  "faq": {
+    "title": "Pyetjet e bëra më shpesh",
+    "subtitle": "Çfarë pyesni veten për turizmin shëndetësor.",
+    "heading": "Pyetjet e bëra më shpesh",
+    "q1": "Çfarë është turizmi shëndetësor?",
+    "a1": "Turizmi shëndetësor po udhëton në një vend tjetër për të marrë trajtim mjekësor, shpesh me një kosto më të ulët ose me cilësi më të mirë sesa në dispozicion në vend.",
+    "q2": "Sa zgjat procesi i trajtimit?",
+    "q3": "Cilat dokumente më duhen?",
+    "a2": "Kohëzgjatja e trajtimit ndryshon në varësi të procedurës. ",
+    "a3": "Ju do të keni nevojë për pasaportën tuaj, të dhënat mjekësore, fotot e fundit dhe çdo dokumentacion të mëparshëm të trajtimit. "
+  },
+  "cta": {
+    "freeConsultation": "Merrni konsultim falas",
+    "hair": {
+      "title": "Filloni udhëtimin tuaj për transplantimin e flokëve",
+      "subtitle": "Le të përcaktojmë teknikën më të përshtatshme të transplantimit të flokëve për ju me ekipin tonë të ekspertëve. "
+    },
+    "dental": {
+      "title": "Rinovoni buzëqeshjen tuaj",
+      "subtitle": "Le të përcaktojmë planin më të përshtatshëm të trajtimit për ju me dentistët tanë ekspertë. "
+    },
+    "plastic": {
+      "title": "Zbuloni bukurinë tuaj",
+      "subtitle": "Le të përcaktojmë planin më të përshtatshëm të kirurgjisë estetike për ju me kirurgët tanë të ekspertëve plastikë. "
+    }
+  },
+  "footer": {
+    "quick_links": "Lidhje të shpejta",
+    "contact": "Kontakt",
+    "address": "Stamboll, Turqi",
+    "phone": "+90 212 356 36 08",
+    "email": "info@besafehealth.com",
+    "copyright": "Të gjitha të drejtat e rezervuara.",
+    "links": {
+      "about": "Afër",
+      "services": "Shërbime",
+      "contact": "Kontakt"
+    }
+  },
+  "links": {
+    "about": "Afër",
+    "services": "Shërbime",
+    "contact": "Kontakt"
+  },
+  "chatForm": {
+    "title": "Formular kontakti",
+    "subtitle": "Ne jemi këtu për të ndihmuar! ",
+    "namePlaceholder": "Emri juaj",
+    "emailPlaceholder": "Adresa juaj e emailit",
+    "messagePlaceholder": "Mesazhi juaj",
+    "sendButton": "Vë",
+    "sending": "Dërgimi ..."
+  },
+  "contact": {
+    "title": "Na kontaktoni",
+    "subtitle": "Kontaktoni me ne për çdo pyetje ose për të planifikuar konsultimin tuaj.",
+    "whatsapp": "Whatsapp",
+    "form": {
+      "name": "Emër i plotë",
+      "namePlaceholder": "Vendosni emrin tuaj të plotë",
+      "email": "Adresa e postës elektronike",
+      "emailPlaceholder": "Futni adresën tuaj të postës elektronike",
+      "phone": "Numër telefoni",
+      "phonePlaceholder": "Vendosni numrin tuaj të telefonit",
+      "message": "Mesazh",
+      "messagePlaceholder": "Na tregoni për nevojat tuaja",
+      "sending": "Dërgimi ...",
+      "send": "Dërgo mesazh",
+      "thankYou": "Faleminderit!",
+      "successMessage": "Mesazhi juaj është dërguar me sukses. "
+    }
+  },
+  "stepDetails": {
+    "duration": "Kohëzgjatje",
+    "requirements": "Kërkesa",
+    "process": "Përpunoj",
+    "benefits": "Përfitime",
+    "getStarted": "Filloj",
+    "clickForDetails": "Klikoni për detaje"
+  },
+  "notifications": {
+    "messages": [
+      "Emërimi i ri i transplantimit të flokëve",
+      "Planifikimi i trajtimit dentar përfundoi",
+      "Konsultimi estetik i konfirmuar",
+      "Kujtesë për kontrollin pas trajtimit",
+      "Rezervimi i akomodimit i konfirmuar",
+      "Shërbimi i transferimit të planifikuar",
+      "Raporti i Shëndetit gati",
+      "Receta e ilaçeve azhurnohet",
+      "Filloi programi i terapisë fizike",
+      "Takimi i kontrollit të krijuar"
+    ],
+    "titles": [
+      "Emërimi i transplantit të flokëve",
+      "Plan i trajtimit dentar",
+      "Konsultë estetike",
+      "Kujtesë",
+      "Konfirmimi i akomodimit",
+      "Plan transferimi",
+      "Raport shëndetësor",
+      "Azhurnim i recetave",
+      "Terapi fizike",
+      "Takimi i kontrollit"
+    ]
+  },
+  "agency": {
+    "title": "Rreth nesh",
+    "paragraph1": "Ne jemi një kompani udhëheqëse e turizmit shëndetësor që ofron shërbime gjithëpërfshirëse të kujdesit shëndetësor për pacientët ndërkombëtarë. ",
+    "paragraph2": "Me vite përvojë në industrinë e kujdesit shëndetësor, ne kemi krijuar partneritete të forta me spitale dhe klinika të njohura në të gjithë Turqinë. ",
+    "paragraph3": "Ekipi ynë i profesionistëve të kujdesit shëndetësor dhe koordinatorët e udhëtimit punojnë së bashku për të siguruar përvoja të qetë mjekësore të turizmit, nga konsultimi fillestar deri tek kujdesi pas trajtimit dhe përcjellja."
+  },
+  "aboutExtra": {
+    "valuesTitle": "Vlerat tona",
+    "values": {
+      "patient_first": "Qasja e parë e pacientit: Ne i japim përparësi shëndetit dhe mirëqenies tuaj mbi gjithçka tjetër.",
+      "transparent_pricing": "Icingmimi transparent: Nuk ka kosto të fshehur, çmime të qarta dhe të ndershme për të gjitha shërbimet.",
+      "world_class": "Standardet e klasit botëror: Ne ruajmë standardet ndërkombëtare të kujdesit shëndetësor në të gjitha shërbimet tona.",
+      "coordination": "Koordinim i plotë: Ne i trajtojmë të gjitha aspektet e udhëtimit tuaj mjekësor nga fillimi në fund."
+    },
+    "teamTitle": "Ekipi ynë i ekspertëve",
+    "teamDesc": "Ekipi ynë përbëhet nga profesionistë me përvojë të kujdesit shëndetësor, koordinatorë të udhëtimit dhe specialistë të kujdesit për pacientët, të cilët janë të përkushtuar për të ofruar një shërbim të jashtëzakonshëm. ",
+    "tourismTitle": "Përsosmëria e Turizmit Shëndetësor",
+    "tourismDesc": "Turqia është bërë një destinacion global për turizmin shëndetësor, duke ofruar lehtësira mjekësore të klasit botëror me çmime konkurruese. "
+  },
+  "beforeAfter": {
+    "heading": "Rezultatet para dhe pas",
+    "before": "Para",
+    "after": "Më pas",
+    "moreImages": "Më shumë para dhe pas imazheve"
+  },
+  "partners": {
+    "title": "Partnerët tanë",
+    "subtitle": "Duke punuar me institucione të besueshme të kujdesit shëndetësor",
+    "list": [
+      "Pamje e mirë",
+      "100. Yıl hastanesi"
+    ]
+  },
+  "dailyLimit": {
+    "info": "Kufiri ditor: {{remaining}}/{{limit}} format",
+    "exceeded": "Kufiri ditor i tejkaluar!  {{limit}} Format/Dita)",
+    "remaining": "Format e mbetura: {{remaining}}"
+  },
+  "hairServices": {
+    "fue": {
+      "features": [
+        "Minimalisht pushtues",
+        "Shërim i shpejtë",
+        "Rezultate natyrore",
+        "Më pak dhëmbëza"
+      ]
+    },
+    "sapphire": {
+      "features": [
+        "Blades safir",
+        "Prerje e saktë",
+        "Më pak trauma",
+        "Shërim i shpejtë"
+      ]
+    },
+    "dhi": {
+      "features": [
+        "Dendësi maksimale",
+        "Pamje natyrore",
+        "Vendosje e drejtpërdrejtë",
+        "Shkalla e lartë e suksesit"
+      ]
+    },
+    "women": {
+      "features": [
+        "Teknika specifike për gratë",
+        "Ruajtja e flokëve të imët",
+        "Rezultate natyrore",
+        "Ekip ekspert"
+      ]
+    },
+    "beard": {
+      "features": [
+        "Mjekër dhe mustaqe",
+        "Pamje natyrore",
+        "Teknika të veçanta",
+        "Rezultate të përhershme"
+      ]
+    }
+  },
+  "dentalServices": {
+    "smile": {
+      "features": [
+        "Analizë e buzëqeshjes",
+        "Dizajn i personalizuar",
+        "Rezultate natyrore",
+        "Pamje harmonike"
+      ]
+    },
+    "laminate": {
+      "features": [
+        "Porcelan i hollë",
+        "Veshje e sipërfaqes së përparme",
+        "Buzëqeshje e përsosur",
+        "Rezultate estetike"
+      ]
+    },
+    "zirconium": {
+      "features": [
+        "Material i qëndrueshëm",
+        "Pamje natyrore",
+        "Afatgjatë",
+        "Me cilësi të lartë"
+      ]
+    },
+    "implant": {
+      "features": [
+        "Teknologji moderne",
+        "Pamje natyrore",
+        "Funksional",
+        "Zgjidhje e përhershme"
+      ]
+    },
+    "orthodontics": {
+      "features": [
+        "Korrigjim i shtrembër",
+        "Shtrirje estetike",
+        "Dhëmbë të shëndetshëm",
+        "Trajtim profesional"
+      ]
+    },
+    "whitening": {
+      "features": [
+        "Teknikë profesionale",
+        "Buzëqeshje e ndritshme",
+        "Dhëmbë",
+        "Rezultate të shpejta"
+      ]
+    }
+  },
+  "plasticServices": {
+    "rhinoplasty": {
+      "features": [
+        "Formë e hundës",
+        "Përmirësimi i funksionit",
+        "Pamje natyrore",
+        "Harmoni e fytyrës"
+      ]
+    },
+    "breastAugmentation": {
+      "features": [
+        "Implantet moderne",
+        "Kirurgji e sigurt",
+        "Rezultate natyrore",
+        "Kirurgë ekspertësh"
+      ]
+    },
+    "breastReduction": {
+      "features": [
+        "Përmasat e trupit",
+        "Rehati fizike",
+        "Pamje estetike",
+        "Përmirësim shëndetësor"
+      ]
+    },
+    "tummyTuck": {
+      "features": [
+        "Shtrëngim i barkut",
+        "Stomak i rrafshët",
+        "Paraqitje e tonifikuar",
+        "Rinovim"
+      ]
+    },
+    "armLift": {
+      "features": [
+        "Shtrëngim i krahut",
+        "Pamje rinore",
+        "Krahë të tonifikuar",
+        "Rezultate estetike"
+      ]
+    },
+    "bbl": {
+      "features": [
+        "Formim i hip",
+        "Pamje e plotë",
+        "Përmasa estetike",
+        "Rezultate natyrore"
+      ]
+    },
+    "neckLift": {
+      "features": [
+        "Shtrëngim në qafë",
+        "Pamje rinore",
+        "Largim nga sagging",
+        "Rezultate estetike"
+      ]
+    },
+    "earSurgery": {
+      "features": [
+        "Korrigjimi i spikatur i veshit",
+        "Formë natyrore",
+        "Harmoni e fytyrës",
+        "Rezultate estetike"
+      ]
+    }
+  },
+  "benefits": {
+    "hair": {
+      "expertTeam": {
+        "title": "Ekip ekspert",
+        "description": "Ne punojmë me specialistë me përvojë të transplantimit të flokëve"
+      },
+      "safeTreatment": {
+        "title": "Trajtim i sigurt",
+        "description": "Trajtimi me teknologjinë e fundit dhe mjedisin steril"
+      },
+      "fastRecovery": {
+        "title": "Shërim i shpejtë",
+        "description": "Shërimi i shpejtë me teknika minimale invazive"
+      },
+      "personalCare": {
+        "title": "Kujdestar",
+        "description": "Plani i veçantë i trajtimit për secilin pacient"
+      }
+    },
+    "dental": {
+      "expertDentists": {
+        "title": "Dentistë ekspertësh",
+        "description": "Ne punojmë me dentistë me përvojë dhe ekspertë"
+      },
+      "modernTechnology": {
+        "title": "Teknologji moderne",
+        "description": "Ne përdorim teknologjitë më të fundit dentare"
+      },
+      "fastTreatment": {
+        "title": "Trajtim i shpejtë",
+        "description": "Proceset efektive dhe të shpejta të trajtimit"
+      },
+      "aestheticResults": {
+        "title": "Rezultate estetike",
+        "description": "Dizajn i buzëqeshjes natyrale dhe estetike"
+      }
+    },
+    "plastic": {
+      "expertSurgeons": {
+        "title": "Kirurgë ekspertësh",
+        "description": "Ne punojmë me kirurgë me përvojë plastike"
+      },
+      "safeSurgery": {
+        "title": "Kirurgji e sigurt",
+        "description": "Kirurgjia me teknologji moderne dhe mjedis steril"
+      },
+      "fastRecovery": {
+        "title": "Shërim i shpejtë",
+        "description": "Shërimi i shpejtë me teknika minimale invazive"
+      },
+      "naturalResults": {
+        "title": "Rezultate natyrore",
+        "description": "Pamja natyrale e pajtueshme me fytyrën tuaj"
+      }
+    }
+  },
+  "pageHeaders": {
+    "hair": {
+      "expertServices": "Shërbime ekspertësh të transplantimit të flokëve"
+    },
+    "dental": {
+      "professionalServices": "Trajtime profesionale dentare"
+    },
+    "plastic": {
+      "safeAesthetic": "Kirurgji e sigurt estetike"
+    }
+  },
+  "serviceSections": {
+    "hair": {
+      "title": "Teknikat tona të transplantimit të flokëve",
+      "subtitle": "Ne zgjedhim teknikën më të përshtatshme për secilin pacient me teknologji moderne dhe ekip ekspert"
+    },
+    "dental": {
+      "title": "Shërbimet tona të trajtimit dentar",
+      "subtitle": "Ne e përsosim buzëqeshjen tuaj me teknologjinë moderne dhe ekipin e ekspertëve"
+    },
+    "plastic": {
+      "title": "Shërbimet tona të kirurgjisë estetike",
+      "subtitle": "Ne zbulojmë bukurinë tuaj me teknologjinë moderne dhe ekipin e ekspertëve"
+    }
+  }
+}

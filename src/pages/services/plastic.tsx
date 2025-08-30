@@ -14,49 +14,49 @@ export default function PlasticSurgeryPage() {
     {
       title: t("services.plastic.rhinoplasty.title"),
       description: t("services.plastic.rhinoplasty.description"),
-      features: ["Burun şekli", "Fonksiyon iyileştirme", "Doğal görünüm", "Yüz uyumu"],
+      features: t("plasticServices.rhinoplasty.features", { returnObjects: true }) as string[],
       image: "/images/services/rhinoplasty.png"
     },
     {
       title: t("services.plastic.breastAugmentation.title"),
       description: t("services.plastic.breastAugmentation.description"),
-      features: ["Modern implantlar", "Güvenli ameliyat", "Doğal sonuçlar", "Uzman cerrahlar"],
+      features: t("plasticServices.breastAugmentation.features", { returnObjects: true }) as string[],
       image: "/images/services/meme-buyutme.png"
     },
     {
       title: t("services.plastic.breastReduction.title"),
       description: t("services.plastic.breastReduction.description"),
-      features: ["Vücut oranları", "Fiziksel rahatlık", "Estetik görünüm", "Sağlık iyileştirme"],
+      features: t("plasticServices.breastReduction.features", { returnObjects: true }) as string[],
       image: "/images/services/meme-kucultme.png"
     },
     {
       title: t("services.plastic.tummyTuck.title"),
       description: t("services.plastic.tummyTuck.description"),
-      features: ["Karın sıkılaştırma", "Düz karın", "Tonlu görünüm", "Gençleştirme"],
+      features: t("plasticServices.tummyTuck.features", { returnObjects: true }) as string[],
       image: "/images/services/karın-germe.png"
     },
     {
       title: t("services.plastic.armLift.title"),
       description: t("services.plastic.armLift.description"),
-      features: ["Kol sıkılaştırma", "Genç görünüm", "Tonlu kollar", "Estetik sonuçlar"],
+      features: t("plasticServices.armLift.features", { returnObjects: true }) as string[],
       image: "/images/services/kol-germe.png"
     },
     {
       title: t("services.plastic.bbl.title"),
       description: t("services.plastic.bbl.description"),
-      features: ["Kalça şekillendirme", "Dolgun görünüm", "Estetik oranlar", "Doğal sonuçlar"],
+      features: t("plasticServices.bbl.features", { returnObjects: true }) as string[],
       image: "/images/services/BBL.png"
     },
     {
       title: t("services.plastic.neckLift.title"),
       description: t("services.plastic.neckLift.description"),
-      features: ["Boyun sıkılaştırma", "Genç görünüm", "Sarkma giderme", "Estetik sonuçlar"],
+      features: t("plasticServices.neckLift.features", { returnObjects: true }) as string[],
       image: "/images/services/boyun-germe.png"
     },
     {
       title: t("services.plastic.earSurgery.title"),
       description: t("services.plastic.earSurgery.description"),
-      features: ["Kepçe kulak düzeltme", "Doğal şekil", "Yüz uyumu", "Estetik sonuçlar"],
+      features: t("plasticServices.earSurgery.features", { returnObjects: true }) as string[],
       image: "/images/services/kepce-kulak.png"
     }
   ];
@@ -64,23 +64,23 @@ export default function PlasticSurgeryPage() {
   const benefits = [
     {
       icon: <Award className="w-8 h-8 text-yellow-400" />,
-      title: "Uzman Cerrahlar",
-      description: "Deneyimli plastik cerrahlar ile çalışıyoruz"
+      title: t("benefits.plastic.expertSurgeons.title"),
+      description: t("benefits.plastic.expertSurgeons.description")
     },
     {
       icon: <Shield className="w-8 h-8 text-yellow-400" />,
-      title: "Güvenli Ameliyat",
-      description: "Modern teknoloji ve steril ortamda ameliyat"
+      title: t("benefits.plastic.safeSurgery.title"),
+      description: t("benefits.plastic.safeSurgery.description")
     },
     {
       icon: <Clock className="w-8 h-8 text-yellow-400" />,
-      title: "Hızlı İyileşme",
-      description: "Minimal invaziv teknikler ile hızlı toparlanma"
+      title: t("benefits.plastic.fastRecovery.title"),
+      description: t("benefits.plastic.fastRecovery.description")
     },
     {
       icon: <Heart className="w-8 h-8 text-yellow-400" />,
-      title: "Doğal Sonuçlar",
-      description: "Yüzünüzle uyumlu doğal görünüm"
+      title: t("benefits.plastic.naturalResults.title"),
+      description: t("benefits.plastic.naturalResults.description")
     }
   ];
 
@@ -126,7 +126,7 @@ export default function PlasticSurgeryPage() {
             </p>
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 text-yellow-300 px-4 py-2 rounded-full border border-yellow-500/30">
               <Heart className="w-5 h-5" />
-              <span className="font-medium">Güvenli Estetik Cerrahi</span>
+              <span className="font-medium">{t("pageHeaders.plastic.safeAesthetic")}</span>
             </div>
           </motion.div>
         </div>
@@ -155,9 +155,9 @@ export default function PlasticSurgeryPage() {
         {/* Services Grid */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Estetik Cerrahi Hizmetlerimiz</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{t("serviceSections.plastic.title")}</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Modern teknoloji ve uzman ekibimizle güzelliğinizi ortaya çıkarıyoruz
+              {t("serviceSections.plastic.subtitle")}
             </p>
           </div>
           
@@ -196,7 +196,7 @@ export default function PlasticSurgeryPage() {
                     href="/contact"
                     className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-200 font-medium"
                   >
-                    Ücretsiz Danışmanlık Al
+                    {t("cta.freeConsultation")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
@@ -209,17 +209,16 @@ export default function PlasticSurgeryPage() {
         <section className="text-center">
           <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-2xl border border-yellow-500/20 p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Güzelliğinizi Ortaya Çıkarın
+              {t("cta.plastic.title")}
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Uzman plastik cerrahlarımızla görüşerek size en uygun estetik ameliyat planını belirleyelim. 
-              Ücretsiz danışmanlık için hemen iletişime geçin.
+              {t("cta.plastic.subtitle")}
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold rounded-xl hover:from-yellow-600 hover:to-yellow-700 transition-all duration-200 hover:scale-105 hover:shadow-lg"
             >
-              Ücretsiz Danışmanlık Al
+              {t("cta.freeConsultation")}
               <CheckCircle2 className="w-5 h-5" />
             </Link>
           </div>

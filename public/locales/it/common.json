@@ -1,0 +1,563 @@
+{
+  "navbar": { "home": "Home", "about": "Chi Siamo", "services": "Servizi", "contact": "Contatto" },
+  "hero": {
+    "title": "Benvenuti al Punto di Partenza Perfetto.",
+    "subtitle": "Il tuo partner affidabile nel tuo viaggio di turismo sanitario. Vieni in Turchia per servizi sanitari di qualità.",
+    "cta": "Inizia Ora",
+    "scroll": "Scorri Giù",
+    "explore": "Esplora",
+    "contactForm": {
+      "title": "Consultazione Gratuita",
+      "subtitle": "Consulta il nostro team di esperti per determinare il piano di trattamento più adatto a te.",
+      "name": "Il Tuo Nome Completo",
+      "phone": "Il Tuo Numero di Telefono",
+      "email": "Il Tuo Indirizzo Email",
+      "service": "Seleziona Servizio",
+      "message": "Il Tuo Messaggio (Opzionale)",
+      "submit": "Invia",
+      "sending": "Invio in corso...",
+      "successTitle": "Grazie!",
+      "successMessage": "Il tuo messaggio è stato inviato con successo. Ti ricontatteremo al più presto.",
+      "newMessage": "Invia un Nuovo Messaggio"
+    }
+  },
+  "heroTrust": {
+    "certified": "Medici Certificati",
+    "experience": "Oltre 10 Anni di Esperienza",
+    "support": "Supporto 24/7"
+  },
+  "services": {
+    "title": "I Nostri Servizi",
+    "subtitle": "Forniamo servizi sanitari della massima qualità con il nostro team esperto e tecnologia moderna.",
+    "hair": {
+      "title": "Trapianto di Capelli",
+      "subtitle": "Servizi di trapianto di capelli esperti per risultati naturali e permanenti.",
+      "description": "Otteniamo risultati naturali e permanenti con moderne tecniche di trapianto di capelli. Prepariamo piani di trattamento personalizzati per ogni paziente.",
+      "fue": {
+        "title": "Tecnica FUE",
+        "description": "Otteniamo risultati naturali estraendo i follicoli piliferi uno per uno utilizzando la tecnica di Estrazione di Unità Follicolare. Minimamente invasiva con un processo di recupero rapido."
+      },
+      "sapphire": {
+        "title": "Tecnica FUE con Zaffiro",
+        "description": "Eseguiamo incisioni più precise e nitide utilizzando lame di zaffiro. Garantiamo meno trauma e un recupero più veloce."
+      },
+      "dhi": {
+        "title": "Tecnica DHI",
+        "description": "Posizioniamo i follicoli piliferi direttamente nell'area target con l'Impianto Diretto di Capelli. Massima densità e aspetto naturale."
+      },
+      "women": {
+        "title": "Trapianto di Capelli per Donne",
+        "description": "Otteniamo risultati naturali con tecniche di trapianto di capelli specifiche per le donne, preservando le ciocche di capelli fini."
+      },
+      "beard": {
+        "title": "Trapianto di Barba",
+        "description": "Eseguiamo trapianti di barba dall'aspetto naturale con tecniche speciali per le aree della barba e dei baffi."
+      }
+    },
+    "dental": {
+      "title": "Trattamenti Dentali",
+      "subtitle": "Rinnova il tuo sorriso con le moderne tecnologie odontoiatriche.",
+      "description": "Forniamo risultati estetici e funzionali con trattamenti dentali completi. Perfezioniamo il tuo sorriso con tecnologia moderna e un team esperto.",
+      "smile": {
+        "title": "Estetica del Sorriso",
+        "description": "Creiamo un design dentale estetico personalizzato analizzando il tuo sorriso. Otteniamo risultati naturali e armoniosi."
+      },
+      "laminate": {
+        "title": "Faccette in Laminato",
+        "description": "Otteniamo un sorriso perfetto ricoprendo la superficie frontale dei denti con sottili lamine di porcellana."
+      },
+      "zirconium": {
+        "title": "Corone in Zirconia",
+        "description": "Realizziamo corone dentali di aspetto naturale e di lunga durata con il resistente materiale in zirconia."
+      },
+      "implant": {
+        "title": "Impianto",
+        "description": "Completiamo i tuoi denti mancanti con moderne tecnologie implantari. Forniamo aspetto e funzione naturale."
+      },
+      "orthodontics": {
+        "title": "Trattamenti Ortodontici",
+        "description": "Otteniamo un allineamento dentale estetico e sano raddrizzando i denti storti."
+      },
+      "whitening": {
+        "title": "Sbiancamento Dentale",
+        "description": "Otteniamo un sorriso luminoso e bianco con tecniche professionali di sbiancamento dentale."
+      }
+    },
+    "plastic": {
+      "title": "Chirurgia Plastica",
+      "subtitle": "Rivela la tua bellezza con interventi di estetica sicuri e naturali.",
+      "description": "Otteniamo risultati sicuri e naturali con i nostri chirurghi plastici esperti. Prepariamo piani di trattamento personalizzati per ogni paziente.",
+      "rhinoplasty": {
+        "title": "Rinoplastica",
+        "description": "Otteniamo un aspetto naturale che si armonizza con il tuo viso migliorando la forma e la funzione del naso."
+      },
+      "breastAugmentation": {
+        "title": "Aumento del Seno",
+        "description": "Eseguiamo interventi di aumento del seno sicuri e dall'aspetto naturale con moderne tecnologie di impianti."
+      },
+      "breastReduction": {
+        "title": "Riduzione del Seno",
+        "description": "Bilanciamo le proporzioni del tuo corpo ed eliminiamo i disagi fisici riducendo i seni grandi."
+      },
+      "tummyTuck": {
+        "title": "Addominoplastica",
+        "description": "Otteniamo un addome piatto e tonico stringendo la pelle addominale lassa."
+      },
+      "armLift": {
+        "title": "Lifting delle Braccia",
+        "description": "Forniamo un aspetto delle braccia più giovane e tonico stringendo la pelle cadente delle braccia."
+      },
+      "bbl": {
+        "title": "BBL",
+        "description": "Otteniamo un aspetto più pieno e estetico modellando la zona dei fianchi con il Lift Brasiliano dei Glutei."
+      },
+      "neckLift": {
+        "title": "Lifting del Collo",
+        "description": "Forniamo un aspetto più giovane e più stretto eliminando il rilassamento nella zona del collo."
+      },
+      "earSurgery": {
+        "title": "Chirurgia dell'Orecchio",
+        "description": "Otteniamo una forma naturale dell'orecchio che si armonizza con il tuo viso correggendo le orecchie sporgenti."
+      }
+    },
+    "academy": {
+      "title": "Accademia",
+      "subtitle": "Programmi completi di formazione e certificazione per professionisti sanitari.",
+      "description": "Be Safe Health Academy offre programmi di formazione completi per i professionisti che lavorano nel settore sanitario. Forniamo opportunità di specializzazione in tecnologie mediche moderne, metodi di trattamento e cura del paziente."
+    }
+  },
+  "journey": {
+    "title": "Il Tuo Viaggio",
+    "subtitle": "Ti guidiamo attraverso il tuo processo di turismo sanitario.",
+    "steps": {
+      "step1": {
+        "title": "Consultazione Iniziale",
+        "desc": "Valutiamo le tue condizioni di salute e ti offriamo il piano di trattamento più adatto.",
+        "duration": "1-2 giorni",
+        "requirements": {
+          "photo": "Foto recenti",
+          "history": "Storia medica",
+          "medications": "Farmaci attuali"
+        },
+        "process": "Analisi dettagliata delle tue condizioni di salute e presentazione delle opzioni di trattamento",
+        "benefits": {
+          "response": "Risposta e valutazione rapida",
+          "travel": "Supporto per la pianificazione del viaggio",
+          "evaluation": "Valutazione sanitaria completa"
+        }
+      },
+      "step2": {
+        "title": "Pianificazione",
+        "desc": "Pianifichiamo il tuo processo di trattamento in dettaglio e facciamo tutti gli arrangiamenti necessari.",
+        "duration": "3-5 giorni",
+        "requirements": {
+          "dates": "Date preferite",
+          "budget": "Pianificazione del budget",
+          "requests": "Richieste speciali"
+        },
+        "process": "Creazione del programma di trattamento, arrangiamenti per alloggio e trasferimento",
+        "benefits": {
+          "scheduling": "Pianificazione flessibile",
+          "options": "Multiple opzioni",
+          "cost": "Informazioni chiare sui costi"
+        }
+      },
+      "step3": {
+        "title": "Viaggio",
+        "desc": "Facciamo tutti gli arrangiamenti per un viaggio sicuro e confortevole verso la Turchia.",
+        "duration": "1-2 giorni",
+        "requirements": {
+          "passport": "Passaporto valido",
+          "documents": "Documenti richiesti",
+          "records": "Documenti medici"
+        },
+        "process": "Trasferimento, alloggio e servizi di benvenuto",
+        "benefits": {
+          "arrival": "Ritiro in aeroporto",
+          "support": "Supporto continuo",
+          "guidance": "Servizi di guida"
+        }
+      },
+      "step4": {
+        "title": "Trattamento",
+        "desc": "Eseguiamo il tuo trattamento con dispositivi medici moderni e il nostro team esperto.",
+        "duration": "1-7 giorni",
+        "requirements": {
+          "tests": "Test richiesti",
+          "fasting": "Requisiti di digiuno",
+          "clothing": "Abbigliamento appropriato"
+        },
+        "process": "Processo di trattamento professionale, monitoraggio continuo e cura",
+        "benefits": {
+          "technology": "Tecnologia moderna",
+          "team": "Team esperto",
+          "care": "Cura personalizzata"
+        }
+      },
+      "step5": {
+        "title": "Recupero",
+        "desc": "Ti supportiamo nel processo post-trattamento e monitoriamo il tuo recupero.",
+        "duration": "2-4 settimane",
+        "requirements": {
+          "instructions": "Istruzioni per la cura",
+          "medication": "Uso di farmaci",
+          "appointments": "Appuntamenti di follow-up"
+        },
+        "process": "Monitoraggio post-trattamento, controlli e aggiustamenti necessari",
+        "benefits": {
+          "confidence": "Recupero sicuro",
+          "care": "Cura continua",
+          "support": "Supporto 24/7"
+        }
+      },
+      "step6": {
+        "title": "Follow-up",
+        "desc": "Monitoriamo i risultati a lungo termine e apportiamo gli aggiustamenti necessari.",
+        "duration": "Continuo",
+        "requirements": {
+          "photos": "Foto dei progressi",
+          "updates": "Aggiornamenti regolari",
+          "symptoms": "Monitoraggio dei sintomi"
+        },
+        "process": "Monitoraggio a lungo termine e aggiustamenti necessari",
+        "benefits": {
+          "support": "Supporto continuo",
+          "tracking": "Monitoraggio dei progressi",
+          "guidance": "Guida esperta"
+        }
+      }
+    },
+    "cta": {
+      "title": "Inizia il Tuo Viaggio",
+      "subtitle": "Incontra il nostro team di esperti e crea il tuo piano di trattamento.",
+      "button": "Inizia Ora"
+    }
+  },
+  "reviews": {
+    "title": "Recensioni dei Clienti",
+    "subtitle": "Feedback dai nostri clienti che condividono le loro esperienze.",
+    "heading": "Cosa Dicono i Nostri Clienti",
+    "swipeHint": "Scorri per vedere più recensioni",
+    "googleBadge": "Recensioni Google"
+  },
+  "faq": {
+    "title": "Domande Frequenti",
+    "subtitle": "Cosa ti incuriosisce sul turismo sanitario.",
+    "heading": "Domande Frequenti",
+    "q1": "Cos'è il turismo sanitario?",
+    "a1": "Il turismo sanitario è viaggiare in un altro paese per ricevere cure mediche, spesso a un costo inferiore o con una qualità migliore rispetto a quella disponibile localmente.",
+    "q2": "Quanto dura il processo di trattamento?",
+    "q3": "Di quali documenti ho bisogno?",
+    "a2": "La durata del trattamento varia a seconda della procedura. Trattamenti semplici possono richiedere 1-2 giorni, mentre interventi chirurgici complessi possono richiedere 1-2 settimane.",
+    "a3": "Avrai bisogno del tuo passaporto, documenti medici, foto recenti e qualsiasi documentazione di trattamenti precedenti. Forniremo un elenco completo durante la consultazione."
+  },
+  "cta": {
+    "title": "Agisci Ora per la Tua Salute",
+    "subtitle": "Ti forniamo il miglior servizio con il nostro team esperto e partner accreditati.",
+    "button": "Contattaci"
+  },
+  "footer": {
+    "quick_links": "Collegamenti Rapidi",
+    "contact": "Contatto",
+    "address": "Istanbul, Turchia",
+    "phone": "+90 212 356 36 08",
+    "email": "info@besafehealth.com",
+    "copyright": "Tutti i diritti riservati.",
+    "links": {
+      "about": "Chi Siamo",
+      "services": "Servizi",
+      "contact": "Contatto"
+    }
+  },
+  "links": { "about": "Chi Siamo", "services": "Servizi", "contact": "Contatto" },
+  "chatForm": {
+    "title": "Modulo di Contatto",
+    "subtitle": "Siamo qui per aiutare! Invaci un messaggio e risponderemo il prima possibile.",
+    "namePlaceholder": "Il Tuo Nome",
+    "emailPlaceholder": "Il Tuo Indirizzo Email",
+    "messagePlaceholder": "Il Tuo Messaggio",
+    "sendButton": "Invia",
+    "sending": "Invio in corso..."
+  },
+  "contact": {
+    "form": {
+      "name": "Nome Completo",
+      "namePlaceholder": "Inserisci il tuo nome completo",
+      "email": "Indirizzo Email",
+      "emailPlaceholder": "Inserisci il tuo indirizzo email",
+      "phone": "Numero di Telefono",
+      "phonePlaceholder": "Inserisci il tuo numero di telefono",
+      "message": "Messaggio",
+      "messagePlaceholder": "Inserisci il tuo messaggio",
+      "sending": "Invio in corso...",
+      "send": "Invia Messaggio"
+    }
+  },
+  "stepDetails": {
+    "duration": "Durata",
+    "requirements": "Requisiti",
+    "process": "Processo",
+    "benefits": "Vantaggi",
+    "getStarted": "Inizia",
+    "clickForDetails": "Clicca per i dettagli"
+  },
+  "notifications": {
+    "messages": [
+      "Nuovo appuntamento per trapianto di capelli",
+      "Pianificazione trattamento dentale completata",
+      "Consultazione estetica confermata",
+      "Promemoria controllo post-trattamento",
+      "Prenotazione alloggio confermata",
+      "Servizio di trasferimento pianificato",
+      "Referto medico pronto",
+      "Prescrizione farmaci aggiornata",
+      "Programma di fisioterapia iniziato",
+      "Appuntamento di controllo creato"
+    ],
+    "titles": [
+      "Appuntamento Trapianto Capelli",
+      "Piano Trattamento Dentale",
+      "Consultazione Estetica",
+      "Promemoria Controllo",
+      "Conferma Alloggio",
+      "Piano Trasferimento",
+      "Referto Medico",
+      "Aggiornamento Prescrizione",
+      "Fisioterapia",
+      "Appuntamento Controllo"
+    ]
+  },
+  "agency": {
+    "title": "Be Safe Health",
+    "paragraph1": "Be Safe Health Company è un'organizzazione specializzata in turismo sanitario, che fornisce servizi affidabili e di qualità. Lavoriamo per fornire ai nostri clienti i migliori servizi sanitari.",
+    "paragraph2": "Con il nostro team esperto e partner affidabili, ti guidiamo attraverso il tuo processo di turismo sanitario. Forniamo servizi di trattamento della massima qualità con dispositivi medici moderni e medici esperti.",
+    "paragraph3": "Con il nostro approccio orientato alla soddisfazione del cliente e la politica dei prezzi trasparente, serviamo come partner affidabile nel campo del turismo sanitario."
+  },
+  "aboutExtra": {
+    "valuesTitle": "I Nostri Valori",
+    "patient_first": "Approccio Centrato sul Paziente",
+    "transparent_pricing": "Prezzi Trasparenti",
+    "world_class": "Qualità di Livello Mondiale",
+    "coordination": "Coordinamento Perfetto",
+    "teamTitle": "Il Nostro Team Esperto",
+    "teamDesc": "Forniamo servizi sanitari della massima qualità con il nostro team esperto e specializzato. Ogni membro lavora per fornire ai nostri clienti la migliore esperienza.",
+    "tourismTitle": "Turismo Sanitario",
+    "tourismDesc": "Utilizzando i vantaggi della Turchia nel turismo sanitario, forniamo servizi a standard internazionali. Forniamo servizi di trattamento affidabili con ospedali moderni e medici esperti."
+  },
+  "beforeAfter": {
+    "heading": "Risultati Prima & Dopo",
+    "before": "Prima",
+    "after": "Dopo",
+    "moreImages": "Altre Immagini Prima & Dopo"
+  },
+  "partners": {
+    "title": "I Nostri Partner",
+    "subtitle": "Collaborazione con istituzioni sanitarie fidate",
+    "list": [
+      "GoodLook",
+      "100. Yıl Hastanesi"
+    ]
+  },
+  "agency": {
+    "title": "Chi Siamo",
+    "paragraph1": "Siamo un'azienda leader nel turismo sanitario che fornisce servizi sanitari completi a pazienti internazionali. La nostra missione è collegare i pazienti con le migliori strutture mediche e specialisti in Turchia.",
+    "paragraph2": "Con anni di esperienza nel settore sanitario, abbiamo stabilito forti partnership con rinomati ospedali e cliniche in tutta la Turchia. Ci assicuriamo che ogni paziente riceva cure e attenzioni personalizzate durante tutto il suo viaggio medico.",
+    "paragraph3": "Il nostro team di professionisti sanitari e coordinatori di viaggio lavora insieme per fornire esperienze di turismo medico senza intoppi, dalla consultazione iniziale alla cura post-trattamento e al follow-up."
+  },
+  "aboutExtra": {
+    "valuesTitle": "I Nostri Valori",
+    "values": {
+      "patient_first": "Approccio Patient-First: diamo priorità alla tua salute e al tuo benessere sopra ogni cosa.",
+      "transparent_pricing": "Prezzi Trasparenti: Nessun costo nascosto, prezzi chiari e onesti per tutti i servizi.",
+      "world_class": "Standard di Livello Mondiale: Manteniamo standard sanitari internazionali in tutti i nostri servizi.",
+      "coordination": "Coordinamento Completo: Gestiamo tutti gli aspetti del tuo viaggio medico dall'inizio alla fine."
+    },
+    "teamTitle": "Il Nostro Team Esperto",
+    "teamDesc": "Il nostro team è composto da esperti professionisti sanitari, coordinatori di viaggio e specialisti della cura del paziente dedicati a fornire un servizio eccezionale. Lavoriamo a stretto contatto con le principali istituzioni mediche e specialisti per garantire i migliori risultati possibili per i nostri pazienti.",
+    "tourismTitle": "Eccellenza nel Turismo Sanitario",
+    "tourismDesc": "La Turchia è diventata una destinazione globale per il turismo sanitario, offrendo strutture mediche di livello mondiale a prezzi competitivi. Sfruttiamo questo vantaggio per fornire ai nostri pazienti l'accesso a tecnologie mediche all'avanguardia e a professionisti sanitari altamente qualificati."
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Mettiti in contatto con noi per qualsiasi domanda o per programmare la tua consultazione.",
+    "whatsapp": "WhatsApp",
+    "form": {
+      "name": "Nome Completo",
+      "namePlaceholder": "Inserisci il tuo nome completo",
+      "email": "Indirizzo Email",
+      "emailPlaceholder": "Inserisci il tuo indirizzo email",
+      "phone": "Numero di Telefono",
+      "phonePlaceholder": "Inserisci il tuo numero di telefono",
+      "message": "Messaggio",
+      "messagePlaceholder": "Raccontaci delle tue esigenze",
+      "sending": "Invio in corso...",
+      "send": "Invia Messaggio",
+      "thankYou": "Grazie!",
+      "successMessage": "Il tuo messaggio è stato inviato con successo. Ti ricontatteremo al più presto."
+    }
+  },
+  "dailyLimit": {
+    "info": "Limite giornaliero: {{remaining}}/{{limit}} moduli",
+    "exceeded": "Limite giornaliero superato! Puoi riprovare domani. (Limite: {{limit}} moduli/giorno)",
+    "remaining": "Moduli rimanenti: {{remaining}}"
+  },
+  "hairServices": {
+    "fue": {
+      "features": ["Minimamente invasivo", "Recupero rapido", "Risultati naturali", "Meno cicatrici"]
+    },
+    "sapphire": {
+      "features": ["Lame di zaffiro", "Taglio preciso", "Meno trauma", "Recupero rapido"]
+    },
+    "dhi": {
+      "features": ["Massima densità", "Aspetto naturale", "Posizionamento diretto", "Alto tasso di successo"]
+    },
+    "women": {
+      "features": ["Tecniche specifiche per donne", "Preservazione capelli fini", "Risultati naturali", "Team esperto"]
+    },
+    "beard": {
+      "features": ["Barba e baffi", "Aspetto naturale", "Tecniche speciali", "Risultati permanenti"]
+    }
+  },
+  "dentalServices": {
+    "smile": {
+      "features": ["Analisi del sorriso", "Design personalizzato", "Risultati naturali", "Aspetto armonioso"]
+    },
+    "laminate": {
+      "features": ["Porcellana sottile", "Rivestimento superficie frontale", "Sorriso perfetto", "Risultati estetici"]
+    },
+    "zirconium": {
+      "features": ["Materiale resistente", "Aspetto naturale", "Di lunga durata", "Alta qualità"]
+    },
+    "implant": {
+      "features": ["Tecnologia moderna", "Aspetto naturale", "Funzionale", "Soluzione permanente"]
+    },
+    "orthodontics": {
+      "features": ["Correzione denti storti", "Allineamento estetico", "Denti sani", "Trattamento professionale"]
+    },
+    "whitening": {
+      "features": ["Tecnica professionale", "Sorriso luminoso", "Denti bianchi", "Risultati rapidi"]
+    }
+  },
+  "plasticServices": {
+    "rhinoplasty": {
+      "features": ["Forma del naso", "Miglioramento funzione", "Aspetto naturale", "Armonia facciale"]
+    },
+    "breastAugmentation": {
+      "features": ["Impianti moderni", "Chirurgia sicura", "Risultati naturali", "Chirurghi esperti"]
+    },
+    "breastReduction": {
+      "features": ["Proporzioni corporee", "Comfort fisico", "Aspetto estetico", "Miglioramento salute"]
+    },
+    "tummyTuck": {
+      "features": ["Rassodamento addominale", "Addome piatto", "Aspetto tonico", "Ringiovanimento"]
+    },
+    "armLift": {
+      "features": ["Rassodamento braccia", "Asppetto giovanile", "Braccia toniche", "Risultati estetici"]
+    },
+    "bbl": {
+      "features": ["Modellamento fianchi", "Aspetto più pieno", "Proporzioni estetiche", "Risultati naturali"]
+    },
+    "neckLift": {
+      "features": ["Rassodamento collo", "Aspetto giovanile", "Rimozione rilassamento", "Risultati estetici"]
+    },
+    "earSurgery": {
+      "features": ["Correzione orecchie sporgenti", "Forma naturale", "Armonia facciale", "Risultati estetici"]
+    }
+  },
+  "benefits": {
+    "hair": {
+      "expertTeam": {
+        "title": "Team Esperto",
+        "description": "Lavoriamo con specialisti esperti di trapianto di capelli"
+      },
+      "safeTreatment": {
+        "title": "Trattamento Sicuro",
+        "description": "Trattamento con tecnologia all'avanguardia e ambiente sterile"
+      },
+      "fastRecovery": {
+        "title": "Recupero Rapido",
+        "description": "Recupero rapido con tecniche minimamente invasive"
+      },
+      "personalCare": {
+        "title": "Cura Personalizzata",
+        "description": "Piano di trattamento speciale per ogni paziente"
+      }
+    },
+    "dental": {
+      "expertDentists": {
+        "title": "Dentisti Esperti",
+        "description": "Lavoriamo con dentisti esperti e specializzati"
+      },
+      "modernTechnology": {
+        "title": "Tecnologia Moderna",
+        "description": "Utilizziamo le ultime tecnologie odontoiatriche"
+      },
+      "fastTreatment": {
+        "title": "Trattamento Rapido",
+        "description": "Processi di trattamento efficaci e rapidi"
+      },
+      "aestheticResults": {
+        "title": "Risultati Estetici",
+        "description": "Design del sorriso naturale ed estetico"
+      }
+    },
+    "plastic": {
+      "expertSurgeons": {
+        "title": "Chirurghi Esperti",
+        "description": "Lavoriamo con chirurghi plastici esperti"
+      },
+      "safeSurgery": {
+        "title": "Chirurgia Sicura",
+        "description": "Chirurgia con tecnologia moderna e ambiente sterile"
+      },
+      "fastRecovery": {
+        "title": "Recupero Rapido",
+        "description": "Recupero rapido con tecniche minimamente invasive"
+      },
+      "naturalResults": {
+        "title": "Risultati Naturali",
+        "description": "Asppetto naturale compatibile con il tuo viso"
+      }
+    }
+  },
+  "pageHeaders": {
+    "hair": {
+      "expertServices": "Servizi Esperti di Trapianto di Capelli"
+    },
+    "dental": {
+      "professionalServices": "Trattamenti Dentali Professionali"
+    },
+    "plastic": {
+      "safeAesthetic": "Chirurgia Estetica Sicura"
+    }
+  },
+  "serviceSections": {
+    "hair": {
+      "title": "Le Nostre Tecniche di Trapianto di Capelli",
+      "subtitle": "Selezioniamo la tecnica più adatta per ogni paziente con tecnologia moderna e team esperto"
+    },
+    "dental": {
+      "title": "I Nostri Servizi di Trattamento Dentale",
+      "subtitle": "Perfezioniamo il tuo sorriso con tecnologia moderna e team esperto"
+    },
+    "plastic": {
+      "title": "I Nostri Servizi di Chirurgia Estetica",
+      "subtitle": "Riveliamo la tua bellezza con tecnologia moderna e team esperto"
+    }
+  },
+  "cta": {
+    "freeConsultation": "Ottieni Consultazione Gratuita",
+    "hair": {
+      "title": "Inizia il Tuo Viaggio di Trapianto di Capelli",
+      "subtitle": "Determiniamo la tecnica di trapianto di capelli più adatta a te con il nostro team esperto. Contattaci immediatamente per una consultazione gratuita."
+    },
+    "dental": {
+      "title": "Rinnova il Tuo Sorriso",
+      "subtitle": "Determiniamo il piano di trattamento più adatto a te con i nostri dentisti esperti. Contattaci immediatamente per una consultazione gratuita."
+    },
+    "plastic": {
+      "title": "Rivela la Tua Bellezza",
+      "subtitle": "Determiniamo il piano di chirurgia estetica più adatto a te con i nostri chirurghi plastici esperti. Contattaci immediatamente per una consultazione gratuita."
+    }
+  }
+}

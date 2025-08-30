@@ -119,6 +119,11 @@
         "title": "Ear Surgery",
         "description": "We achieve natural ear shape that harmonizes with your face by correcting protruding ears."
       }
+    },
+    "academy": {
+      "title": "Academy",
+      "subtitle": "Comprehensive training and certification programs for healthcare professionals.",
+      "description": "Be Safe Health Academy offers comprehensive training programs for professionals working in the healthcare sector. We provide specialization opportunities in modern medical technologies, treatment methods, and patient care."
     }
   },
   "journey": {
@@ -395,5 +400,164 @@
     "info": "Daily limit: {{remaining}}/{{limit}} forms",
     "exceeded": "Daily limit exceeded! You can try again tomorrow. (Limit: {{limit}} forms/day)",
     "remaining": "Remaining forms: {{remaining}}"
+  },
+  "hairServices": {
+    "fue": {
+      "features": ["Minimally invasive", "Fast recovery", "Natural results", "Less scarring"]
+    },
+    "sapphire": {
+      "features": ["Sapphire blades", "Precise cutting", "Less trauma", "Fast recovery"]
+    },
+    "dhi": {
+      "features": ["Maximum density", "Natural appearance", "Direct placement", "High success rate"]
+    },
+    "women": {
+      "features": ["Women-specific techniques", "Fine hair preservation", "Natural results", "Expert team"]
+    },
+    "beard": {
+      "features": ["Beard and mustache", "Natural appearance", "Special techniques", "Permanent results"]
+    }
+  },
+  "dentalServices": {
+    "smile": {
+      "features": ["Smile analysis", "Personalized design", "Natural results", "Harmonious appearance"]
+    },
+    "laminate": {
+      "features": ["Thin porcelain", "Front surface coating", "Perfect smile", "Aesthetic results"]
+    },
+    "zirconium": {
+      "features": ["Durable material", "Natural appearance", "Long-lasting", "High quality"]
+    },
+    "implant": {
+      "features": ["Modern technology", "Natural appearance", "Functional", "Permanent solution"]
+    },
+    "orthodontics": {
+      "features": ["Crooked correction", "Aesthetic alignment", "Healthy teeth", "Professional treatment"]
+    },
+    "whitening": {
+      "features": ["Professional technique", "Bright smile", "White teeth", "Fast results"]
+    }
+  },
+  "plasticServices": {
+    "rhinoplasty": {
+      "features": ["Nose shape", "Function improvement", "Natural appearance", "Facial harmony"]
+    },
+    "breastAugmentation": {
+      "features": ["Modern implants", "Safe surgery", "Natural results", "Expert surgeons"]
+    },
+    "breastReduction": {
+      "features": ["Body proportions", "Physical comfort", "Aesthetic appearance", "Health improvement"]
+    },
+    "tummyTuck": {
+      "features": ["Abdominal tightening", "Flat stomach", "Toned appearance", "Rejuvenation"]
+    },
+    "armLift": {
+      "features": ["Arm tightening", "Youthful appearance", "Toned arms", "Aesthetic results"]
+    },
+    "bbl": {
+      "features": ["Hip shaping", "Full appearance", "Aesthetic proportions", "Natural results"]
+    },
+    "neckLift": {
+      "features": ["Neck tightening", "Youthful appearance", "Sagging removal", "Aesthetic results"]
+    },
+    "earSurgery": {
+      "features": ["Prominent ear correction", "Natural shape", "Facial harmony", "Aesthetic results"]
+    }
+  },
+  "benefits": {
+    "hair": {
+      "expertTeam": {
+        "title": "Expert Team",
+        "description": "We work with experienced hair transplant specialists"
+      },
+      "safeTreatment": {
+        "title": "Safe Treatment",
+        "description": "Treatment with latest technology and sterile environment"
+      },
+      "fastRecovery": {
+        "title": "Fast Recovery",
+        "description": "Quick recovery with minimally invasive techniques"
+      },
+      "personalCare": {
+        "title": "Personal Care",
+        "description": "Special treatment plan for each patient"
+      }
+    },
+    "dental": {
+      "expertDentists": {
+        "title": "Expert Dentists",
+        "description": "We work with experienced and expert dentists"
+      },
+      "modernTechnology": {
+        "title": "Modern Technology",
+        "description": "We use the latest dental technologies"
+      },
+      "fastTreatment": {
+        "title": "Fast Treatment",
+        "description": "Effective and fast treatment processes"
+      },
+      "aestheticResults": {
+        "title": "Aesthetic Results",
+        "description": "Natural and aesthetic smile design"
+      }
+    },
+    "plastic": {
+      "expertSurgeons": {
+        "title": "Expert Surgeons",
+        "description": "We work with experienced plastic surgeons"
+      },
+      "safeSurgery": {
+        "title": "Safe Surgery",
+        "description": "Surgery with modern technology and sterile environment"
+      },
+      "fastRecovery": {
+        "title": "Fast Recovery",
+        "description": "Quick recovery with minimally invasive techniques"
+      },
+      "naturalResults": {
+        "title": "Natural Results",
+        "description": "Natural appearance compatible with your face"
+      }
+    }
+  },
+  "pageHeaders": {
+    "hair": {
+      "expertServices": "Expert Hair Transplant Services"
+    },
+    "dental": {
+      "professionalServices": "Professional Dental Treatments"
+    },
+    "plastic": {
+      "safeAesthetic": "Safe Aesthetic Surgery"
+    }
+  },
+  "serviceSections": {
+    "hair": {
+      "title": "Our Hair Transplant Techniques",
+      "subtitle": "We select the most suitable technique for each patient with modern technology and expert team"
+    },
+    "dental": {
+      "title": "Our Dental Treatment Services",
+      "subtitle": "We perfect your smile with modern technology and expert team"
+    },
+    "plastic": {
+      "title": "Our Aesthetic Surgery Services",
+      "subtitle": "We reveal your beauty with modern technology and expert team"
+    }
+  },
+  "cta": {
+    "freeConsultation": "Get Free Consultation",
+    "hair": {
+      "title": "Start Your Hair Transplant Journey",
+      "subtitle": "Let's determine the most suitable hair transplant technique for you with our expert team. Contact us immediately for free consultation."
+    },
+    "dental": {
+      "title": "Renew Your Smile",
+      "subtitle": "Let's determine the most suitable treatment plan for you with our expert dentists. Contact us immediately for free consultation."
+    },
+    "plastic": {
+      "title": "Reveal Your Beauty",
+      "subtitle": "Let's determine the most suitable aesthetic surgery plan for you with our expert plastic surgeons. Contact us immediately for free consultation."
+    }
   }
 }
