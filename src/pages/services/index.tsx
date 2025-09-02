@@ -107,17 +107,16 @@ export default function ServicesPage() {
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-2xl border border-yellow-500/20 p-8 md:p-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Sağlığınız İçin Hemen Harekete Geçin
+              {t("cta.services.title")}
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Uzman ekibimiz ve modern teknolojimizle size en iyi sağlık hizmetlerini sunuyoruz. 
-              Ücretsiz danışmanlık için hemen iletişime geçin.
+              {t("cta.services.subtitle")}
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold rounded-xl hover:from-yellow-600 hover:to-yellow-700 transition-all duration-200 hover:scale-105 hover:shadow-lg"
             >
-              Ücretsiz Danışmanlık Al
+              {t("cta.services.button")}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

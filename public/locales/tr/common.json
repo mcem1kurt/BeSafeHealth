@@ -29,6 +29,10 @@
   "services": {
     "title": "Hizmetlerimiz",
     "subtitle": "Uzman ekibimiz ve modern teknolojimizle en kaliteli sağlık hizmetlerini sunuyoruz.",
+    "ourServices": "Hizmetlerimiz:",
+    "moreServices": "+{{count}} daha...",
+    "viewDetails": "Detayları Gör",
+    "visitSite": "Siteyi Ziyaret Et",
     "hair": {
       "title": "Saç Ekimi",
       "subtitle": "Doğal ve kalıcı sonuçlar için uzman saç ekimi hizmetleri.",
@@ -530,6 +534,12 @@
   },
   "cta": {
     "freeConsultation": "Ücretsiz Danışmanlık Al",
+    "services": {
+      "title": "Sağlığınız İçin Hemen Harekete Geçin",
+      "subtitle": "Uzman ekibimiz ve modern teknolojimizle size en iyi sağlık hizmetlerini sunuyoruz. Ücretsiz danışmanlık için hemen iletişime geçin.",
+      "button": "Ücretsiz Danışmanlık Al"
+    },
+    "viewAllServices": "Tüm Hizmetleri Gör",
     "hair": {
       "title": "Saç Ekimi İçin Hemen Başlayın",
       "subtitle": "Uzman ekibimizle görüşerek size en uygun saç ekimi tekniğini belirleyelim. Ücretsiz danışmanlık için hemen iletişime geçin."

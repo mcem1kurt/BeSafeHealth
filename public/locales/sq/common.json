@@ -34,6 +34,10 @@
   "services": {
     "title": "Shërbimet tona",
     "subtitle": "Ne ofrojmë shërbime të kujdesit shëndetësor me cilësi më të lartë me ekipin tonë të ekspertëve dhe teknologjinë moderne.",
+    "ourServices": "Shërbimet tona:",
+    "moreServices": "+{{count}} më shumë...",
+    "viewDetails": "Shiko Detajet",
+    "visitSite": "Vizito Sajtin",
     "hair": {
       "title": "Transplantim i flokëve",
       "subtitle": "Shërbime ekspertësh të transplantimit të flokëve për rezultate natyrale dhe të përhershme.",
@@ -258,6 +262,12 @@
   },
   "cta": {
     "freeConsultation": "Merrni konsultim falas",
+    "services": {
+      "title": "Veproni tani për shëndetin tuaj",
+      "subtitle": "Ne ju ofrojmë shërbimet më të mira të kujdesit shëndetësor me ekipin tonë të ekspertëve dhe teknologjinë moderne. Kontaktoni me ne menjëherë për konsultim falas.",
+      "button": "Merrni konsultim falas"
+    },
+    "viewAllServices": "Shiko Të Gjitha Shërbimet",
     "hair": {
       "title": "Filloni udhëtimin tuaj për transplantimin e flokëve",
       "subtitle": "Le të përcaktojmë teknikën më të përshtatshme të transplantimit të flokëve për ju me ekipin tonë të ekspertëve. "

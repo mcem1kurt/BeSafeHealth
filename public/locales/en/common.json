@@ -29,6 +29,10 @@
   "services": {
     "title": "Our Services",
     "subtitle": "We provide the highest quality healthcare services with our expert team and modern technology.",
+    "ourServices": "Our Services:",
+    "moreServices": "+{{count}} more...",
+    "viewDetails": "View Details",
+    "visitSite": "Visit Site",
     "hair": {
       "title": "Hair Transplant",
       "subtitle": "Expert hair transplant services for natural and permanent results.",
@@ -547,6 +551,12 @@
   },
   "cta": {
     "freeConsultation": "Get Free Consultation",
+    "services": {
+      "title": "Take Action Now for Your Health",
+      "subtitle": "We provide you with the best healthcare services with our expert team and modern technology. Contact us immediately for free consultation.",
+      "button": "Get Free Consultation"
+    },
+    "viewAllServices": "View All Services",
     "hair": {
       "title": "Start Your Hair Transplant Journey",
       "subtitle": "Let's determine the most suitable hair transplant technique for you with our expert team. Contact us immediately for free consultation."

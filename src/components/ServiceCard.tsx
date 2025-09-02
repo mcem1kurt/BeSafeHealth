@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 interface ServiceCardProps {
   title: string;
@@ -16,6 +17,8 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ title, subtitle, description, image, href, external, subServices }: ServiceCardProps) {
+  const { t } = useTranslation("common");
+  
   const CardContent = () => (
     <div className="relative h-full rounded-2xl border border-gray-700 bg-gray-800/50 p-6 md:p-8 transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden">
       
@@ -55,7 +58,7 @@ export default function ServiceCard({ title, subtitle, description, image, href,
         {/* Sub-services list */}
         {subServices && subServices.length > 0 && (
           <div className="space-y-2">
-            <h4 className="text-sm font-semibold text-yellow-300 mb-2">Hizmetlerimiz:</h4>
+            <h4 className="text-sm font-semibold text-yellow-300 mb-2">{t("services.ourServices")}</h4>
             <div className="grid grid-cols-1 gap-1">
               {subServices.slice(0, 4).map((service, index) => (
                 <div key={index} className="flex items-center gap-2 text-xs text-gray-400">
@@ -65,7 +68,7 @@ export default function ServiceCard({ title, subtitle, description, image, href,
               ))}
               {subServices.length > 4 && (
                 <div className="text-xs text-yellow-400 font-medium mt-1">
-                  +{subServices.length - 4} daha...
+                  {t("services.moreServices", { count: subServices.length - 4 })}
                 </div>
               )}
             </div>
@@ -74,7 +77,7 @@ export default function ServiceCard({ title, subtitle, description, image, href,
 
         {/* CTA Button */}
         <div className="mt-6 flex items-center gap-2 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300">
-          <span className="text-sm font-medium">{external ? "Siteyi Ziyaret Et" : "Detayları Gör"}</span>
+          <span className="text-sm font-medium">{external ? t("services.visitSite") : t("services.viewDetails")}</span>
           <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>

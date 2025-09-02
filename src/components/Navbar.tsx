@@ -178,46 +178,76 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <div className="relative group">
               <button
-                className="hidden md:inline-flex items-center gap-1 text-xs uppercase tracking-wider px-2 py-1 rounded border border-white/10 hover:border-[var(--color-gold-400)] hover:text-[var(--color-gold-400)] text-white cursor-pointer transition-all duration-200"
+                className="hidden md:inline-flex items-center gap-1 px-2 py-1 rounded border border-white/10 hover:border-[var(--color-gold-400)] hover:text-[var(--color-gold-400)] text-white cursor-pointer transition-all duration-200"
               >
-                {router.locale === "en" ? "EN" : router.locale === "tr" ? "TR" : router.locale === "it" ? "IT" : "SQ"}
+                <Image
+                  src={`/images/flags/${router.locale === "en" ? "us" : router.locale === "tr" ? "tr" : router.locale === "it" ? "it" : "al"}.png`}
+                  alt={`${router.locale} flag`}
+                  width={20}
+                  height={15}
+                  className="w-5 h-4 object-cover rounded-sm"
+                />
                 <ChevronDown size={12} />
               </button>
               
               {/* Language Dropdown */}
-              <div className="absolute top-full right-0 mt-2 w-20 bg-gray-900/90 backdrop-blur-xl border border-white/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute top-full right-0 mt-2 w-16 bg-gray-900/90 backdrop-blur-xl border border-white/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-1">
                   <button
                     onClick={() => router.push(router.asPath, undefined, { locale: "en" })}
-                    className={`w-full text-left px-3 py-2 text-xs uppercase tracking-wider hover:bg-gray-800/50 transition-colors duration-200 ${
-                      router.locale === "en" ? "text-[var(--color-gold-400)]" : "text-gray-300"
+                    className={`w-full flex justify-center px-3 py-2 hover:bg-gray-800/50 transition-colors duration-200 ${
+                      router.locale === "en" ? "ring-1 ring-[var(--color-gold-400)]" : ""
                     }`}
                   >
-                    EN
+                    <Image
+                      src="/images/flags/us.png"
+                      alt="US flag"
+                      width={20}
+                      height={15}
+                      className="w-5 h-4 object-cover rounded-sm"
+                    />
                   </button>
                   <button
                     onClick={() => router.push(router.asPath, undefined, { locale: "tr" })}
-                    className={`w-full text-left px-3 py-2 text-xs uppercase tracking-wider hover:bg-gray-800/50 transition-colors duration-200 ${
-                      router.locale === "tr" ? "text-[var(--color-gold-400)]" : "text-gray-300"
+                    className={`w-full flex justify-center px-3 py-2 hover:bg-gray-800/50 transition-colors duration-200 ${
+                      router.locale === "tr" ? "ring-1 ring-[var(--color-gold-400)]" : ""
                     }`}
                   >
-                    TR
+                    <Image
+                      src="/images/flags/tr.png"
+                      alt="TR flag"
+                      width={20}
+                      height={15}
+                      className="w-5 h-4 object-cover rounded-sm"
+                    />
                   </button>
                   <button
                     onClick={() => router.push(router.asPath, undefined, { locale: "it" })}
-                    className={`w-full text-left px-3 py-2 text-xs uppercase tracking-wider hover:bg-gray-800/50 transition-colors duration-200 ${
-                      router.locale === "it" ? "text-[var(--color-gold-400)]" : "text-gray-300"
+                    className={`w-full flex justify-center px-3 py-2 hover:bg-gray-800/50 transition-colors duration-200 ${
+                      router.locale === "it" ? "ring-1 ring-[var(--color-gold-400)]" : ""
                     }`}
                   >
-                    IT
+                    <Image
+                      src="/images/flags/it.png"
+                      alt="IT flag"
+                      width={20}
+                      height={15}
+                      className="w-5 h-4 object-cover rounded-sm"
+                    />
                   </button>
                   <button
                     onClick={() => router.push(router.asPath, undefined, { locale: "sq" })}
-                    className={`w-full text-left px-3 py-2 text-xs uppercase tracking-wider hover:bg-gray-800/50 transition-colors duration-200 ${
-                      router.locale === "sq" ? "text-[var(--color-gold-400)]" : "text-gray-300"
+                    className={`w-full flex justify-center px-3 py-2 hover:bg-gray-800/50 transition-colors duration-200 ${
+                      router.locale === "sq" ? "ring-1 ring-[var(--color-gold-400)]" : ""
                     }`}
                   >
-                    SQ
+                    <Image
+                      src="/images/flags/al.png"
+                      alt="AL flag"
+                      width={20}
+                      height={15}
+                      className="w-5 h-4 object-cover rounded-sm"
+                    />
                   </button>
                 </div>
               </div>
@@ -304,46 +334,70 @@ export default function Navbar() {
               
               <div className="mt-4 space-y-2">
                 <div className="text-sm text-gray-400 mb-2">Dil Seçimi / Language Selection</div>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="flex justify-center gap-3">
                   <button
                     onClick={() => { setOpenMobile(false); router.push(router.asPath, undefined, { locale: "en" }); }}
-                    className={`text-xs uppercase tracking-wider px-3 py-2 rounded border transition-all duration-200 ${
+                    className={`px-3 py-2 rounded border transition-all duration-200 ${
                       router.locale === "en" 
-                        ? "border-[var(--color-gold-400)] text-[var(--color-gold-400)]" 
-                        : "border-white/10 text-white hover:border-[var(--color-gold-400)] hover:text-[var(--color-gold-400)]"
+                        ? "border-[var(--color-gold-400)] ring-1 ring-[var(--color-gold-400)]" 
+                        : "border-white/10 hover:border-[var(--color-gold-400)]"
                     }`}
                   >
-                    EN
+                    <Image
+                      src="/images/flags/us.png"
+                      alt="US flag"
+                      width={24}
+                      height={18}
+                      className="w-6 h-5 object-cover rounded-sm"
+                    />
                   </button>
                   <button
                     onClick={() => { setOpenMobile(false); router.push(router.asPath, undefined, { locale: "tr" }); }}
-                    className={`text-xs uppercase tracking-wider px-3 py-2 rounded border transition-all duration-200 ${
+                    className={`px-3 py-2 rounded border transition-all duration-200 ${
                       router.locale === "tr" 
-                        ? "border-[var(--color-gold-400)] text-[var(--color-gold-400)]" 
-                        : "border-white/10 text-white hover:border-[var(--color-gold-400)] hover:text-[var(--color-gold-400)]"
+                        ? "border-[var(--color-gold-400)] ring-1 ring-[var(--color-gold-400)]" 
+                        : "border-white/10 hover:border-[var(--color-gold-400)]"
                     }`}
                   >
-                    TR
+                    <Image
+                      src="/images/flags/tr.png"
+                      alt="TR flag"
+                      width={24}
+                      height={18}
+                      className="w-6 h-5 object-cover rounded-sm"
+                    />
                   </button>
                   <button
                     onClick={() => { setOpenMobile(false); router.push(router.asPath, undefined, { locale: "it" }); }}
-                    className={`text-xs uppercase tracking-wider px-3 py-2 rounded border transition-all duration-200 ${
+                    className={`px-3 py-2 rounded border transition-all duration-200 ${
                       router.locale === "it" 
-                        ? "border-[var(--color-gold-400)] text-[var(--color-gold-400)]" 
-                        : "border-white/10 text-white hover:border-[var(--color-gold-400)] hover:text-[var(--color-gold-400)]"
+                        ? "border-[var(--color-gold-400)] ring-1 ring-[var(--color-gold-400)]" 
+                        : "border-white/10 hover:border-[var(--color-gold-400)]"
                     }`}
                   >
-                    IT
+                    <Image
+                      src="/images/flags/it.png"
+                      alt="IT flag"
+                      width={24}
+                      height={18}
+                      className="w-6 h-5 object-cover rounded-sm"
+                    />
                   </button>
                   <button
                     onClick={() => { setOpenMobile(false); router.push(router.asPath, undefined, { locale: "sq" }); }}
-                    className={`text-xs uppercase tracking-wider px-3 py-2 rounded border transition-all duration-200 ${
+                    className={`px-3 py-2 rounded border transition-all duration-200 ${
                       router.locale === "sq" 
-                        ? "border-[var(--color-gold-400)] text-[var(--color-gold-400)]" 
-                        : "border-white/10 text-white hover:border-[var(--color-gold-400)] hover:text-[var(--color-gold-400)]"
+                        ? "border-[var(--color-gold-400)] ring-1 ring-[var(--color-gold-400)]" 
+                        : "border-white/10 hover:border-[var(--color-gold-400)]"
                     }`}
                   >
-                    SQ
+                    <Image
+                      src="/images/flags/al.png"
+                      alt="AL flag"
+                      width={24}
+                      height={18}
+                      className="w-6 h-5 object-cover rounded-sm"
+                    />
                   </button>
                 </div>
               </div>

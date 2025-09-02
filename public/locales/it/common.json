@@ -29,6 +29,10 @@
   "services": {
     "title": "I Nostri Servizi",
     "subtitle": "Forniamo servizi sanitari della massima qualità con il nostro team esperto e tecnologia moderna.",
+    "ourServices": "I Nostri Servizi:",
+    "moreServices": "+{{count}} altri...",
+    "viewDetails": "Visualizza Dettagli",
+    "visitSite": "Visita Sito",
     "hair": {
       "title": "Trapianto di Capelli",
       "subtitle": "Servizi di trapianto di capelli esperti per risultati naturali e permanenti.",
@@ -547,6 +551,12 @@
   },
   "cta": {
     "freeConsultation": "Ottieni Consultazione Gratuita",
+    "services": {
+      "title": "Agisci Ora per la Tua Salute",
+      "subtitle": "Ti forniamo i migliori servizi sanitari con il nostro team esperto e tecnologia moderna. Contattaci immediatamente per una consultazione gratuita.",
+      "button": "Ottieni Consultazione Gratuita"
+    },
+    "viewAllServices": "Visualizza Tutti i Servizi",
     "hair": {
       "title": "Inizia il Tuo Viaggio di Trapianto di Capelli",
       "subtitle": "Determiniamo la tecnica di trapianto di capelli più adatta a te con il nostro team esperto. Contattaci immediatamente per una consultazione gratuita."
