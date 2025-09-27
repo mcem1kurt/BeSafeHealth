@@ -174,9 +174,6 @@ export default function Home() {
       {/* FAQ */}
       <FAQ />
 
-      {/* Partners marquee */}
-      <PartnersMarquee />
-
       {/* Fixed WhatsApp Button - Bottom Right */}
       <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-40 flex flex-col gap-3">
         {/* Chat Button */}
@@ -192,7 +189,7 @@ export default function Home() {
 
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/905555555555"
+          href="https://wa.me/905079415087"
           target="_blank"
           rel="noopener noreferrer"
           className="group relative inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-b from-green-500 to-green-700 text-white shadow-[0_8px_32px_-8px_rgba(34,197,94,0.5)] hover:shadow-[0_12px_40px_-8px_rgba(34,197,94,0.6)] hover:scale-110 transition-all duration-300"

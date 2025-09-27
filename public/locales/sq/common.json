@@ -247,7 +247,109 @@
     "subtitle": "Reagime nga klientët tanë që ndajnë përvojat e tyre.",
     "heading": "Çfarë thonë klientët tanë",
     "swipeHint": "Rrëshqitni për të parë më shumë komente",
-    "googleBadge": "Shqyrtime të Google"
+    "googleBadge": "Shqyrtime të Google",
+    "list": [
+      {
+        "id": 1,
+        "name": "Fatjon Cenaj",
+        "date": "27 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "F",
+        "profileColor": "from-orange-400 to-orange-500",
+        "review": "Pershendetje te gjithve kush e lexon. Un quhem Fatjon, doja te falenderoja shum kliniken Be Safe Health. Un jam Shqiptar dhe me besoni para se te paraqitesha te kjo klinik provova shum te tjera te cilat me shgenjyhen. U njoha me kliniken Be Safe me an te nje publicite dhe mendova shkruaj. Mu pergjigj zonja Makbule e cila me von u be dhe engjelli im mbrojtes, e edukur e sjellshme dhe shum profesioniste ne punen e saj. Kur erdha ne Turqi njoha pjesen tjeter te stafit, qe me shoqeruan ne cdo sek, nga hoteli ne klinik nga klinika ne hotel, nja staff i mrekullushem dhe shum prifesional. U gjenda me te vertet shum mir. Pervec klinikes qe e falenderoj shum per punen qe Ka ber me mua, Dua te falenderoj ne vecan zonjen Makbule qe sme la asnje sek vetem, ne cdo hap. Shum shum faleminderit. Dhe kush Ka ndermend te bej kete eksperjenc mos nguroni sepse jeni me te vertet ne duar te profesionistave. Jua keshilloj",
+        "shortReview": "Pershendetje te gjithve kush e lexon. Un quhem Fatjon, doja te falenderoja shum kliniken Be Safe Health. Un jam Shqiptar dhe me besoni para se te paraqitesha te kjo klinik..."
+      },
+      {
+        "id": 2,
+        "name": "Miri Sulovari",
+        "date": "25 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "M",
+        "profileColor": "from-purple-400 to-purple-500",
+        "review": "Jam Miri kam kryer Transplantin e flokeve ne Tirane. perfect Kemi kaluar shume mire ekipi. Makbule gjithashtu qe nuk te le vetem ne asnje moment me ka qendruar prane gjate gjithe procesit e sjellshme dhe e Respktuar. Nese deshironi te kryeni nje Transplant flokesh vetem Be Safe Health jua sugjeroj. Nuk do te zhgenjeheni. Por do te ngeleni te kenaqur. Makbule je me e mira!",
+        "shortReview": "Jam Miri kam kryer Transplantin e flokeve ne Tirane. perfect Kemi kaluar shume mire ekipi. Makbule gjithashtu qe nuk te le vetem ne asnje moment..."
+      },
+      {
+        "id": 3,
+        "name": "Ernis Fezga",
+        "date": "25 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "E",
+        "profileColor": "from-blue-400 to-blue-500",
+        "review": "Shume i kënaqur me rezultatin. Zgjidhni Be Safe Health",
+        "shortReview": "Shume i kënaqur me rezultatin. Zgjidhni Be Safe Health..."
+      },
+      {
+        "id": 4,
+        "name": "Leo T",
+        "date": "23 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "L",
+        "profileColor": "from-green-400 to-green-500",
+        "review": "Une jam Leo, sot me daten 21.08.2025 erdha ne Tiranë tek Be Safe Health per mbjelle floku, jam shum kenaqur me punen dhe kujdesin ndaj meje. Kan një staf te mrekullueshem, dhe shum harmonik! Falenderoj Makbulen, dhe i deshiroj me shum pune ne te ardhmen, suksese te gjith Stafit te Be Safe Health!",
+        "shortReview": "Une jam Leo, sot me daten 21.08.2025 erdha ne Tiranë tek Be Safe Health per mbjelle floku, jam shum kenaqur me punen dhe kujdesin ndaj meje..."
+      },
+      {
+        "id": 5,
+        "name": "Anest Tirona",
+        "date": "22 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "A",
+        "profileColor": "from-red-400 to-red-500",
+        "review": "Pershendetje Un jam Anesti Vi nga greqia dhe kam ber mbjelljen e flokut ne Tiran tek Be Safe Health dhe jam shum i kenaqur per çdo gje Ishte nje staf i mbrekullueshem me mirpriten shum shum mir ne radh te par falenderoj Makbulen dhe ju sugjueroj te vini te gjith tek Be Safe Health,",
+        "shortReview": "Pershendetje Un jam Anesti Vi nga greqia dhe kam ber mbjelljen e flokut ne Tiran tek Be Safe Health dhe jam shum i kenaqur per çdo gje..."
+      },
+      {
+        "id": 6,
+        "name": "Genti Kapushi",
+        "date": "21 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "G",
+        "profileColor": "from-yellow-400 to-yellow-500",
+        "review": "Pershndetje jam genti jam nga qyteti i korces dhe kam kryer transplantin e flokëve para 10 ditesh pershendes stafin e magbules kanë ber nje punë të përkryer falënderoj magbulen ne veçanti jeni staf i mrekullueshëm",
+        "shortReview": "Pershndetje jam genti jam nga qyteti i korces dhe kam kryer transplantin e flokëve para 10 ditesh pershendes stafin e magbules kanë ber nje punë të përkryer..."
+      },
+      {
+        "id": 7,
+        "name": "Kilton Mino",
+        "date": "20 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "K",
+        "profileColor": "from-indigo-400 to-indigo-500",
+        "review": "Erdha nga greqia per te ber transplantin e flokeve ne Be Safe Health proçesi ishte shume i thjesht pa dhimbje stafi i mbrekullueshem por ne vencanti makbule qe na beri te ndiheshim komod si te ishim ne shqiperi ishte aty per cdo gje madje edhe kur humbem rugen neper stambool kliniken Be Safe Health ua sygjeroj te gjithve",
+        "shortReview": "Erdha nga greqia per te ber transplantin e flokeve ne Be Safe Health proçesi ishte shume i thjesht pa dhimbje stafi i mbrekullueshem por ne vencanti makbule..."
+      },
+      {
+        "id": 8,
+        "name": "Flori Lluka",
+        "date": "19 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "F",
+        "profileColor": "from-pink-400 to-pink-500",
+        "review": "Faleminderit Makbule për kujdesin dhe profesionalizmin gjatë gjithë procesit të transplantit të flokëve. U ndjeva në duar të sigurta dhe jam shumë i kënaqur me përvojën. Vlerësoj shumë përkushtimin tuaj dhe gjithe stafin Be Safe Health",
+        "shortReview": "Faleminderit Makbule për kujdesin dhe profesionalizmin gjatë gjithë procesit të transplantit të flokëve. U ndjeva në duar të sigurta dhe jam shumë i kënaqur..."
+      },
+      {
+        "id": 9,
+        "name": "Xheladin Ismaili",
+        "date": "18 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "X",
+        "profileColor": "from-teal-400 to-teal-500",
+        "review": "Shërbim cilsor, Magbulja na ka prit shum mirë. Kush menon me ba inplant ktu duhet të shkoj.",
+        "shortReview": "Shërbim cilsor, Magbulja na ka prit shum mirë. Kush menon me ba inplant ktu duhet të shkoj..."
+      },
+      {
+        "id": 10,
+        "name": "Nazmi Sherifi",
+        "date": "17 Shkurt 2025",
+        "rating": 5,
+        "profileLetter": "N",
+        "profileColor": "from-cyan-400 to-cyan-500",
+        "review": "Përshëndetje të gjithëve, Doja thjesht të ndaja me ju përvojën time lidhur me transplantin e flokëve në klinikën Be Safe Health. Për të gjithë ata që ende hezitojnë, ju këshilloj fuqimisht këtë klinikë, e cila është shumë profesionale dhe ka një staf të mrekullueshëm. Gjatë gjithë kohës se operacionit, nuk kam ndjerë asnjë dhimbje i cili zgjati 5 orë. Prandaj, nëse keni nevojë për një transplant flokësh, ju rekomandoj të zgjidhni këtë klinikë. Në veçanti, dua ta falënderoj zonjën Magbule, e cila, me mirësinë dhe profesionalizmin e saj, na shoqëroi nga fillimi deri në momentin kur u larguam nga Stambolli. E falënderoj nga zemra",
+        "shortReview": "Përshëndetje të gjithëve, Doja thjesht të ndaja me ju përvojën time lidhur me transplantin e flokëve në klinikën Be Safe Health. Për të gjithë ata që ende hezitojnë..."
+      }
+    ]
   },
   "faq": {
     "title": "Pyetjet e bëra më shpesh",
@@ -285,7 +387,7 @@
     "quick_links": "Lidhje të shpejta",
     "contact": "Kontakt",
     "address": "Stamboll, Turqi",
-    "phone": "+90 212 356 36 08",
+    "phone": "+90 507 941 50 87",
     "email": "info@besafehealth.com",
     "copyright": "Të gjitha të drejtat e rezervuara.",
     "links": {

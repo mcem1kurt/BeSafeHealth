@@ -33,7 +33,7 @@ export default function HairTransplantPage() {
       title: t("services.hair.women.title"),
       description: t("services.hair.women.description"),
       features: t("hairServices.women.features", { returnObjects: true }) as string[],
-      image: "/images/services/woman-hair-transplant.png"
+      image: "/images/services/woman-hair-transplant.jpg"
     },
     {
       title: t("services.hair.beard.title"),

@@ -242,7 +242,109 @@
     "subtitle": "Deneyimlerimizi paylaşan müşterilerimizin geri bildirimleri.",
     "heading": "Müşterilerimiz Ne Diyor",
     "swipeHint": "Daha fazla yorum için kaydırın",
-    "googleBadge": "Google Yorumları"
+    "googleBadge": "Google Yorumları",
+    "list": [
+      {
+        "id": 1,
+        "name": "Mehmet Ozer",
+        "date": "27 Şubat 2025",
+        "rating": 5,
+        "profileLetter": "M",
+        "profileColor": "from-orange-400 to-orange-500",
+        "review": "Merhabalar yaklaşık 4 yıldır saç ekmeyi düşünüyordum nereye gitsem aras rsam bir eksik buldum ve son olarak karşıma Be Safe Health’ten Meral hanım çık saç ekim konusunda verdiği bilgilerle beni cesaretlendirdi Mayıs 27 ekim yapıldı ağrısız ve şişkinlik olmadan 7 günümü atla m başta meral hanım olmak üzere tüm be safe health ekibine sonsuz teşekkür ederim.",
+        "shortReview": ""
+      },
+      {
+        "id": 2,
+        "name": "Furkan Aytekin",
+        "date": "25 Mart 2025",
+        "rating": 5,
+        "profileLetter": "F",
+        "profileColor": "from-purple-400 to-purple-500",
+        "review": "Gerçekten çok ilgililer. Süreci rahat ilerlemesinde çok yardımcı oldurlar. Özellikle Sena Hanım ve Enes verdikler güven ve destek ile çok yardımcı oldular. ",
+        "shortReview": ""
+      },
+      {
+        "id": 3,
+        "name": "Abdulbasir İlbaş",
+        "date": "11 Kasım 2024",
+        "rating": 5,
+        "profileLetter": "A",
+        "profileColor": "from-blue-400 to-blue-500",
+        "review": "Sürecin başından sonuna kadar ilgisini ve samimiye ni benden eksik etmeyen Meral Hanım'a, Sena Hanım'a ve Be Safe ekibine en kalbi duygularımla teşekkür ederim. Kesinlikle kendinizi emin ellere teslim etmek is yorsanız Be Safe Clinic ile tanışın. ",
+        "shortReview": ""
+      },
+      {
+        "id": 4,
+        "name": "Omer Manaz",
+        "date": "3 Haziran 2024",
+        "rating": 5,
+        "profileLetter": "O",
+        "profileColor": "from-green-400 to-green-500",
+        "review": "Hocalarımız çok kaliteli ve tecrübeliler hocalarımıza ilgi ve alakalarından dolayı teşekkür ederim. Başta Seha beye ilk süreçten en son sürece kadar ilgi ve müşteri memnuniye nden dolayı sonsuz teşekkürlerimi sunarım. İyiki de Be Safe Health’te saçımı ek ğim için çok mutluyum herkese öneririm saygılarımla iyi çalışmalar dilerim Allah'a emanet olunuz.",
+        "shortReview": ""
+      },
+      {
+        "id": 5,
+        "name": "Mustafa Gultekin",
+        "date": "12 Ocak 2025",
+        "rating": 5,
+        "profileLetter": "M",
+        "profileColor": "from-red-400 to-red-500",
+        "review": "Feedback over mijn ervaring bij Be Safe Health ik heb een haarimplanta e gehad op 16-012025 wat fantas sch is verlopen dankzij Enes die mij geweldig hee geholpen. Ik raad iedereen aan om hier je haar implanta e te doen. Het is een schoon werkplek en professioneels in hun werk .",
+        "shortReview": ""
+      },
+      {
+        "id": 6,
+        "name": "ALİ BAYRAK",
+        "date": "17 Mayıs 2025",
+        "rating": 5,
+        "profileLetter": "A",
+        "profileColor": "from-red-400 to-red-500",
+        "review": "Meral hanım sayesinde Be Safe Health ailesiyle tanıştım . İlk geldiğim andan itibaren Meral hanım ve saç ekim ekibi doktorum hemşire hanımlar sosyal medya sorumlusu beyefendi ve Enes bey çok sıcakkanlı güler yüzlü. Çevremdeki herkese tavsiye edeceğim anlatacağım Be Safe ailesini. Teşekkürler Meral hanım teşekkürler Be Safe Health. İçiniz rahat bir şekilde saç ekimine gelebilirsiniz.",
+        "shortReview": ""
+      },
+      {
+        "id": 7,
+        "name": "Maïa",
+        "date": "3 Haziran 2025",
+        "rating": 5,
+        "profileLetter": "M",
+        "profileColor": "from-red-400 to-red-500",
+        "review": "Fransa Lyon şehrinden saç ekimi için geldim. Be safe health ailesiyle tanıştım. Her şey harikaydı. Öncelikle Meral Hanıma ilgi ve alakasından dolayı çok ama çok teşekkür ederim. Saç ekimi için tereddütleri olan herkes düşünmeden gelebilir. ",
+        "shortReview": ""
+      },
+      {
+        "id": 7,
+        "name": "Umut Yazici",
+        "date": "7 Mayıs 2025",
+        "rating": 5,
+        "profileLetter": "U",
+        "profileColor": "from-red-400 to-red-500",
+        "review": "Öncelikle Be Safe ailesine ve Meral hanıma ilgilerinden dolayı çok teşekkür ederim kafamda çok soru işaretleri vardı kapıdan içeri girdiğim andan itibaren bütün Herşey aniden değişti iyiki sizleri tanıdım başarılarınızın devamını diliyorum Dubai den sevgiler Be Safe ailesi ..",
+        "shortReview": ""
+      },
+      {
+        "id": 8,
+        "name": "Latif Durul",
+        "date": "2 Mart 2025",
+        "rating": 5,
+        "profileLetter": "L",
+        "profileColor": "from-red-400 to-red-500",
+        "review": "Merhabalar arkadaşlar Erkek kuaförüyüm işim gereği bir çok ekim yapılmış saç gördüm sonrasında herkes gibi bende araştırdım sordum ve Be safe Health saç ekim merkezini buldum bu ekim merkeziyle görüştüm ve saçlarımı ektirmeye karar verdim ekim gerçekleşti memnun kaldım hiç düşünmeden gelebilirsiniz Meral hanıma ve Enes beye ilgilerinden dolayı çok teşekkürler.",
+        "shortReview": ""
+      },
+      {
+        "id": 9,
+        "name": "Muhammed Demirkol",
+        "date": "21 Ocak 2025",
+        "rating": 5,
+        "profileLetter": "M",
+        "profileColor": "from-red-400 to-red-500",
+        "review": "Çok memnun kaldım. Seha bey in ilgisi ve yönlendirmeleri sayesinde rahat bi süreçti.Teşekkürler",
+        "shortReview": ""
+      }
+    ]
   },
   "faq": {
     "title": "Sık Sorulan Sorular",
@@ -264,7 +366,7 @@
     "quick_links": "Hızlı Bağlantılar",
     "contact": "İletişim",
     "address": "İstanbul, Türkiye",
-    "phone": "+90 212 356 36 08",
+    "phone": "+90 507 941 50 87",
     "email": "info@besafehealth.com",
     "copyright": "Tüm hakları saklıdır.",
     "links": {

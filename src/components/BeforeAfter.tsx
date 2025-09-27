@@ -23,7 +23,7 @@ export default function BeforeAfter() {
   const beforeAfterCases = [
     {
       id: 1,
-      image: "/images/before-after/case1.jpg",
+      image: "/images/before-after/case1.png",
       age: "35",
       technique: "FUE",
       monthsLater: "6",
@@ -33,7 +33,7 @@ export default function BeforeAfter() {
     },
     {
       id: 2,
-      image: "/images/before-after/case2.jpg",
+      image: "/images/before-after/case2.png",
       age: "42",
       technique: "FUE",
       monthsLater: "12",
@@ -43,7 +43,7 @@ export default function BeforeAfter() {
     },
     {
       id: 3,
-      image: "/images/before-after/case3.jpg",
+      image: "/images/before-after/case3.png",
       age: "38",
       technique: "FUE",
       monthsLater: "5",
@@ -53,7 +53,7 @@ export default function BeforeAfter() {
     },
     {
       id: 4,
-      image: "/images/before-after/case4.jpg",
+      image: "/images/before-after/case4.png",
       age: "36",
       technique: "DHI",
       monthsLater: "5",
@@ -63,7 +63,7 @@ export default function BeforeAfter() {
     },
     {
       id: 5,
-      image: "/images/before-after/case5.jpg",
+      image: "/images/before-after/case5.png",
       age: "31",
       technique: "Sapphire FUE",
       monthsLater: "9",
@@ -73,7 +73,7 @@ export default function BeforeAfter() {
     },
     {
       id: 6,
-      image: "/images/before-after/case6.jpg",
+      image: "/images/before-after/case6.png",
       age: "39",
       technique: "FUE",
       monthsLater: "12",
@@ -83,7 +83,7 @@ export default function BeforeAfter() {
     },
     {
       id: 7,
-      image: "/images/before-after/case7.jpg",
+      image: "/images/before-after/case7.png",
       age: "44",
       technique: "FUE",
       monthsLater: "12",
@@ -93,11 +93,21 @@ export default function BeforeAfter() {
     },
     {
       id: 8,
-      image: "/images/before-after/case8.jpg",
+      image: "/images/before-after/case8.png",
       age: "36",
       technique: "FUE",
       monthsLater: "7",
       country: "Albanian",
+      grafts: "4500",
+      patientType: "Male"
+    },
+    {
+      id: 9,
+      image: "/images/before-after/case9.png",
+      age: "31",
+      technique: "FUE",
+      monthsLater: "7",
+      country: "Turkey",
       grafts: "4500",
       patientType: "Male"
     }

@@ -242,7 +242,109 @@
     "subtitle": "Feedback from our customers who share their experiences.",
     "heading": "What Our Customers Say",
     "swipeHint": "Swipe to see more reviews",
-    "googleBadge": "Google Reviews"
+    "googleBadge": "Google Reviews",
+    "list": [
+      {
+        "id": 1,
+        "name": "Revive Cleaning",
+        "date": "February 27, 2025",
+        "rating": 5,
+        "profileLetter": "R",
+        "profileColor": "from-orange-400 to-orange-500",
+        "review": "I had a really great Experience with be safe health, a seamless transition and very very happy with the results. The hotel, transfers and the customer service was top quality",
+        "shortReview": "I had a really great Experience with be safe health, a seamless transition and very very happy with the results..."
+      },
+      {
+        "id": 2,
+        "name": "Narendra Bishundial",
+        "date": "February 25, 2025",
+        "rating": 5,
+        "profileLetter": "N",
+        "profileColor": "from-purple-400 to-purple-500",
+        "review": "I recently got my hair transplant completed by Be Safe Health, and the experience was amazing! My advisor, Nikola, is the best! I was well informed before, throughout, and after my procedure. They truly care and were attentive to all my needs to ensure I was comfortable. My procedure came out perfectly, with no issues. If you are looking into getting your procedure done, I recommend them 1000%. Get in contact with Nikola, and you'll be in great hands!",
+        "shortReview": "I recently got my hair transplant completed by Be Safe Health, and the experience was amazing! My advisor, Nikola, is the best! I was well informed before, throughout, and after my procedure..."
+      },
+      {
+        "id": 3,
+        "name": "Preston Deakin",
+        "date": "February 25, 2025",
+        "rating": 5,
+        "profileLetter": "P",
+        "profileColor": "from-blue-400 to-blue-500",
+        "review": "I Recently had a hair transplant with this clinic, was very happy with their service, I'm currently recovering and looking forward to seeing the results. Eric took good care of me, from start to finish, organising the days, making me feel comfortable and translating very well, if your needing a transplant, would definitely recommend!",
+        "shortReview": "I Recently had a hair transplant with this clinic, was very happy with their service, I'm currently recovering and looking forward to seeing the results..."
+      },
+      {
+        "id": 4,
+        "name": "Fabio Pelosini",
+        "date": "February 23, 2025",
+        "rating": 5,
+        "profileLetter": "F",
+        "profileColor": "from-green-400 to-green-500",
+        "review": "I had a great experience with these guys. Very professional and very careful. Special thanks to Enrico who is always gentle and helpful.",
+        "shortReview": "I had a great experience with these guys. Very professional and very careful. Special thanks to Enrico who is always gentle and helpful..."
+      },
+      {
+        "id": 5,
+        "name": "Teigan Leigh Wheeldon",
+        "date": "February 22, 2025",
+        "rating": 5,
+        "profileLetter": "T",
+        "profileColor": "from-red-400 to-red-500",
+        "review": "There are many ways I could write this review but I honestly couldn't recommend Be Safe Health enough! From booking to having the surgery done to getting back on the plane home everything was taken care of and planned to ensure it all ran smoothly. Eric was amazing throughout our visit and messaging prior to my arrival. No question feels like a silly question and they are always there to answer no matter what time or how big/small it may be.",
+        "shortReview": "There are many ways I could write this review but I honestly couldn't recommend Be Safe Health enough! From booking to having the surgery done to getting back on the plane home everything was taken care of..."
+      },
+      {
+        "id": 6,
+        "name": "Mehmet Tuncel",
+        "date": "February 21, 2025",
+        "rating": 5,
+        "profileLetter": "M",
+        "profileColor": "from-yellow-400 to-yellow-500",
+        "review": "I chose be safe really really amazing Price also perfect Mr Enes mr nice ms Meral Doctor mr İsmail and him team perfect ı am soon happy with them not bored not feel bad they are really perfect a team thanks for them",
+        "shortReview": "I chose be safe really really amazing Price also perfect Mr Enes mr nice ms Meral Doctor mr İsmail and him team perfect..."
+      },
+      {
+        "id": 7,
+        "name": "Antony Skipper",
+        "date": "February 20, 2025",
+        "rating": 5,
+        "profileLetter": "A",
+        "profileColor": "from-indigo-400 to-indigo-500",
+        "review": "Recently had a hair transplant with this company and the full team really need to be recognised for the amazing work they do couldn't thank them enough and they literally go the extra mile for your comfort and safety mathew was my personal hero while out in turkey he was brilliant",
+        "shortReview": "Recently had a hair transplant with this company and the full team really need to be recognised for the amazing work they do couldn't thank them enough..."
+      },
+      {
+        "id": 8,
+        "name": "Connor Holroyd",
+        "date": "February 19, 2025",
+        "rating": 5,
+        "profileLetter": "C",
+        "profileColor": "from-pink-400 to-pink-500",
+        "review": "Can't thank Sean, Matthew and Sena enough. Good communication throughout and always there to answer any questions or help you. 100% recommend",
+        "shortReview": "Can't thank Sean, Matthew and Sena enough. Good communication throughout and always there to answer any questions or help you..."
+      },
+      {
+        "id": 9,
+        "name": "Deck Winder",
+        "date": "February 18, 2025",
+        "rating": 5,
+        "profileLetter": "D",
+        "profileColor": "from-teal-400 to-teal-500",
+        "review": "Met at the airport by driver, transport really comfortable. Taken to the hotel, hotel modern and comfortable. Came back for me the next day for the surgery. Everyone professional and friendly then taken back to the hotel afterwards. Picked up again day after surgery to be checked over and have bandages removed. Picked up for the return flight to be taken to airport. Everything sorted out for me nothing to organise myself it was all done for me. Very happy with the service I received. A big thank you to Shaun Matthew and Nicola",
+        "shortReview": "Met at the airport by driver, transport really comfortable. Taken to the hotel, hotel modern and comfortable. Came back for me the next day for the surgery..."
+      },
+      {
+        "id": 10,
+        "name": "Liam Madden",
+        "date": "February 17, 2025",
+        "rating": 5,
+        "profileLetter": "L",
+        "profileColor": "from-cyan-400 to-cyan-500",
+        "review": "I originally started my hair transplant journey by having a consultation with the owner Sean Jordan Baruch back in April 2023. Right from the off he was incredibly informative, providing client insight as well as his own experience within the industry. We scheduled the transplant to take place in Istanbul in January 2024. Throughout the process he kept in touch via whatsapp/video calling to check in to see if I had any questions and also provided instructions for before and after the treatment.",
+        "shortReview": "I originally started my hair transplant journey by having a consultation with the owner Sean Jordan Baruch back in April 2023. Right from the off he was incredibly informative..."
+      }
+    ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -264,7 +366,7 @@
     "quick_links": "Quick Links",
     "contact": "Contact",
     "address": "Istanbul, Turkey",
-    "phone": "+90 212 356 36 08",
+    "phone": "+90 507 941 50 87",
     "email": "info@besafehealth.com",
     "copyright": "All rights reserved.",
     "links": {

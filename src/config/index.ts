@@ -4,7 +4,7 @@
 export const config = {
   // Site Configuration
   site: {
-    name: "Be Safe Health",
+    name: "Be Safe Health | Hair Transplant",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://besafehealth.com.tr",
     description: "Premium health tourism services in Turkey: hair transplant, dental, and aesthetic surgery with world-class doctors.",
     defaultLocale: "en",

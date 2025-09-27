@@ -6,58 +6,17 @@ const GoogleReviews = () => {
     const { t } = useTranslation("common");
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const reviews = [
-        {
-            id: 1,
-            name: "Nivine Abou El Zelof",
-            date: "February 27, 2025",
-            rating: 5,
-            profileLetter: "N",
-            profileColor: "from-orange-400 to-orange-500",
-            review: "Yakın zamanda saç ekimi yaptırdım ve tüm deneyimimden son derece memnunum. Başlangıçtan itibaren hizmet mükemmeldi. Ekip profesyonel, bilgilendirici ve her zaman yardımcı oldu.",
-            shortReview: "Yakın zamanda saç ekimi yaptırdım ve tüm deneyimimden son derece memnunum. Başlangıçtan itibaren hizmet mükemmeldi..."
-        },
-        {
-            id: 2,
-            name: "Lars Gebhard",
-            date: "February 25, 2025",
-            rating: 5,
-            profileLetter: "L",
-            profileColor: "from-purple-400 to-purple-500",
-            review: "Mükemmel hizmet ve birinci sınıf bakım - tam anlamıyla endişesiz bir paket! Özellikle, klinikte ve WhatsApp üzerinden yapılan sıcak iletişim beni çok etkiledi.",
-            shortReview: "Mükemmel hizmet ve birinci sınıf bakım - tam anlamıyla endişesiz bir paket! Özellikle, klinikte ve WhatsApp üzerinden..."
-        },
-        {
-            id: 3,
-            name: "Sergio Pérez Alcañiz",
-            date: "February 25, 2025",
-            rating: 5,
-            profileLetter: "S",
-            profileColor: "from-blue-400 to-blue-500",
-            review: "Her şey harikaydı! Klinik adeta bir sanat galerisi gibi. O kadar temiz ki, banyolarda bile yemek yenebilir. Hizmet, ilk andan itibaren mükemmel ve profesyonel.",
-            shortReview: "Her şey harikaydı! Klinik adeta bir sanat galerisi gibi. O kadar temiz ki, banyolarda bile yemek yenebilir..."
-        },
-        {
-            id: 4,
-            name: "Maria Rodriguez",
-            date: "February 23, 2025",
-            rating: 5,
-            profileLetter: "M",
-            profileColor: "from-green-400 to-green-500",
-            review: "Saç ekimi sürecim boyunca hissettiğim güven ve profesyonellik beni çok etkiledi. Doktor ekibi çok deneyimli ve her adımda bilgilendirici oldu.",
-            shortReview: "Saç ekimi sürecim boyunca hissettiğim güven ve profesyonellik beni çok etkiledi. Doktor ekibi çok deneyimli..."
-        },
-        {
-            id: 5,
-            name: "Ahmed Hassan",
-            date: "February 22, 2025",
-            rating: 5,
-            profileLetter: "A",
-            profileColor: "from-red-400 to-red-500",
-            review: "İnanılmaz sonuçlar! Be Safe Health ekibi gerçekten profesyonel. Tüm süreç boyunca kendimi güvende hissettim ve sonuçlar beklentilerimin çok üzerinde.",
-            shortReview: "İnanılmaz sonuçlar! Be Safe Health ekibi gerçekten profesyonel. Tüm süreç boyunca kendimi güvende hissettim..."
-        }
-    ];
+    // Get reviews from i18n translations
+    const reviews = t("reviews.list", { returnObjects: true }) as Array<{
+        id: number;
+        name: string;
+        date: string;
+        rating: number;
+        profileLetter: string;
+        profileColor: string;
+        review: string;
+        shortReview: string;
+    }>;
 
     // Auto-slide effect
     useEffect(() => {
@@ -138,7 +97,7 @@ const GoogleReviews = () => {
 
 
                     {/* Review Card */}
-                    <div className="relative h-80 sm:h-96 lg:h-96">
+                    <div className="relative h-96 sm:h-[28rem] lg:h-[32rem]">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentIndex}

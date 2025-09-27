@@ -242,7 +242,109 @@
     "subtitle": "Feedback dai nostri clienti che condividono le loro esperienze.",
     "heading": "Cosa Dicono i Nostri Clienti",
     "swipeHint": "Scorri per vedere più recensioni",
-    "googleBadge": "Recensioni Google"
+    "googleBadge": "Recensioni Google",
+    "list": [
+      {
+        "id": 1,
+        "name": "Shanuka Dulan",
+        "date": "27 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "S",
+        "profileColor": "from-orange-400 to-orange-500",
+        "review": "Mi sono affidato a be safe health per il trapianto di capelli, e fin da subito Furio ed Enrico sono stati disponibilissimi, appena arrivato in Turchia mi ha seguito Enrico che non mi ha più lasciato ancora ad oggi che sono in italia finito il trapianto è sempre disponibile per messaggio. Il personale e i dottori accolgono con il sorriso e ti mettono subito a tuo agio, professionalità è la base di tutto! Un esperienza unica oltre che un viaggio di salute, l'intervento è andato tutto bene, grazie anche ai consigli e al lavoro svolto con passione e serietà.",
+        "shortReview": "Mi sono affidato a be safe health per il trapianto di capelli, e fin da subito Furio ed Enrico sono stati disponibilissimi, appena arrivato in Turchia mi ha seguito Enrico..."
+      },
+      {
+        "id": 2,
+        "name": "Francesco Sss",
+        "date": "25 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "F",
+        "profileColor": "from-purple-400 to-purple-500",
+        "review": "Clinica top e risulta certa. Medici e infermieri altamente specializzati. Erem e Furio vi metteranno a vostro agio, vi daranno tutte le informazioni necessarie per il vostro trapianto e saranno presenti anche post operazione per qualsiasi dubbio. Consiglio vivamente questa clinica.",
+        "shortReview": "Clinica top e risulta certa. Medici e infermieri altamente specializzati. Erem e Furio vi metteranno a vostro agio, vi daranno tutte le informazioni necessarie..."
+      },
+      {
+        "id": 3,
+        "name": "Giovanni Ruotolo",
+        "date": "25 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "G",
+        "profileColor": "from-blue-400 to-blue-500",
+        "review": "Consiglio vivamente Be Safe Health, il personale è competente e disponibile. Ti mettono subito a tuo agio con tanta cortesia e simpatia. Un ringraziamento speciale a Furio ed Enrico.",
+        "shortReview": "Consiglio vivamente Be Safe Health, il personale è competente e disponibile. Ti mettono subito a tuo agio con tanta cortesia e simpatia..."
+      },
+      {
+        "id": 4,
+        "name": "Donato Esposito",
+        "date": "23 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "D",
+        "profileColor": "from-green-400 to-green-500",
+        "review": "Sono appena tornato dalla Turchia dove mi sono sottoposto al trapianto di capelli che dire tutto perfetto",
+        "shortReview": "Sono appena tornato dalla Turchia dove mi sono sottoposto al trapianto di capelli che dire tutto perfetto..."
+      },
+      {
+        "id": 5,
+        "name": "Giovanni Parisi",
+        "date": "22 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "G",
+        "profileColor": "from-red-400 to-red-500",
+        "review": "Clinica number one gruppo fantastico è Furio un grande uomo i capelli fa vendere mi dispiace che nn riesco a pubblicare la foto",
+        "shortReview": "Clinica number one gruppo fantastico è Furio un grande uomo i capelli fa vendere mi dispiace che nn riesco a pubblicare la foto..."
+      },
+      {
+        "id": 6,
+        "name": "Francesco Ben",
+        "date": "21 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "F",
+        "profileColor": "from-yellow-400 to-yellow-500",
+        "review": "Ho scelto questa clinica grazie un mio collega vi posso dire che ho fatto la scelta giusta....personale qualificato bravissimi a svolgere il suo lavoro e pronti a tutto sempre col sorriso....Enrico una persona speciale sempre disponibile....scegliete BE SAFE HEALTH....",
+        "shortReview": "Ho scelto questa clinica grazie un mio collega vi posso dire che ho fatto la scelta giusta....personale qualificato bravissimi a svolgere il suo lavoro..."
+      },
+      {
+        "id": 7,
+        "name": "Vincenzo D'Ambrosio",
+        "date": "20 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "V",
+        "profileColor": "from-indigo-400 to-indigo-500",
+        "review": "18/01/2024 ho avuto trapianto di capelli,complimenti a tutto lo staff Be safe health un organizzazione bellissima.Mi sono trovato bene trapianto bene grazie Furia.enrico .nikol un abbraccio da Napoli",
+        "shortReview": "18/01/2024 ho avuto trapianto di capelli,complimenti a tutto lo staff Be safe health un organizzazione bellissima.Mi sono trovato bene trapianto bene..."
+      },
+      {
+        "id": 8,
+        "name": "Giovanni Fedele",
+        "date": "19 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "G",
+        "profileColor": "from-pink-400 to-pink-500",
+        "review": "Mi sono trovato molto bene alla clinica Be Safe Healt molto professionali assistenza al TOP Furio molto accomodante e il suo assistente Enrico ancora di più.Li sceglierei altre 100 volte,li consiglio a tutti.....",
+        "shortReview": "Mi sono trovato molto bene alla clinica Be Safe Healt molto professionali assistenza al TOP Furio molto accomodante e il suo assistente Enrico ancora di più..."
+      },
+      {
+        "id": 9,
+        "name": "Alessia Bonaccorso",
+        "date": "18 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "A",
+        "profileColor": "from-teal-400 to-teal-500",
+        "review": "Vorrei assolutamente condividere la mia esperienza. Sono Carlo, arrivo dalla Sicilia. Staff impeccabile, assolutamente disponibili sin dal primo momento. Mi hanno assistito dal momento dell'emissione del biglietto aereo, fino alla fine di questa esperienza. Consiglio assolutamente. Un grazie a Furio per averci accolto; Un grazie ad Enrico, che si è preso cura di noi, che ci ha coccolato. Per noi è stato un piacere grande. Grazie anche a Nikola per le foto e video. BE SAFE HEALTH number one",
+        "shortReview": "Vorrei assolutamente condividere la mia esperienza. Sono Carlo, arrivo dalla Sicilia. Staff impeccabile, assolutamente disponibili sin dal primo momento..."
+      },
+      {
+        "id": 10,
+        "name": "Vincenzo Sannino",
+        "date": "17 Febbraio 2025",
+        "rating": 5,
+        "profileLetter": "V",
+        "profileColor": "from-cyan-400 to-cyan-500",
+        "review": "Ho effettuato un trapianto di capelli presso Be Safe Health e non posso far altro che ringraziare tutto il team per l'accoglienza ricevuta. Furio, Enrico e Nikola sono persone splendide, trasmettono serenità prima dell'intervento quasi facendoti dimenticare che sia un'operazione. Mi ha colpito molto la disponibilità e la passione che mettono nel far bene il loro lavoro. Consiglio vivamente di affidarsi a questa Equipe di persone qualificate per il vostro intervento. Sarò sicuro che non ve ne pentirete!",
+        "shortReview": "Ho effettuato un trapianto di capelli presso Be Safe Health e non posso far altro che ringraziare tutto il team per l'accoglienza ricevuta. Furio, Enrico e Nikola sono persone splendide..."
+      }
+    ]
   },
   "faq": {
     "title": "Domande Frequenti",
@@ -264,7 +366,7 @@
     "quick_links": "Collegamenti Rapidi",
     "contact": "Contatto",
     "address": "Istanbul, Turchia",
-    "phone": "+90 212 356 36 08",
+    "phone": "+90 507 941 50 87",
     "email": "info@besafehealth.com",
     "copyright": "Tutti i diritti riservati.",
     "links": {

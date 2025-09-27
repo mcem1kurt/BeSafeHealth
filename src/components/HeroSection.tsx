@@ -74,6 +74,7 @@ export default function HeroSection() {
                 loop
                 preload="metadata"
                 aria-hidden="true"
+                poster="/images/hero_section_tumbnail.jpg"
               >
                 <source src="/videos/hero.mp4" type="video/mp4" />
                 <source src="/videos/hero.webm" type="video/webm" />
@@ -138,7 +139,7 @@ export default function HeroSection() {
                   <div className="aspect-video bg-gray-900 relative">
                     <video
                       className="w-full h-full object-cover"
-                      poster="/images/award-ceremony.jpg"
+                      poster="/images/hero_section_tumbnail.jpg"
                       controls
                       preload="metadata"
                     >
