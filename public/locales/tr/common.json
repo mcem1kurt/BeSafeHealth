@@ -488,7 +488,8 @@
     "heading": "Öncesi & Sonrası Sonuçlar",
     "before": "Öncesi",
     "after": "Sonrası",
-    "moreImages": "Daha Fazla Öncesi & Sonrası Görsel"
+    "moreImages": "Daha Fazla Öncesi & Sonrası Görsel",
+    "labels": { "yearsOld": "yaşında", "monthLater": "Ay sonra", "country": "Ülke", "graft": "Greft" }
   },
   "hairServices": {
     "fue": {
@@ -654,5 +655,12 @@
       "title": "Güzelliğinizi Ortaya Çıkarın",
       "subtitle": "Uzman plastik cerrahlarımızla görüşerek size en uygun estetik ameliyat planını belirleyelim. Ücretsiz danışmanlık için hemen iletişime geçin."
     }
+  },
+  "countries": {
+    "England": "İngiltere",
+    "Lithuanian": "Litvanya",
+    "Turkey": "Türkiye",
+    "Italy": "İtalya",
+    "Albanian": "Arnavutluk"
   }
 }

@@ -486,7 +486,8 @@
     "heading": "Rezultatet para dhe pas",
     "before": "Para",
     "after": "Më pas",
-    "moreImages": "Më shumë para dhe pas imazheve"
+    "moreImages": "Më shumë para dhe pas imazheve",
+    "labels": { "yearsOld": "vjeç", "monthLater": "Muaj më pas", "country": "Shteti", "graft": "Graft" }
   },
   "partners": {
     "title": "Partnerët tanë",
@@ -739,5 +740,12 @@
       "title": "Shërbimet tona të kirurgjisë estetike",
       "subtitle": "Ne zbulojmë bukurinë tuaj me teknologjinë moderne dhe ekipin e ekspertëve"
     }
+  },
+  "countries": {
+    "England": "Angli",
+    "Lithuanian": "Lituani",
+    "Turkey": "Turqi",
+    "Italy": "Itali",
+    "Albanian": "Shqipëri"
   }
 }

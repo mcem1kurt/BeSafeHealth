@@ -5,6 +5,13 @@ import { useEffect } from "react";
 import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../../next-i18next.config.js";
 import { siteConfig } from "../config";
+import { useRouter } from "next/router";
+
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+  }
+}
 
 // Type for navigator with maxTouchPoints
 interface NavigatorWithMaxTouchPoints extends Navigator {
@@ -12,6 +19,7 @@ interface NavigatorWithMaxTouchPoints extends Navigator {
 }
 
 function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
 
   useEffect(() => {
     // Force dark mode on all users, regardless of system preference
@@ -46,6 +54,49 @@ function App({ Component, pageProps }: AppProps) {
     });
     
     return () => observer.disconnect();
+  }, []);
+
+  // Facebook Pixel - route change PageView
+  useEffect(() => {
+    const handleRouteChange = () => {
+      if (typeof window !== "undefined" && window.fbq) {
+        window.fbq('track', 'PageView');
+        // Track content views on service-related pages
+        const path = window.location.pathname || '';
+        if (path.startsWith('/services')) {
+          window.fbq('track', 'ViewContent');
+        }
+      }
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
+  // Facebook Pixel - global link click instrumentation for Contact and FindLocation
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+      const anchor = target.closest('a') as HTMLAnchorElement | null;
+      if (!anchor) return;
+
+      const href = anchor.getAttribute('href') || '';
+      const tel = href.startsWith('tel:');
+      const mailto = href.startsWith('mailto:');
+      const isMap = /\b(google\.[^/]+\/maps|maps\.apple\.com|bing\.com\/maps)\b/i.test(href);
+
+      if (typeof window !== 'undefined' && window.fbq) {
+        if (tel || mailto) {
+          window.fbq('track', 'Contact');
+        } else if (isMap) {
+          window.fbq('track', 'FindLocation');
+        }
+      }
+    };
+    document.addEventListener('click', handleClick, { capture: true });
+    return () => document.removeEventListener('click', handleClick, { capture: true } as any);
   }, []);
 
   // Desktop scroll smoothing (lightweight, no dependency)

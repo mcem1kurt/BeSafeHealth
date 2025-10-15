@@ -180,7 +180,7 @@ export default function BeforeAfter() {
                       <div className="flex justify-between items-center">
                         <div className="bg-gray-700/80 border border-gray-600/50 rounded-full px-4 py-2">
                           <span className="text-white font-medium text-sm">
-                            {case_.age} years old
+                            {case_.age} {t("beforeAfter.labels.yearsOld")}
                           </span>
                         </div>
                         <div className="bg-gray-700/80 border border-gray-600/50 rounded-full px-4 py-2">
@@ -194,15 +194,15 @@ export default function BeforeAfter() {
                       <div className="grid grid-cols-3 gap-2">
                         <div className="bg-gray-700/80 border border-gray-600/50 rounded-full px-3 py-2 text-center">
                           <div className="text-white font-semibold text-sm">{case_.monthsLater}</div>
-                          <div className="text-white/70 text-xs">Month later</div>
+                          <div className="text-white/70 text-xs">{t("beforeAfter.labels.monthLater")}</div>
                         </div>
                         <div className="bg-gray-700/80 border border-gray-600/50 rounded-full px-3 py-2 text-center">
-                          <div className="text-white font-semibold text-sm">{case_.country}</div>
-                          <div className="text-white/70 text-xs">Country</div>
+                          <div className="text-white font-semibold text-sm">{t(`countries.${case_.country}`) || case_.country}</div>
+                          <div className="text-white/70 text-xs">{t("beforeAfter.labels.country")}</div>
                         </div>
                         <div className="bg-gray-700/80 border border-gray-600/50 rounded-full px-3 py-2 text-center">
                           <div className="text-white font-semibold text-sm">{case_.grafts}</div>
-                          <div className="text-white/70 text-xs">Graft</div>
+                          <div className="text-white/70 text-xs">{t("beforeAfter.labels.graft")}</div>
                         </div>
                       </div>
                     </div>

@@ -33,6 +33,11 @@ export default function HeroSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Facebook Pixel - Lead event (form submitted)
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq('track', 'Lead');
+    }
+
     // Send email using EmailJS
     await sendEmail(formData);
     

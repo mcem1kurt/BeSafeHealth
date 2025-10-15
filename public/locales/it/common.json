@@ -454,7 +454,8 @@
     "heading": "Risultati Prima & Dopo",
     "before": "Prima",
     "after": "Dopo",
-    "moreImages": "Altre Immagini Prima & Dopo"
+    "moreImages": "Altre Immagini Prima & Dopo",
+    "labels": { "yearsOld": "anni", "monthLater": "Mese dopo", "country": "Paese", "graft": "Innesti" }
   },
   "partners": {
     "title": "I Nostri Partner",
@@ -463,6 +464,13 @@
       "GoodLook",
       "100. Yıl Hastanesi"
     ]
+  },
+  "countries": {
+    "England": "Inghilterra",
+    "Lithuanian": "Lituania",
+    "Turkey": "Turchia",
+    "Italy": "Italia",
+    "Albanian": "Albania"
   },
   "agency": {
     "title": "Chi Siamo",

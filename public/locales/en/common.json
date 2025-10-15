@@ -454,7 +454,8 @@
     "heading": "Before & After Results",
     "before": "Before",
     "after": "After",
-    "moreImages": "More Before & After Images"
+    "moreImages": "More Before & After Images",
+    "labels": { "yearsOld": "years old", "monthLater": "Month later", "country": "Country", "graft": "Graft" }
   },
   "partners": {
     "title": "Our Partners",
@@ -463,6 +464,13 @@
       "GoodLook",
       "100. Yıl Hastanesi"
     ]
+  },
+  "countries": {
+    "England": "England",
+    "Lithuanian": "Lithuanian",
+    "Turkey": "Turkey",
+    "Italy": "Italy",
+    "Albanian": "Albanian"
   },
   "agency": {
     "title": "About Us",
