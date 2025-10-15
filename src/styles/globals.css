@@ -59,6 +59,9 @@ body {
   color: var(--foreground);
   font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+/* Prevent horizontal overflow on mobile (iOS Safari production) */
+*, *::before, *::after { box-sizing: border-box; }
+:root, html, body, #__next { max-width: 100vw; overflow-x: hidden; }
 
 /* (removed) snap-scrolling utilities */
 
