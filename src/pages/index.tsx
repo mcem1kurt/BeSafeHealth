@@ -6,7 +6,6 @@ import Image from "next/image";
 import ServiceCard from "@/components/ServiceCard";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import PartnersMarquee from "@/components/PartnersMarquee";
 import { motion } from "framer-motion";
 import StepsTimeline from "@/components/StepsTimeline";
 import GoogleReviews from "@/components/GoogleReviews";

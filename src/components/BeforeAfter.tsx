@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
-import { ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 

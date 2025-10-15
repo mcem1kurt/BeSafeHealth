@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 
 declare global {
   interface Window {
-    fbq?: (...args: any[]) => void;
+    fbq?: (command: string, ...args: unknown[]) => void;
   }
 }
 
@@ -96,7 +96,7 @@ function App({ Component, pageProps }: AppProps) {
       }
     };
     document.addEventListener('click', handleClick, { capture: true });
-    return () => document.removeEventListener('click', handleClick, { capture: true } as any);
+    return () => document.removeEventListener('click', handleClick, true);
   }, []);
 
   // Desktop scroll smoothing (lightweight, no dependency)

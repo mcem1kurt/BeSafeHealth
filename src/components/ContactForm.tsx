@@ -12,7 +12,7 @@ export default function ContactForm() {
     message: ""
   });
 
-  const { sendEmail, isSubmitting, isSubmitted, error, resetForm } = useEmailJS(emailJSConfig);
+  const { sendEmail, isSubmitting, isSubmitted, error } = useEmailJS(emailJSConfig);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({

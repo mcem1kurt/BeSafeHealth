@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useEffect, useRef, useState } from "react";
-import { Play } from "lucide-react";
 import { useEmailJS } from "@/hooks/useEmailJS";
 import { emailJSConfig } from "@/config/emailjs";
 

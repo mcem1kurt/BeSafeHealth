@@ -17,6 +17,42 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
   const [show, setShow] = useState(false);
   const [number, setNumber] = useState(initialNumber);
 
+  // Get different notification messages for variety
+  function getNotificationMessage() {
+    const messages = [
+      t("notifications.messages.0"),
+      t("notifications.messages.1"),
+      t("notifications.messages.2"),
+      t("notifications.messages.3"),
+      t("notifications.messages.4"),
+      t("notifications.messages.5"),
+      t("notifications.messages.6"),
+      t("notifications.messages.7"),
+      t("notifications.messages.8"),
+      t("notifications.messages.9"),
+    ];
+    const timeBasedIndex = Math.floor((Date.now() / 60000) % messages.length);
+    return messages[timeBasedIndex];
+  }
+
+  // Get different notification titles for variety
+  function getNotificationTitle() {
+    const titles = [
+      t("notifications.titles.0"),
+      t("notifications.titles.1"),
+      t("notifications.titles.2"),
+      t("notifications.titles.3"),
+      t("notifications.titles.4"),
+      t("notifications.titles.5"),
+      t("notifications.titles.6"),
+      t("notifications.titles.7"),
+      t("notifications.titles.8"),
+      t("notifications.titles.9"),
+    ];
+    const timeBasedIndex = Math.floor((Date.now() / 60000) % titles.length);
+    return titles[timeBasedIndex];
+  }
+
   // Use browser's default notification sound
   const playNotificationSound = useCallback(() => {
     try {
@@ -108,46 +144,6 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
     console.log(`⏰ Next notification update in: ${nextUpdateDelay / 1000} seconds (1 minute)`);
     setTimeout(updateNotificationNumber, nextUpdateDelay);
   }, [number, playNotificationSound]);
-
-  // Get different notification messages for variety
-  const getNotificationMessage = () => {
-    const messages = [
-      t("notifications.messages.0"),
-      t("notifications.messages.1"),
-      t("notifications.messages.2"),
-      t("notifications.messages.3"),
-      t("notifications.messages.4"),
-      t("notifications.messages.5"),
-      t("notifications.messages.6"),
-      t("notifications.messages.7"),
-      t("notifications.messages.8"),
-      t("notifications.messages.9")
-    ];
-    
-    // Use a deterministic index based on current time to avoid hydration issues
-    const timeBasedIndex = Math.floor((Date.now() / 60000) % messages.length); // Changes every minute
-    return messages[timeBasedIndex];
-  };
-
-  // Get different notification titles for variety
-  const getNotificationTitle = () => {
-    const titles = [
-      t("notifications.titles.0"),
-      t("notifications.titles.1"),
-      t("notifications.titles.2"),
-      t("notifications.titles.3"),
-      t("notifications.titles.4"),
-      t("notifications.titles.5"),
-      t("notifications.titles.6"),
-      t("notifications.titles.7"),
-      t("notifications.titles.8"),
-      t("notifications.titles.9")
-    ];
-    
-    // Use a deterministic index based on current time to avoid hydration issues
-    const timeBasedIndex = Math.floor((Date.now() / 60000) % titles.length); // Changes every minute
-    return titles[timeBasedIndex];
-  };
 
   // Animation key for number changes
   const [key, setKey] = useState(0);
