@@ -165,6 +165,7 @@ export default function BeforeAfter() {
                         src={case_.image}
                         alt={`Case ${case_.id} - Before & After`}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover"
                         onError={(e) => {
                           // Fallback placeholder

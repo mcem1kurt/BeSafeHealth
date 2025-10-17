@@ -205,6 +205,7 @@ export default function Navbar() {
                       width={20}
                       height={15}
                       className="w-5 h-4 object-cover rounded-sm"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </button>
                   <button
@@ -219,6 +220,7 @@ export default function Navbar() {
                       width={20}
                       height={15}
                       className="w-5 h-4 object-cover rounded-sm"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </button>
                   <button
@@ -233,6 +235,7 @@ export default function Navbar() {
                       width={20}
                       height={15}
                       className="w-5 h-4 object-cover rounded-sm"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </button>
                   <button
@@ -247,6 +250,7 @@ export default function Navbar() {
                       width={20}
                       height={15}
                       className="w-5 h-4 object-cover rounded-sm"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </button>
                 </div>
@@ -349,6 +353,7 @@ export default function Navbar() {
                       width={24}
                       height={18}
                       className="w-6 h-5 object-cover rounded-sm"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </button>
                   <button
@@ -365,6 +370,7 @@ export default function Navbar() {
                       width={24}
                       height={18}
                       className="w-6 h-5 object-cover rounded-sm"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </button>
                   <button
@@ -381,6 +387,7 @@ export default function Navbar() {
                       width={24}
                       height={18}
                       className="w-6 h-5 object-cover rounded-sm"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </button>
                   <button
@@ -397,6 +404,7 @@ export default function Navbar() {
                       width={24}
                       height={18}
                       className="w-6 h-5 object-cover rounded-sm"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </button>
                 </div>

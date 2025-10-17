@@ -32,10 +32,18 @@ export default function HeroSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Facebook Pixel - Lead event (form submitted)
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq('track', 'Lead');
-    }
+    // Facebook Pixel - Lead event (form submitted) with retry mechanism
+    const tryTrackLead = (retries = 3) => {
+      if (typeof window !== "undefined" && window.fbq) {
+        console.log('🔍 Facebook Pixel: Lead event triggered');
+        window.fbq!('track', 'Lead');
+      } else if (retries > 0) {
+        setTimeout(() => tryTrackLead(retries - 1), 100);
+      } else {
+        console.warn('⚠️ Facebook Pixel: fbq not available for Lead event after retries');
+      }
+    };
+    tryTrackLead();
 
     // Send email using EmailJS
     await sendEmail(formData);
