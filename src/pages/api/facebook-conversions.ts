@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   // Facebook API credentials
   const ACCESS_TOKEN = process.env.FACEBOOK_ACCESS_TOKEN || 'EAAJlF7gyLaABPjNLt1Ql0ldZCqzwdRzuC9VK0MZC3Px8q4GBGHZA7y1zchUUVnZC7StYspmBYAFnJn7yEiXDdgnkREpjwaq0tKaA4rWNZCrZBBnZBfPdKJci2CURFqeNnFnWTdkUQmZCHipf7PrzESWqDspyqB3ZAsROEJ01jUb4wWcSc7foZB8lbQ6R8VM2XWgLizQgZDZD';
-  const PIXEL_ID = '1162634105881469';
+  const PIXEL_ID = '738567675869556';
 
   // Hash email and phone for privacy
   const hashData = (data: string) => {
