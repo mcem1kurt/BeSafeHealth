@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { eventName, userData, customData } = req.body;
 
   // Facebook API credentials
-  const ACCESS_TOKEN = process.env.FACEBOOK_ACCESS_TOKEN || 'EAAJlF7gyLaABPjNLt1Ql0ldZCqzwdRzuC9VK0MZC3Px8q4GBGHZA7y1zchUUVnZC7StYspmBYAFnJn7yEiXDdgnkREpjwaq0tKaA4rWNZCrZBBnZBfPdKJci2CURFqeNnFnWTdkUQmZCHipf7PrzESWqDspyqB3ZAsROEJ01jUb4wWcSc7foZB8lbQ6R8VM2XWgLizQgZDZD';
+  const ACCESS_TOKEN = process.env.FACEBOOK_ACCESS_TOKEN || 'EAAJlF7gyLaABPrFuFi5QDT2DhZCZCZC7ZBR0inDoTAJK6Cs9pATTjPNV0cvExpg96RwHkG17Ct5Qw0bf7sZAnKP4Q4WHrTjmEF3QaUToAWoM5cWihX302V86AKZCbOFi83A4uI6QB2OWn1ZAm4ug9ml48S149wJCbs2PBworRgXvI0stg82JHoTyP1gKSk566UekwZDZD';
   const PIXEL_ID = '738567675869556';
 
   // Hash email and phone for privacy
