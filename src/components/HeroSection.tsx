@@ -42,6 +42,38 @@ export default function HeroSection() {
       }
     }, 100);
 
+    // Facebook Conversions API - Lead event (server-side)
+    try {
+      const conversionsResponse = await fetch('/api/facebook-conversions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          eventName: 'Lead',
+          userData: {
+            email: formData.email,
+            firstName: formData.name?.split(' ')[0],
+            lastName: formData.name?.split(' ').slice(1).join(' '),
+            phone: formData.phone,
+            leadId: Date.now(), // Unique lead ID
+          },
+          customData: {
+            content_name: 'Contact Form',
+            content_category: 'Lead Generation',
+          },
+        }),
+      });
+
+      if (conversionsResponse.ok) {
+        console.log('✅ Facebook Conversions API: Lead event sent');
+      } else {
+        console.warn('⚠️ Facebook Conversions API: Failed to send Lead event');
+      }
+    } catch (error) {
+      console.warn('⚠️ Facebook Conversions API Error:', error);
+    }
+
     // Send email using EmailJS
     await sendEmail(formData);
     
