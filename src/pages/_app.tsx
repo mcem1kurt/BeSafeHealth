@@ -56,17 +56,33 @@ function App({ Component, pageProps }: AppProps) {
     return () => observer.disconnect();
   }, []);
 
+  // Facebook Pixel - Check if loaded
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.fbq) {
+      console.log('✅ Facebook Pixel: Successfully loaded');
+    } else {
+      console.warn('⚠️ Facebook Pixel: Not loaded yet');
+    }
+  }, []);
+
   // Facebook Pixel - route change PageView
   useEffect(() => {
     const handleRouteChange = () => {
-      if (typeof window !== "undefined" && window.fbq) {
-        window.fbq('track', 'PageView');
-        // Track content views on service-related pages
-        const path = window.location.pathname || '';
-        if (path.startsWith('/services')) {
-          window.fbq('track', 'ViewContent');
+      // Simple tracking with small delay
+      setTimeout(() => {
+        if (typeof window !== "undefined" && window.fbq) {
+          console.log('🔍 Facebook Pixel: PageView event triggered');
+          window.fbq!('track', 'PageView');
+          // Track content views on service-related pages
+          const path = window.location.pathname || '';
+          if (path.startsWith('/services')) {
+            console.log('🔍 Facebook Pixel: ViewContent event triggered');
+            window.fbq!('track', 'ViewContent');
+          }
+        } else {
+          console.warn('⚠️ Facebook Pixel: fbq not available');
         }
-      }
+      }, 100);
     };
     router.events.on('routeChangeComplete', handleRouteChange);
     return () => {
@@ -76,6 +92,7 @@ function App({ Component, pageProps }: AppProps) {
 
   // Facebook Pixel - global link click instrumentation for Contact and FindLocation
   useEffect(() => {
+
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
       if (!target) return;
@@ -87,16 +104,33 @@ function App({ Component, pageProps }: AppProps) {
       const mailto = href.startsWith('mailto:');
       const isMap = /\b(google\.[^/]+\/maps|maps\.apple\.com|bing\.com\/maps)\b/i.test(href);
 
-      if (typeof window !== 'undefined' && window.fbq) {
-        if (tel || mailto) {
-          window.fbq('track', 'Contact');
-        } else if (isMap) {
-          window.fbq('track', 'FindLocation');
-        }
+      if (tel || mailto || isMap) {
+        // Simple tracking with small delay
+        setTimeout(() => {
+          if (typeof window !== "undefined" && window.fbq) {
+            if (tel || mailto) {
+              console.log('🔍 Facebook Pixel: Contact event triggered');
+              window.fbq!('track', 'Contact');
+            } else if (isMap) {
+              console.log('🔍 Facebook Pixel: FindLocation event triggered');
+              window.fbq!('track', 'FindLocation');
+            }
+          } else {
+            console.warn('⚠️ Facebook Pixel: fbq not available');
+          }
+        }, 100);
       }
     };
-    document.addEventListener('click', handleClick, { capture: true });
-    return () => document.removeEventListener('click', handleClick, true);
+
+    // Add event listener after a short delay to ensure fbq is loaded
+    const timeoutId = setTimeout(() => {
+      document.addEventListener('click', handleClick, { capture: true });
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+      document.removeEventListener('click', handleClick, true);
+    };
   }, []);
 
   // Desktop scroll smoothing (lightweight, no dependency)

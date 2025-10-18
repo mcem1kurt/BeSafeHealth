@@ -63,13 +63,14 @@ export default function Home() {
             className="flex justify-center"
           >
             <Link href="/" className="cursor-pointer">
-              <Image
+            <Image
                 src="/images/logo-besafe-dark.png"
                 alt="Be Safe Health"
                 width={320}
                 height={80}
                 priority
                 className="h-20 w-auto hover:scale-105 transition-transform duration-300"
+                style={{ width: "auto", height: "auto" }}
               />
             </Link>
           </motion.div>
