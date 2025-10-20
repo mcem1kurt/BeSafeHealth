@@ -35,10 +35,7 @@ export default function HeroSection() {
     // Facebook Pixel - Lead event (form submitted)
     setTimeout(() => {
       if (typeof window !== "undefined" && window.fbq) {
-        console.log('🔍 Facebook Pixel: Lead event triggered');
         window.fbq!('track', 'Lead');
-      } else {
-        console.warn('⚠️ Facebook Pixel: fbq not available for Lead event');
       }
     }, 100);
 
@@ -66,13 +63,9 @@ export default function HeroSection() {
         }),
       });
 
-      if (conversionsResponse.ok) {
-        console.log('✅ Facebook Conversions API: Lead event sent');
-      } else {
-        console.warn('⚠️ Facebook Conversions API: Failed to send Lead event');
-      }
+      // silent in production
     } catch (error) {
-      console.warn('⚠️ Facebook Conversions API Error:', error);
+      // silent in production
     }
 
     // Send email using EmailJS

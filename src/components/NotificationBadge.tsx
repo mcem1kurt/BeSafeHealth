@@ -67,7 +67,7 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
           requireInteraction: false,
           silent: false // This will play the default system sound
         });
-        console.log("🔊 Browser notification sound played successfully");
+      
         return true;
       } else {
         // Fallback: use Web Audio API to create a simple beep
@@ -75,7 +75,7 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
         return true;
       }
     } catch (error) {
-      console.error("❌ Failed to play notification sound:", error);
+      
       // Fallback: create a simple beep sound
       createBeepSound();
       return false;
@@ -87,7 +87,7 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
     try {
       // Check if Web Audio API is supported
       if (!window.AudioContext && !(window as WindowWithWebkitAudioContext).webkitAudioContext) {
-        console.error("❌ Web Audio API not supported");
+        
         return false;
       }
 
@@ -134,14 +134,14 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
     
     setNumber(newNumber);
     
-    console.log(`🔔 New notification! Number increased from ${number} to ${newNumber} (+1)`);
+    
     
     // Play sound for new notification
     playNotificationSound();
     
     // Schedule next update exactly every 60 seconds (1 minute)
     const nextUpdateDelay = 60 * 1000; // 60 seconds = 1 minute
-    console.log(`⏰ Next notification update in: ${nextUpdateDelay / 1000} seconds (1 minute)`);
+    
     setTimeout(updateNotificationNumber, nextUpdateDelay);
   }, [number, playNotificationSound]);
 
@@ -164,14 +164,14 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
     const timer = setTimeout(() => {
       setShow(true);
       
-      console.log(`🔔 Initial notification appeared! Number: ${initialNumber}`);
+      
       
       // Play initial notification sound
       playNotificationSound();
       
       // Start the update cycle - first update in exactly 1 minute
       const firstUpdateDelay = 60 * 1000; // First update in exactly 60 seconds (1 minute)
-      console.log(`⏰ First notification update in: ${firstUpdateDelay / 1000} seconds (1 minute)`);
+      
       setTimeout(updateNotificationNumber, firstUpdateDelay);
     }, delay * 1000);
 
@@ -193,7 +193,7 @@ export default function NotificationBadge({ delay, initialNumber = 1 }: Notifica
           }}
           className="absolute z-50 -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg border-2 border-white animate-pulse cursor-pointer"
           onClick={() => {
-            console.log("🧪 Testing notification sound...");
+            
             playNotificationSound();
           }} // Click to test sound
           title={`Click to test notification sound (Permission: ${Notification.permission})`}

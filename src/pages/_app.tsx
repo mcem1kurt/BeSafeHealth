@@ -56,13 +56,9 @@ function App({ Component, pageProps }: AppProps) {
     return () => observer.disconnect();
   }, []);
 
-  // Facebook Pixel - Check if loaded
+  // Facebook Pixel - Check if loaded (silent in production)
   useEffect(() => {
-    if (typeof window !== "undefined" && window.fbq) {
-      console.log('✅ Facebook Pixel: Successfully loaded');
-    } else {
-      console.warn('⚠️ Facebook Pixel: Not loaded yet');
-    }
+    // no-op
   }, []);
 
   // Facebook Pixel - route change PageView
@@ -71,16 +67,12 @@ function App({ Component, pageProps }: AppProps) {
       // Simple tracking with small delay
       setTimeout(() => {
         if (typeof window !== "undefined" && window.fbq) {
-          console.log('🔍 Facebook Pixel: PageView event triggered');
           window.fbq!('track', 'PageView');
           // Track content views on service-related pages
           const path = window.location.pathname || '';
           if (path.startsWith('/services')) {
-            console.log('🔍 Facebook Pixel: ViewContent event triggered');
             window.fbq!('track', 'ViewContent');
           }
-        } else {
-          console.warn('⚠️ Facebook Pixel: fbq not available');
         }
       }, 100);
     };
@@ -109,14 +101,10 @@ function App({ Component, pageProps }: AppProps) {
         setTimeout(() => {
           if (typeof window !== "undefined" && window.fbq) {
             if (tel || mailto) {
-              console.log('🔍 Facebook Pixel: Contact event triggered');
               window.fbq!('track', 'Contact');
             } else if (isMap) {
-              console.log('🔍 Facebook Pixel: FindLocation event triggered');
               window.fbq!('track', 'FindLocation');
             }
-          } else {
-            console.warn('⚠️ Facebook Pixel: fbq not available');
           }
         }, 100);
       }

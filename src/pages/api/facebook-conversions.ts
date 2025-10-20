@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { eventName, userData, customData } = req.body;
+  const { eventName, userData, customData, attributionShare, originalEvent } = req.body;
 
   // Facebook API credentials
   const ACCESS_TOKEN = process.env.FACEBOOK_ACCESS_TOKEN || 'EAAJlF7gyLaABPrFuFi5QDT2DhZCZCZC7ZBR0inDoTAJK6Cs9pATTjPNV0cvExpg96RwHkG17Ct5Qw0bf7sZAnKP4Q4WHrTjmEF3QaUToAWoM5cWihX302V86AKZCbOFi83A4uI6QB2OWn1ZAm4ug9ml48S149wJCbs2PBworRgXvI0stg82JHoTyP1gKSk566UekwZDZD';
@@ -24,25 +24,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const leadIdString = typeof leadIdRaw === 'number' ? String(leadIdRaw) : typeof leadIdRaw === 'string' ? leadIdRaw.trim() : '';
   const hasValidLeadId = /^\d{15,17}$/.test(leadIdString);
 
+  // Build payload to match requested structure exactly
+  const nowTs = Math.floor(Date.now() / 1000);
   const eventData = {
     data: [
       {
+        event_name: 'Website Form',
+        event_time: nowTs,
         action_source: 'system_generated',
-        event_name: eventName || 'Lead',
-        event_time: Math.floor(Date.now() / 1000),
         user_data: {
-          ...(userData?.email && { em: [hashData(userData.email)] }),
-          ...(userData?.phone && { ph: [hashData(userData.phone)] }),
-          ...(userData?.firstName && { fn: [hashData(userData.firstName)] }),
-          ...(userData?.lastName && { ln: [hashData(userData.lastName)] }),
-          ...(userData?.city && { ct: [hashData(userData.city)] }),
-          ...(userData?.country && { country: [hashData(userData.country)] }),
           ...(hasValidLeadId ? { lead_id: Number(leadIdString) } : {}),
+          fbc: userData?.fbc ?? null,
+          ...(userData?.email ? { em: hashData(userData.email) } : {}),
+          ...(userData?.phone ? { ph: hashData(userData.phone) } : {}),
+        },
+        attribution_data: {
+          ...(typeof attributionShare === 'number' ? { attribution_share: attributionShare } : {}),
         },
         custom_data: {
-          event_source: 'crm',
           lead_event_source: 'Website Form',
-          ...customData,
+          event_source: 'crm',
+        },
+        original_event_data: {
+          event_name: originalEvent?.event_name || eventName || 'Lead',
+          event_time: originalEvent?.event_time || nowTs,
         },
       },
     ],
@@ -63,14 +68,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const result = await response.json();
 
     if (response.ok) {
-      console.log('✅ Facebook Conversions API: Event sent successfully', result);
       return res.status(200).json({ success: true, data: result });
     } else {
-      console.error('❌ Facebook Conversions API Error:', result);
       return res.status(400).json({ error: 'Facebook API error', details: result });
     }
   } catch (error) {
-    console.error('❌ Facebook Conversions API Error:', error);
     return res.status(500).json({ error: 'Internal server error' });
   }
 }

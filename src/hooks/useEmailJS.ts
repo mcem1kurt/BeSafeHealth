@@ -51,7 +51,7 @@ export const useEmailJS = (config: EmailJSConfig) => {
         throw new Error('Email gönderilemedi');
       }
     } catch (err) {
-      console.error('EmailJS Error:', err);
+      
       setError(err instanceof Error ? err.message : 'Beklenmeyen bir hata oluştu');
     } finally {
       setIsSubmitting(false);
