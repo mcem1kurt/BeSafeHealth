@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { eventName, userData, customData, attributionShare, originalEvent } = req.body;
+  const { eventName, eventId, userData, customData, attributionShare, originalEvent } = req.body;
 
   // Facebook API credentials
   const ACCESS_TOKEN = process.env.FACEBOOK_ACCESS_TOKEN || 'EAAJlF7gyLaABPrFuFi5QDT2DhZCZCZC7ZBR0inDoTAJK6Cs9pATTjPNV0cvExpg96RwHkG17Ct5Qw0bf7sZAnKP4Q4WHrTjmEF3QaUToAWoM5cWihX302V86AKZCbOFi83A4uI6QB2OWn1ZAm4ug9ml48S149wJCbs2PBworRgXvI0stg82JHoTyP1gKSk566UekwZDZD';
@@ -39,6 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               ...(userData?.email ? { em: [hashData(userData.email)] } : {}),
               ...(userData?.phone ? { ph: [hashData(userData.phone)] } : {}),
             },
+            ...(eventId ? { event_id: eventId } : {}),
             custom_data: {
               lead_event_source: 'Website Form',
               event_source: 'crm',
@@ -54,6 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               ...(userData?.email ? { em: hashData(userData.email) } : {}),
               ...(userData?.phone ? { ph: hashData(userData.phone) } : {}),
             },
+            ...(eventId ? { event_id: eventId } : {}),
             attribution_data: {
               ...(typeof attributionShare === 'number' ? { attribution_share: attributionShare } : {}),
             },

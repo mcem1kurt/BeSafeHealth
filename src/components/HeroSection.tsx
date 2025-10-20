@@ -32,10 +32,22 @@ export default function HeroSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Generate a stable event ID for Pixel/CAPI deduplication
+    const eventId = `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+
+    // Read Meta cookies if present
+    const getCookie = (name: string) => {
+      if (typeof document === 'undefined') return undefined;
+      const match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'));
+      return match ? decodeURIComponent(match[1]) : undefined;
+    };
+    const fbp = getCookie('_fbp');
+    const fbc = getCookie('_fbc');
+    
     // Facebook Pixel - Lead event (form submitted)
     setTimeout(() => {
       if (typeof window !== "undefined" && window.fbq) {
-        window.fbq!('track', 'Lead');
+        window.fbq!('track', 'Lead', {}, { eventID: eventId });
       }
     }, 100);
 
@@ -48,13 +60,14 @@ export default function HeroSection() {
         },
         body: JSON.stringify({
           eventName: 'Lead',
+          eventId,
           userData: {
             email: formData.email,
             firstName: formData.name?.split(' ')[0],
             lastName: formData.name?.split(' ').slice(1).join(' '),
             phone: formData.phone,
-            // leadId intentionally omitted here. For Conversion Leads, this must be the
-            // real Meta Lead Ads ID (15-17 digits) obtained from the Leadgen Webhook.
+            fbp,
+            fbc,
           },
           customData: {
             content_name: 'Contact Form',
