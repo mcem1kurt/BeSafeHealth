@@ -28,28 +28,44 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const nowTs = Math.floor(Date.now() / 1000);
   const eventData = {
     data: [
-      {
-        event_name: 'Website Form',
-        event_time: nowTs,
-        action_source: 'system_generated',
-        user_data: {
-          ...(hasValidLeadId ? { lead_id: Number(leadIdString) } : {}),
-          fbc: userData?.fbc ?? null,
-          ...(userData?.email ? { em: hashData(userData.email) } : {}),
-          ...(userData?.phone ? { ph: hashData(userData.phone) } : {}),
-        },
-        attribution_data: {
-          ...(typeof attributionShare === 'number' ? { attribution_share: attributionShare } : {}),
-        },
-        custom_data: {
-          lead_event_source: 'Website Form',
-          event_source: 'crm',
-        },
-        original_event_data: {
-          event_name: originalEvent?.event_name || eventName || 'Lead',
-          event_time: originalEvent?.event_time || nowTs,
-        },
-      },
+      hasValidLeadId
+        ? {
+            // CRM Conversion Leads payload (recognized for optimization)
+            event_name: eventName || 'Lead',
+            event_time: nowTs,
+            action_source: 'system_generated',
+            user_data: {
+              lead_id: Number(leadIdString),
+              ...(userData?.email ? { em: [hashData(userData.email)] } : {}),
+              ...(userData?.phone ? { ph: [hashData(userData.phone)] } : {}),
+            },
+            custom_data: {
+              lead_event_source: 'Website Form',
+              event_source: 'crm',
+            },
+          }
+        : {
+            // Website lead payload (not recognized as CRM Conversion Leads)
+            event_name: 'Website Form',
+            event_time: nowTs,
+            action_source: 'system_generated',
+            user_data: {
+              fbc: userData?.fbc ?? null,
+              ...(userData?.email ? { em: hashData(userData.email) } : {}),
+              ...(userData?.phone ? { ph: hashData(userData.phone) } : {}),
+            },
+            attribution_data: {
+              ...(typeof attributionShare === 'number' ? { attribution_share: attributionShare } : {}),
+            },
+            custom_data: {
+              lead_event_source: 'Website Form',
+              event_source: 'crm',
+            },
+            original_event_data: {
+              event_name: originalEvent?.event_name || eventName || 'Lead',
+              event_time: originalEvent?.event_time || nowTs,
+            },
+          },
     ],
   };
 
