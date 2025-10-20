@@ -19,6 +19,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 
   // Prepare the event data
+  // Only include a valid Meta Lead Ads ID (15-17 digits) if provided
+  const leadIdRaw = userData?.leadId;
+  const leadIdString = typeof leadIdRaw === 'number' ? String(leadIdRaw) : typeof leadIdRaw === 'string' ? leadIdRaw.trim() : '';
+  const hasValidLeadId = /^\d{15,17}$/.test(leadIdString);
+
   const eventData = {
     data: [
       {
@@ -32,7 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           ...(userData?.lastName && { ln: [hashData(userData.lastName)] }),
           ...(userData?.city && { ct: [hashData(userData.city)] }),
           ...(userData?.country && { country: [hashData(userData.country)] }),
-          lead_id: userData?.leadId || Math.floor(Math.random() * 9000000000000000) + 1000000000000000, // 15-17 digit lead_id
+          ...(hasValidLeadId ? { lead_id: Number(leadIdString) } : {}),
         },
         custom_data: {
           event_source: 'crm',

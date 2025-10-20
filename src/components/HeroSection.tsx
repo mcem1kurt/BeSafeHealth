@@ -56,7 +56,8 @@ export default function HeroSection() {
             firstName: formData.name?.split(' ')[0],
             lastName: formData.name?.split(' ').slice(1).join(' '),
             phone: formData.phone,
-            leadId: Date.now(), // Unique lead ID
+            // leadId intentionally omitted here. For Conversion Leads, this must be the
+            // real Meta Lead Ads ID (15-17 digits) obtained from the Leadgen Webhook.
           },
           customData: {
             content_name: 'Contact Form',
