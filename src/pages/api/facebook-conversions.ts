@@ -40,6 +40,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         custom_data: {
           content_name: customData?.content_name || 'Contact Form',
           content_category: customData?.content_category || 'Lead Generation',
+          lead_event_source: 'Website Form',
+          event_source: 'crm',
         },
       },
     ],
