@@ -34,9 +34,6 @@ export default function HeroSection() {
     
     // Generate a stable event ID for Pixel/CAPI deduplication
     const eventId = `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
-    
-    // Generate lead_id for CRM integration (same format as CAPI)
-    const leadId = Math.floor(Math.random() * 9000000000000000) + 1000000000000000;
 
     // Read Meta cookies if present
     const getCookie = (name: string) => {
@@ -50,11 +47,10 @@ export default function HeroSection() {
     // Facebook Pixel - Lead event (form submitted)
     setTimeout(() => {
       if (typeof window !== "undefined" && window.fbq) {
-        // Send with eventID and lead_id for complete deduplication
+        // Send with eventID for deduplication
         window.fbq!('track', 'Lead', {
           content_name: 'Contact Form',
           content_category: 'Lead Generation',
-          lead_id: leadId,
         }, { 
           eventID: eventId 
         });
@@ -78,7 +74,6 @@ export default function HeroSection() {
             phone: formData.phone,
             fbp,
             fbc,
-            leadId, // Same lead_id as Pixel for perfect deduplication
           },
           customData: {
             content_name: 'Contact Form',

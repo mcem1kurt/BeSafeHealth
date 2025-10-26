@@ -19,22 +19,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 
   // Prepare the event data
-  // Meta requires lead_id for proper deduplication and CRM integration
+  // Standard website lead payload without lead_id
   const nowTs = Math.floor(Date.now() / 1000);
-  
-  // Generate lead_id if not provided (for web form leads)
-  const leadId = userData?.leadId || Math.floor(Math.random() * 9000000000000000) + 1000000000000000;
   
   const eventData = {
     data: [
       {
-        // Meta CRM Integration compliant payload
+        // Standard website lead payload
         event_name: eventName || 'Lead',
         event_time: nowTs,
         action_source: 'website',
         event_id: eventId, // Required for deduplication
         user_data: {
-          lead_id: leadId, // Required for CRM integration
           fbc: userData?.fbc ?? null,
           fbp: userData?.fbp ?? null,
           ...(userData?.email ? { em: hashData(userData.email) } : {}),
