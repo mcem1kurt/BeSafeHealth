@@ -44,20 +44,7 @@ export default function HeroSection() {
     const fbp = getCookie('_fbp');
     const fbc = getCookie('_fbc');
 
-    // Facebook Pixel - Lead event (form submitted)
-    setTimeout(() => {
-      if (typeof window !== "undefined" && window.fbq) {
-        // Send with eventID for deduplication
-        window.fbq!('track', 'Lead', {
-          content_name: 'Contact Form',
-          content_category: 'Lead Generation',
-        }, { 
-          eventID: eventId 
-        });
-      }
-    }, 100);
-
-    // Facebook Conversions API - Lead event (server-side)
+    // Facebook Conversions API - Lead event (server-side only)
     try {
       const conversionsResponse = await fetch('/api/facebook-conversions', {
         method: 'POST',
