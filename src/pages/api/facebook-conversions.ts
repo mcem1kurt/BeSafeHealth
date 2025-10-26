@@ -25,22 +25,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const eventData = {
     data: [
       {
-        // Standard website lead payload
+        // Meta's exact successful format
         event_name: eventName || 'Lead',
         event_time: nowTs,
-        action_source: 'website',
-        event_id: eventId, // Required for deduplication
+        action_source: 'system_generated',
         user_data: {
           fbc: userData?.fbc ?? null,
-          fbp: userData?.fbp ?? null,
           ...(userData?.email ? { em: hashData(userData.email) } : {}),
           ...(userData?.phone ? { ph: hashData(userData.phone) } : {}),
-          ...(userData?.firstName ? { fn: hashData(userData.firstName) } : {}),
-          ...(userData?.lastName ? { ln: hashData(userData.lastName) } : {}),
+          fbp: userData?.fbp ?? null,
         },
         custom_data: {
-          content_name: customData?.content_name || 'Contact Form',
-          content_category: customData?.content_category || 'Lead Generation',
           lead_event_source: 'Website Form',
           event_source: 'crm',
         },

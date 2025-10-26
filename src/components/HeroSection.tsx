@@ -44,32 +44,50 @@ export default function HeroSection() {
     const fbp = getCookie('_fbp');
     const fbc = getCookie('_fbc');
 
-    // Facebook Conversions API - Lead event (server-side only)
+    // Facebook Conversions API - Direct Meta format
     try {
-      const conversionsResponse = await fetch('/api/facebook-conversions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          eventName: 'Lead',
-          eventId,
-          userData: {
-            email: formData.email,
-            firstName: formData.name?.split(' ')[0],
-            lastName: formData.name?.split(' ').slice(1).join(' '),
-            phone: formData.phone,
-            fbp,
-            fbc,
+      const nowTs = Math.floor(Date.now() / 1000);
+      
+      // Hash function
+      const hashData = async (data: string) => {
+        const encoder = new TextEncoder();
+        const dataBuffer = encoder.encode(data.toLowerCase().trim());
+        const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      };
+
+      // Meta's exact successful format
+      const eventData = {
+        data: [
+          {
+            event_name: 'Lead',
+            event_time: nowTs,
+            action_source: 'system_generated',
+            user_data: {
+              fbc: fbc ?? null,
+              ...(formData.email ? { em: await hashData(formData.email) } : {}),
+              ...(formData.phone ? { ph: await hashData(formData.phone) } : {}),
+              fbp: fbp ?? null,
+            },
+            custom_data: {
+              lead_event_source: 'Website Form',
+              event_source: 'crm',
+            },
           },
-          customData: {
-            content_name: 'Website Form',
-            content_category: 'Lead Generation',
-            lead_event_source: 'Website Form',
-            event_source: 'crm',
+        ],
+      };
+
+      const response = await fetch(
+        `https://graph.facebook.com/v24.0/738567675869556/events?access_token=EAAJlF7gyLaABPrFuFi5QDT2DhZCZCZC7ZBR0inDoTAJK6Cs9pATTjPNV0cvExpg96RwHkG17Ct5Qw0bf7sZAnKP4Q4WHrTjmEF3QaUToAWoM5cWihX302V86AKZCbOFi83A4uI6QB2OWn1ZAm4ug9ml48S149wJCbs2PBworRgXvI0stg82JHoTyP1gKSk566UekwZDZD`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
           },
-        }),
-      });
+          body: JSON.stringify(eventData),
+        }
+      );
 
       // silent in production
     } catch (error) {
