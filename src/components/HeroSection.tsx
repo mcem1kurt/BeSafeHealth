@@ -63,8 +63,10 @@ export default function HeroSection() {
             fbc,
           },
           customData: {
-            content_name: 'Contact Form',
+            content_name: 'Website Form',
             content_category: 'Lead Generation',
+            lead_event_source: 'Website Form',
+            event_source: 'crm',
           },
         }),
       });
