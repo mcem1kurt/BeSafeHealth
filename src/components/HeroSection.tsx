@@ -31,70 +31,8 @@ export default function HeroSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Generate a stable event ID for Pixel/CAPI deduplication
-    const eventId = `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 
-    // Read Meta cookies if present
-    const getCookie = (name: string) => {
-      if (typeof document === 'undefined') return undefined;
-      const match = document.cookie.match(new RegExp('(?:^|; )' + name.replace(/([.$?*|{}()\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'));
-      return match ? decodeURIComponent(match[1]) : undefined;
-    };
-    const fbp = getCookie('_fbp');
-    const fbc = getCookie('_fbc');
-
-    // Facebook Conversions API - Direct Meta format
-    try {
-      const nowTs = Math.floor(Date.now() / 1000);
-      
-      // Hash function
-      const hashData = async (data: string) => {
-        const encoder = new TextEncoder();
-        const dataBuffer = encoder.encode(data.toLowerCase().trim());
-        const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-      };
-
-      // Meta's exact successful format
-      const eventData = {
-        data: [
-          {
-            event_name: 'Lead',
-            event_time: nowTs,
-            action_source: 'system_generated',
-            user_data: {
-              fbc: fbc ?? null,
-              ...(formData.email ? { em: await hashData(formData.email) } : {}),
-              ...(formData.phone ? { ph: await hashData(formData.phone) } : {}),
-              fbp: fbp ?? null,
-            },
-            custom_data: {
-              lead_event_source: 'Website Form',
-              event_source: 'crm',
-            },
-          },
-        ],
-      };
-
-      const response = await fetch(
-        `https://graph.facebook.com/v24.0/738567675869556/events?access_token=EAAJlF7gyLaABPrFuFi5QDT2DhZCZCZC7ZBR0inDoTAJK6Cs9pATTjPNV0cvExpg96RwHkG17Ct5Qw0bf7sZAnKP4Q4WHrTjmEF3QaUToAWoM5cWihX302V86AKZCbOFi83A4uI6QB2OWn1ZAm4ug9ml48S149wJCbs2PBworRgXvI0stg82JHoTyP1gKSk566UekwZDZD`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(eventData),
-        }
-      );
-
-      // silent in production
-    } catch (error) {
-      // silent in production
-    }
-
-    // Send email using EmailJS
+    // Send email using EmailJS only
     await sendEmail(formData);
     
     // Form data will be reset only after successful submission
