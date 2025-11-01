@@ -25,6 +25,11 @@ export default function Document() {
               s.parentNode.insertBefore(t,s)}(window,document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('init', '1537258454067758');
+              // Mark pixel as loaded for GTM
+              window.fbqLoaded = true;
+              if (window.dataLayer) {
+                window.dataLayer.push({'event': 'fbq_loaded'});
+              }
             `
           }}
         />
