@@ -56,9 +56,24 @@ function App({ Component, pageProps }: AppProps) {
     return () => observer.disconnect();
   }, []);
 
-  // Facebook Pixel - Check if loaded (silent in production)
+  // Facebook Pixel - Initial PageView on mount
   useEffect(() => {
-    // no-op
+    const trackInitialPageView = () => {
+      if (typeof window !== "undefined" && window.fbq) {
+        window.fbq!('track', 'PageView');
+        // Track content views on service-related pages
+        const path = window.location.pathname || '';
+        if (path.startsWith('/services')) {
+          window.fbq!('track', 'ViewContent');
+        }
+      } else {
+        // Retry if fbq not ready yet
+        setTimeout(trackInitialPageView, 200);
+      }
+    };
+    
+    // Wait a bit for pixel to load
+    setTimeout(trackInitialPageView, 100);
   }, []);
 
   // Facebook Pixel - route change PageView
